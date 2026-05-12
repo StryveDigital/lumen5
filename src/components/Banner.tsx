@@ -120,15 +120,15 @@ export default function Banner() {
               <div className="aspect-[355/224] bg-[#ccc8fe] border-4 border-[#201e26] border-solid overflow-clip relative rounded-2xl w-full">
                 <img alt="" className="absolute inset-0 max-w-none object-cover size-full" src={imgVideo} />
               </div>
-              {/* Reactions */}
-              <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
-                <div className="bg-[#3bd9eb] col-1 flex flex-col items-center justify-center ml-0 mt-0 relative rounded-full row-1 size-[40px]">
+              {/* Reactions — overlapping horizontal row */}
+              <div className="flex items-center shrink-0">
+                <div className="bg-[#3bd9eb] flex items-center justify-center rounded-full size-[40px] z-30 relative">
                   <img alt="" className="size-[22px] object-contain" src={imgLike} />
                 </div>
-                <div className="bg-[#f95580] col-1 flex flex-col items-center justify-center ml-[22px] mt-0 relative rounded-full row-1 size-[40px]">
+                <div className="bg-[#f95580] flex items-center justify-center rounded-full size-[40px] -ml-[10px] z-20 relative">
                   <img alt="" className="size-[22px] object-contain" src={imgHeart} />
                 </div>
-                <div className="bg-[#46e378] col-1 flex flex-col items-center justify-center ml-[42px] mt-0 relative rounded-full row-1 size-[40px]">
+                <div className="bg-[#46e378] flex items-center justify-center rounded-full size-[40px] -ml-[10px] z-10 relative">
                   <img alt="" className="size-[22px] object-contain" src={imgSupport} />
                 </div>
               </div>

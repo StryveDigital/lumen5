@@ -1,7 +1,7 @@
-const imgShape8  = "https://www.figma.com/api/mcp/asset/af56884b-636b-4dc2-a517-0de6972fe38a";
-const imgBW      = "https://www.figma.com/api/mcp/asset/ffe15b16-3f04-4a2e-99c0-ee08fe373c99";
-const imgQuoteL  = "https://www.figma.com/api/mcp/asset/88442435-9ad6-4d15-8632-cb92a99f8b9d";
-const imgQuoteR  = "https://www.figma.com/api/mcp/asset/1e0667b7-dd00-4f1e-b23c-825ea96ed4ec";
+const imgShape8  = "https://www.figma.com/api/mcp/asset/f13670d4-4371-427e-8d29-37ce5f191469";
+const imgBW      = "https://www.figma.com/api/mcp/asset/817543d2-ca55-4ed0-9ec2-fb65b1df3519";
+const imgQuoteL  = "https://www.figma.com/api/mcp/asset/d032e11d-26f5-440a-8529-8d97763555d1";
+const imgQuoteR  = "https://www.figma.com/api/mcp/asset/bf236df1-57c5-4add-8f2b-422d84e9e661";
 
 const stats = [
   { value: "97%",  label: "Reduced time to create videos." },
@@ -11,39 +11,46 @@ const stats = [
 
 export default function TestimonialStats() {
   return (
-    <div className="bg-white flex flex-col gap-[97px] items-center justify-center py-[104px] px-[160px] w-full">
-      {/* Heading + Stats */}
-      <div className="flex flex-col items-center w-full">
+    <div className="bg-white flex flex-col gap-[97px] items-center justify-center py-[104px] w-full">
+      {/* Heading + Image + Stats */}
+      <div className="flex flex-col items-center shrink-0">
         {/* Heading */}
-        <div className="flex flex-col gap-3 items-center text-center w-[736px] mb-12">
-          <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26]">
+        <div className="flex flex-col gap-3 items-start text-center w-[736px] mb-12">
+          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[20px] leading-[30px] text-[#201e26] w-full">
             A real customer's machine
           </p>
-          <h2 className="font-heading font-semibold text-[36px] leading-[60px] text-[#201e26]">
+          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[36px] leading-[60px] text-[#201e26] w-full">
             How Best Western Hotels transformed its video marketing
-          </h2>
+          </p>
         </div>
-        {/* Image + Stats */}
-        <div className="flex items-center gap-16 w-full max-w-[1230px]">
-          {/* Image */}
-          <div className="relative shrink-0">
-            <div className="absolute flex h-[256.107px] items-center justify-center left-[-55px] top-0 w-[270.891px] pointer-events-none">
-              <div className="flex-none rotate-[72.91deg]">
-                <img alt="" className="block h-[222px] w-[200px]" src={imgShape8} />
+        {/* Image + Stats — matches Figma absolute layout */}
+        <div className="h-[594px] relative shrink-0 w-[1230px]">
+          {/* Green blob shape */}
+          <div className="absolute flex h-[256px] items-center justify-center left-[-55px] top-0 w-[271px]">
+            <div className="flex-none rotate-[72.91deg]">
+              <img alt="" className="block h-[222px] w-[200px]" src={imgShape8} />
+            </div>
+          </div>
+          {/* Hotel photo — swap imgBW for the real asset once hosted */}
+          <div className="absolute left-[56px] size-[479px] top-[115px]">
+            <div className="absolute inset-0 rounded-3xl bg-[#e2e8f0] overflow-hidden">
+              <img alt="Best Western Hotels" className="absolute block inset-0 max-w-none size-full object-cover" src={imgBW}
+                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="flex items-center justify-center size-full text-[#94a3b8] font-['Inter',sans-serif] text-sm">
+                Best Western hotel photo
               </div>
             </div>
-            <img alt="Best Western Hotels" className="relative z-10 size-[479px] object-cover rounded-3xl" src={imgBW} />
           </div>
           {/* Stats */}
-          <div className="flex flex-col gap-10 flex-1">
+          <div className="absolute flex flex-col gap-10 items-start left-[633px] top-[153px] w-[544px]">
             {stats.map(({ value, label }) => (
-              <div key={value} className="flex items-center gap-6">
+              <div key={value} className="flex items-center w-full">
                 <div className="h-[71px] overflow-clip relative shrink-0 w-[150px]">
-                  <p className="font-heading font-semibold text-[52px] leading-[66px] text-[#201e26] whitespace-nowrap">
+                  <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[52px] leading-[66px] text-[#201e26] whitespace-nowrap">
                     {value}
                   </p>
                 </div>
-                <p className="font-body font-normal text-[20px] leading-[36px] text-[#201e26] flex-1">
+                <p className="font-['Inter',sans-serif] font-normal text-[20px] leading-[36px] text-[#201e26] flex-1 min-w-0">
                   {label}
                 </p>
               </div>
@@ -53,18 +60,22 @@ export default function TestimonialStats() {
       </div>
 
       {/* Testimonial quote */}
-      <div className="bg-[#fafafa] flex gap-12 items-start p-12 rounded-2xl w-[1120px]">
-        <div className="h-[93px] overflow-clip relative shrink-0 w-[120px] flex">
-          <img alt="" className="w-1/2 h-auto object-contain" src={imgQuoteR} />
-          <img alt="" className="w-1/2 h-auto object-contain" src={imgQuoteL} />
+      <div className="bg-[#fafafa] flex gap-12 items-start p-12 rounded-2xl shrink-0 w-[1120px]">
+        <div className="h-[93px] overflow-clip relative shrink-0 w-[120px]">
+          <div className="absolute inset-[0_0_0.23%_56.01%]">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgQuoteL} />
+          </div>
+          <div className="absolute inset-[0.23%_56%_0_0]">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgQuoteR} />
+          </div>
         </div>
-        <div className="flex flex-col gap-6 flex-1">
-          <p className="font-body font-normal text-[20px] leading-[36px] text-[#201e26]">
+        <div className="flex flex-col gap-6 flex-1 min-w-0">
+          <p className="font-['Inter',sans-serif] font-normal text-[20px] leading-[36px] text-[#201e26]">
             Lumen5 cuts down on countless hours of work, and it's also fun to use. It doesn't feel like an addition to anyone's workload, and users are proud of what they're creating.
           </p>
-          <div className="flex flex-col gap-[2px]">
-            <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26]">Robert Schaub</p>
-            <p className="font-body font-normal text-[16px] leading-[24px] text-[#201e26]">Marketing Program Manager</p>
+          <div className="h-[52px]">
+            <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[20px] leading-[30px] text-[#201e26]">Robert Schaub</p>
+            <p className="font-['Inter',sans-serif] font-normal text-[16px] leading-[24px] text-[#201e26]">Marketing Program Manager</p>
           </div>
         </div>
       </div>
