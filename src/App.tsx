@@ -3,6 +3,7 @@ import LogoCarousel from './components/LogoCarousel'
 import TestimonialStats from './components/TestimonialStats'
 import Steps from './components/Steps'
 import SmallCta from './components/SmallCta'
+import CalendarModule from './components/CalendarModule'
 import CtaModule from './components/CtaModule'
 import Footer from './components/Footer'
 
@@ -14,6 +15,7 @@ export default function App() {
       <TestimonialStats />
       <Steps />
       <SmallCta />
+      <CalendarModule />
       <CtaModule />
       <Footer />
     </div>
