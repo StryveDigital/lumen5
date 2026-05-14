@@ -26,9 +26,9 @@ export default function Banner() {
   return (
     <div className="flex items-stretch relative bg-[#201e26]">
       {/* Left */}
-      <div className="bg-[#201e26] flex flex-col gap-12 items-start pl-[110px] py-[104px] flex-[1_0_0] min-w-0">
+      <div className="bg-[#201e26] flex flex-col gap-8 items-start pl-[110px] py-[104px] flex-[1_0_0] min-w-0">
         <Logo />
-        <div className="flex flex-col gap-8 items-start w-[530px]">
+        <div className="flex flex-col gap-6 items-start w-[530px]">
           <h1 className="font-heading font-semibold text-[58px] leading-[72px] text-[#fafafa]">
             Built for the marketer who has to press publish
           </h1>

@@ -7,8 +7,8 @@ const imgElectrolux  = "https://www.figma.com/api/mcp/asset/2a5294b8-db76-4c2c-a
 // Figma's SVG exports use preserveAspectRatio="none", so the browser stretches
 // them to fill any box the CSS gives. We pin each logo's real intrinsic aspect
 // here and render explicit width/height to keep them in proportion.
-const TARGET_H = 44;
-const MAX_W = 180;
+const TARGET_H = 60;
+const MAX_W = 220;
 
 function logoSize(aspect: number) {
   if (aspect >= MAX_W / TARGET_H) return { width: MAX_W, height: MAX_W / aspect };
@@ -25,15 +25,15 @@ const logos = [
 
 export default function LogoCarousel() {
   return (
-    <div className="bg-[#fafafa] flex flex-col gap-5 items-center justify-center py-6 relative w-full">
-      <p className="font-heading font-semibold text-[14px] leading-[21px] text-[#201e26] text-center whitespace-nowrap">
+    <div className="bg-[#fafafa] flex flex-col gap-7 items-center justify-center py-14 relative w-full">
+      <p className="font-heading font-semibold text-[16px] leading-[24px] text-[#201e26] text-center whitespace-nowrap">
         Trusted by marketing teams at
       </p>
-      <div className="flex items-center justify-between w-full max-w-[1280px] px-16">
+      <div className="grid grid-cols-5 w-full max-w-[1280px] px-16">
         {logos.map(logo => {
           const { width, height } = logoSize(logo.aspect);
           return (
-            <div key={logo.alt} className="flex h-[70px] items-center justify-center">
+            <div key={logo.alt} className="flex h-[80px] items-center justify-center">
               <img alt={logo.alt} src={logo.src} width={width} height={height} className="grayscale block" style={{ width, height }} />
             </div>
           );

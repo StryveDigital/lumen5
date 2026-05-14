@@ -1,4 +1,3 @@
-const imgShape8  = "/green-leaf.svg";
 const imgBW      = "/bw-hotel.png";
 const imgQuoteL  = "https://www.figma.com/api/mcp/asset/d032e11d-26f5-440a-8529-8d97763555d1";
 const imgQuoteR  = "https://www.figma.com/api/mcp/asset/bf236df1-57c5-4add-8f2b-422d84e9e661";
@@ -25,13 +24,7 @@ export default function TestimonialStats() {
         </div>
         {/* Image + Stats — matches Figma absolute layout */}
         <div className="h-[594px] relative shrink-0 w-[1230px]">
-          {/* Green blob shape */}
-          <div className="absolute flex h-[256px] items-center justify-center left-[-55px] top-0 w-[271px]">
-            <div className="flex-none rotate-[72.91deg]">
-              <img alt="" className="block h-[222px] w-[200px]" src={imgShape8} />
-            </div>
-          </div>
-          {/* Hotel photo */}
+          {/* Hotel photo (note: the green leaf decoration is baked into the photo asset itself) */}
           <div className="absolute left-[56px] size-[479px] top-[115px]">
             <div className="absolute inset-0 rounded-3xl bg-[#e2e8f0] overflow-hidden">
               <img alt="Best Western Hotels" className="absolute block inset-0 max-w-none size-full object-cover" src={imgBW} />
