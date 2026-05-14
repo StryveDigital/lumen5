@@ -13,7 +13,7 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+        heading: ['Borna', 'Inter', 'sans-serif'],
         body:    ['Inter', 'sans-serif'],
       },
     },

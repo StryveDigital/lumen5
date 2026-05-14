@@ -41,10 +41,10 @@ export default function CalendarModule() {
     <div className="bg-white flex flex-col gap-[97px] items-center py-[104px] w-full">
       {/* Heading */}
       <div className="flex flex-col gap-3 items-center text-center w-[1080px]">
-        <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[20px] leading-[30px] text-[#201e26]">
+        <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26]">
           A real customer's quarter
         </p>
-        <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[42px] leading-[60px] text-[#201e26] w-full whitespace-nowrap">
+        <p className="font-heading font-semibold text-[42px] leading-[60px] text-[#201e26] w-full whitespace-nowrap">
           What a weekly cadence actually looks like
         </p>
         <div className="flex items-center gap-2">
@@ -75,7 +75,7 @@ export default function CalendarModule() {
           <div className="relative bg-white border border-[#201e26] rounded-lg overflow-hidden">
             {/* Header */}
             <div className="border-b border-[#201e26] flex items-center justify-center py-4">
-              <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[20px] leading-[30px] text-[#201e26]">
+              <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26]">
                 Content Marketing Calendar
               </p>
             </div>
@@ -84,11 +84,11 @@ export default function CalendarModule() {
               {/* Day-label column */}
               <div className="flex flex-col w-[145px] shrink-0">
                 <div className="bg-[#201e26] border-t border-[#fafafa] flex items-center px-6 py-4 h-[72px]">
-                  <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[16px] leading-6 text-[#fafafa]">Week</p>
+                  <p className="font-heading font-semibold text-[16px] leading-6 text-[#fafafa]">Week</p>
                 </div>
                 {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'].map(day => (
                   <div key={day} className="bg-[#201e26] border-t border-[#fafafa] flex items-center px-6 py-4 h-[72px]">
-                    <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[16px] leading-6 text-[#fafafa] whitespace-nowrap">
+                    <p className="font-heading font-semibold text-[16px] leading-6 text-[#fafafa] whitespace-nowrap">
                       {day}
                     </p>
                   </div>
@@ -98,7 +98,7 @@ export default function CalendarModule() {
               {calendarData.map((week, wi) => (
                 <div key={wi} className="flex flex-col flex-1 min-w-0">
                   <div className="bg-[#f7f5cb] border-b border-l border-r border-[#201e26] flex items-center justify-center px-2 py-4 h-[72px]">
-                    <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[16px] leading-6 text-[#201e26]">{wi + 1}</p>
+                    <p className="font-heading font-semibold text-[16px] leading-6 text-[#201e26]">{wi + 1}</p>
                   </div>
                   {week.map((cell, di) => (
                     <div key={di} className={`${cellBg[cell]} border border-[#201e26] flex items-center justify-center h-[72px]`}>
@@ -145,7 +145,7 @@ export default function CalendarModule() {
             Lumen5 helped us reduce video creation time from days to just six minutes.
           </p>
           <div className="h-[52px]">
-            <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[20px] leading-[30px] text-[#201e26]">Glen Wellbrock</p>
+            <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26]">Glen Wellbrock</p>
             <p className="font-['Inter',sans-serif] font-normal text-[16px] leading-[24px] text-[#201e26]">
               Senior Director of Marketing, Berkshire Hathaway HomeService
             </p>

@@ -15,10 +15,10 @@ export default function TestimonialStats() {
       <div className="flex flex-col items-center shrink-0">
         {/* Heading */}
         <div className="flex flex-col gap-3 items-start text-center w-[800px] mb-12">
-          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[20px] leading-[30px] text-[#201e26] w-full">
+          <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26] w-full">
             A real customer's machine
           </p>
-          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[42px] leading-[60px] text-[#201e26] w-full">
+          <p className="font-heading font-semibold text-[42px] leading-[60px] text-[#201e26] w-full">
             How Best Western Hotels transformed its video marketing
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function TestimonialStats() {
             {stats.map(({ value, label }) => (
               <div key={label} className="flex items-center w-full">
                 <div className="h-[71px] overflow-clip relative shrink-0 w-[150px]">
-                  <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[52px] leading-[66px] text-[#201e26] whitespace-nowrap">
+                  <p className="font-heading font-semibold text-[52px] leading-[66px] text-[#201e26] whitespace-nowrap">
                     {value}
                   </p>
                 </div>
@@ -63,7 +63,7 @@ export default function TestimonialStats() {
             Lumen5 cuts down on countless hours of work, and it's also fun to use. It doesn't feel like an addition to anyone's workload, and users are proud of what they're creating.
           </p>
           <div className="h-[52px]">
-            <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[20px] leading-[30px] text-[#201e26]">Robert Schaub</p>
+            <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26]">Robert Schaub</p>
             <p className="font-['Inter',sans-serif] font-normal text-[16px] leading-[24px] text-[#201e26]">Marketing Program Manager</p>
           </div>
         </div>

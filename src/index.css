@@ -1,4 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap');
+@font-face {
+  font-family: 'Borna';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/Fonts/Borna-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Borna';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/Fonts/Borna-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Borna';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/Fonts/Borna-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Borna';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/Fonts/Borna-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Borna';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/Fonts/Borna-BoldItalic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/Fonts/Inter-Variable.woff2') format('woff2');
+}
 
 @tailwind base;
 @tailwind components;
