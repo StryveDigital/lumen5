@@ -1,21 +1,14 @@
+// LP1 — "Trusted by marketing teams at"
+// Uses the shared marquee component so LP1 and LP2 stay in sync.
+import LogoMarquee, { type LogoItem } from '../../shared/LogoMarquee';
+
 const imgSiemens     = "/siemens-logo.svg";
 const imgBestWestern = "https://www.figma.com/api/mcp/asset/0bfeda42-1f44-4e8f-92a0-20c9d51dede5";
 const imgCisco       = "https://www.figma.com/api/mcp/asset/b2de9c82-10e3-4367-a20f-a21f1a7e4469";
 const imgCMS         = "/cms-logo.png";
 const imgElectrolux  = "https://www.figma.com/api/mcp/asset/2a5294b8-db76-4c2c-a713-b99e09977318";
 
-// Figma's SVG exports use preserveAspectRatio="none", so the browser stretches
-// them to fill any box the CSS gives. We pin each logo's real intrinsic aspect
-// here and render explicit width/height to keep them in proportion.
-const TARGET_H = 60;
-const MAX_W = 220;
-
-function logoSize(aspect: number) {
-  if (aspect >= MAX_W / TARGET_H) return { width: MAX_W, height: MAX_W / aspect };
-  return { width: TARGET_H * aspect, height: TARGET_H };
-}
-
-const logos = [
+const logos: LogoItem[] = [
   { src: imgSiemens,     alt: "Siemens",                       aspect: 300 / 60 },
   { src: imgBestWestern, alt: "Best Western Hotels & Resorts", aspect: 196 / 38.9635 },
   { src: imgCisco,       alt: "Cisco",                         aspect: 116 / 62 },
@@ -24,21 +17,5 @@ const logos = [
 ];
 
 export default function LogoCarousel() {
-  return (
-    <div className="bg-[#fafafa] flex flex-col gap-7 items-center justify-center py-14 relative w-full">
-      <p className="font-heading font-semibold text-[16px] leading-[24px] text-[#201e26] text-center whitespace-nowrap">
-        Trusted by marketing teams at
-      </p>
-      <div className="grid grid-cols-5 w-full max-w-[1280px] px-16">
-        {logos.map(logo => {
-          const { width, height } = logoSize(logo.aspect);
-          return (
-            <div key={logo.alt} className="flex h-[80px] items-center justify-center">
-              <img alt={logo.alt} src={logo.src} width={width} height={height} className="grayscale block" style={{ width, height }} />
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
+  return <LogoMarquee heading="Trusted by marketing teams at" logos={logos} />;
 }
