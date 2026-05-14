@@ -13,12 +13,7 @@ const imgStar2     = "https://www.figma.com/api/mcp/asset/2b220b1d-3912-40c0-ade
 
 function Logo() {
   return (
-    <div className="flex items-center gap-2">
-      <svg width="34" height="44" viewBox="0 0 28 36" fill="none">
-        <path d="M16 0L0 20h12L9 36 28 14H16L16 0z" fill="#5645f5"/>
-      </svg>
-      <span className="font-heading font-bold text-[28px] text-[#fafafa] tracking-tight">lumen5</span>
-    </div>
+    <img alt="Lumen5" src="/lumen5-logo.svg" width={181} height={48} className="block" />
   );
 }
 
