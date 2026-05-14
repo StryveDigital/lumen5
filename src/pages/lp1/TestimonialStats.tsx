@@ -1,14 +1,63 @@
+// LP1 — Best Western customer case study + stats + quote
+// Figma node: 51:763 (Testimonial + stats module).
+// Stats animate from 0 → target on scroll-into-view (matches LP2/LP3 pattern).
+
+import { useEffect, useRef, useState } from 'react';
+
 const imgBW      = "/bw-hotel.png";
 const imgQuoteL  = "https://www.figma.com/api/mcp/asset/d032e11d-26f5-440a-8529-8d97763555d1";
 const imgQuoteR  = "https://www.figma.com/api/mcp/asset/bf236df1-57c5-4add-8f2b-422d84e9e661";
 
-const stats = [
-  { value: "0%",  label: "Reduced time to create videos." },
-  { value: "1+",  label: "Videos created in one year." },
-  { value: "0%",  label: "Cost reduction compared to agency prices" },
+function useInView<T extends HTMLElement>(threshold = 0.3) {
+  const [inView, setInView] = useState(false);
+  const ref = useRef<T>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || inView) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) setInView(true);
+    }, { threshold });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [inView, threshold]);
+  return { inView, ref };
+}
+
+function useCountUp(target: number, active: boolean, duration = 1800) {
+  const [value, setValue] = useState(0);
+  useEffect(() => {
+    if (!active) {
+      setValue(0);
+      return;
+    }
+    const start = performance.now();
+    let raf = 0;
+    function tick(now: number) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setValue(target * eased);
+      if (progress < 1) raf = requestAnimationFrame(tick);
+    }
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [target, active, duration]);
+  return value;
+}
+
+const STATS = [
+  { target: 97,  format: (v: number) => `${Math.round(v)}%`, label: "Reduced time to create videos." },
+  { target: 480, format: (v: number) => `${Math.round(v)}+`, label: "Videos created in one year." },
+  { target: 94,  format: (v: number) => `${Math.round(v)}%`, label: "Cost reduction compared to agency prices" },
 ];
 
 export default function TestimonialStats() {
+  const { ref, inView } = useInView<HTMLDivElement>(0.25);
+  const v1 = useCountUp(STATS[0].target, inView);
+  const v2 = useCountUp(STATS[1].target, inView);
+  const v3 = useCountUp(STATS[2].target, inView);
+  const values = [v1, v2, v3];
+
   return (
     <div className="bg-white flex flex-col gap-[120px] items-center justify-center py-[140px] w-full">
       {/* Heading + Image + Stats */}
@@ -23,8 +72,8 @@ export default function TestimonialStats() {
           </p>
         </div>
         {/* Image + Stats — matches Figma absolute layout */}
-        <div className="h-[594px] relative shrink-0 w-[1230px]">
-          {/* Hotel photo (note: the green leaf decoration is baked into the photo asset itself) */}
+        <div ref={ref} className="h-[594px] relative shrink-0 w-[1230px]">
+          {/* Hotel photo (green leaf decoration is baked into the photo asset itself) */}
           <div className="absolute left-[56px] size-[479px] top-[115px]">
             <div className="absolute inset-0 rounded-3xl bg-[#e2e8f0] overflow-hidden">
               <img alt="Best Western Hotels" className="absolute block inset-0 max-w-none size-full object-cover" src={imgBW} />
@@ -32,15 +81,15 @@ export default function TestimonialStats() {
           </div>
           {/* Stats */}
           <div className="absolute flex flex-col gap-10 items-start left-[633px] top-[153px] w-[544px]">
-            {stats.map(({ value, label }) => (
-              <div key={label} className="flex items-center w-full">
+            {STATS.map((stat, i) => (
+              <div key={stat.label} className="flex items-center w-full">
                 <div className="h-[71px] overflow-clip relative shrink-0 w-[150px]">
-                  <p className="font-heading font-semibold text-[52px] leading-[66px] text-[#201e26] whitespace-nowrap">
-                    {value}
+                  <p className="font-heading font-semibold text-[52px] leading-[66px] text-[#201e26] whitespace-nowrap tabular-nums">
+                    {stat.format(values[i])}
                   </p>
                 </div>
                 <p className="font-['Inter',sans-serif] font-normal text-[20px] leading-[36px] text-[#201e26] flex-1 min-w-0">
-                  {label}
+                  {stat.label}
                 </p>
               </div>
             ))}
