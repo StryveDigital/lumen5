@@ -40,11 +40,11 @@ export default function CalendarModule() {
   return (
     <div className="bg-white flex flex-col gap-[97px] items-center py-[104px] w-full">
       {/* Heading */}
-      <div className="flex flex-col gap-3 items-center text-center w-[860px]">
+      <div className="flex flex-col gap-3 items-center text-center w-[800px]">
         <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[20px] leading-[30px] text-[#201e26]">
           A real customer's quarter
         </p>
-        <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[36px] leading-[60px] text-[#201e26] w-[788px]">
+        <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[42px] leading-[60px] text-[#201e26] w-full">
           What a weekly cadence actually looks like
         </p>
         <div className="flex items-center gap-2">

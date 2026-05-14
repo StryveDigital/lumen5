@@ -32,10 +32,10 @@ export default function Banner() {
           <h1 className="font-heading font-semibold text-[58px] leading-[72px] text-[#fafafa]">
             Built for the marketer who has to press publish
           </h1>
-          <p className="font-body font-normal text-[20px] leading-[36px] text-[#fafafa]">
+          <p className="font-body font-normal text-[22px] leading-[38px] text-[#fafafa]">
             Turn the blog you already wrote into a video that's on-brand and ready to ship in minutes.
           </p>
-          <button className="bg-[#5645f5] px-6 py-4 rounded-full font-heading font-bold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap hover:opacity-90 transition-opacity">
+          <button className="bg-[#5645f5] px-8 py-5 rounded-full font-heading font-bold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap hover:opacity-90 transition-opacity">
             Make my next video
           </button>
         </div>

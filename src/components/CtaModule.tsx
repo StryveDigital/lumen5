@@ -6,18 +6,18 @@ export default function CtaModule() {
     <div className="bg-[#201e26] relative w-full overflow-hidden" style={{ minHeight: 432 }}>
       {/* Centered content */}
       <div className="flex flex-col gap-3 items-center justify-center pt-[104px] pb-[104px] px-16 relative z-10">
-        <h2 className="font-heading font-semibold text-[36px] leading-[60px] text-[#fafafa] text-center w-[788px]">
+        <h2 className="font-heading font-semibold text-[42px] leading-[60px] text-[#fafafa] text-center w-[800px]">
           Your blog post is already half a video
         </h2>
         <p className="font-body font-normal text-[20px] leading-[36px] text-[#fafafa] text-center w-[669px]">
           Make the other half in the time it takes to make coffee.
         </p>
-        <button className="bg-[#5645f5] flex items-center justify-center px-6 py-4 rounded-full shrink-0 hover:opacity-90 transition-opacity mt-3">
-          <p className="font-heading font-bold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
+        <button className="bg-[#5645f5] flex items-center justify-center px-8 py-5 rounded-full shrink-0 hover:opacity-90 transition-opacity mt-4">
+          <p className="font-heading font-bold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap">
             Make my next video
           </p>
         </button>
-        <p className="font-body font-normal text-[18px] leading-[30px] text-[#fafafa] text-center w-[669px] opacity-70">
+        <p className="font-body font-normal text-[16px] leading-[24px] text-[#fafafa] text-center opacity-70 mt-2">
           Free plan • No credit card required
         </p>
       </div>

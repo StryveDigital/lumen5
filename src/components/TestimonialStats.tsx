@@ -1,4 +1,4 @@
-const imgShape8  = "https://www.figma.com/api/mcp/asset/f13670d4-4371-427e-8d29-37ce5f191469";
+const imgShape8  = "/green-leaf.svg";
 const imgBW      = "/bw-hotel.png";
 const imgQuoteL  = "https://www.figma.com/api/mcp/asset/d032e11d-26f5-440a-8529-8d97763555d1";
 const imgQuoteR  = "https://www.figma.com/api/mcp/asset/bf236df1-57c5-4add-8f2b-422d84e9e661";
@@ -15,11 +15,11 @@ export default function TestimonialStats() {
       {/* Heading + Image + Stats */}
       <div className="flex flex-col items-center shrink-0">
         {/* Heading */}
-        <div className="flex flex-col gap-3 items-start text-center w-[736px] mb-12">
+        <div className="flex flex-col gap-3 items-start text-center w-[800px] mb-12">
           <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[20px] leading-[30px] text-[#201e26] w-full">
             A real customer's machine
           </p>
-          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[36px] leading-[60px] text-[#201e26] w-full">
+          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[42px] leading-[60px] text-[#201e26] w-full">
             How Best Western Hotels transformed its video marketing
           </p>
         </div>

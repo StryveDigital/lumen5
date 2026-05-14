@@ -27,11 +27,11 @@ export default function Steps() {
   return (
     <div className="bg-[#fafafa] flex flex-col gap-16 items-center justify-center px-16 py-[104px] w-full">
       {/* Heading */}
-      <div className="flex flex-col gap-3 items-center text-center w-[736px]">
+      <div className="flex flex-col gap-3 items-center text-center w-[800px]">
         <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26]">
           For marketers who own a weekly cadence
         </p>
-        <h2 className="font-heading font-semibold text-[36px] leading-[60px] text-[#201e26]">
+        <h2 className="font-heading font-semibold text-[42px] leading-[60px] text-[#201e26]">
           Three steps, one afternoon
         </h2>
         <p className="font-body font-normal text-[20px] leading-[36px] text-[#201e26]">
