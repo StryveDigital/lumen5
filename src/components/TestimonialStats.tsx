@@ -11,7 +11,7 @@ const stats = [
 
 export default function TestimonialStats() {
   return (
-    <div className="bg-white flex flex-col gap-[97px] items-center justify-center py-[104px] w-full">
+    <div className="bg-white flex flex-col gap-[120px] items-center justify-center py-[140px] w-full">
       {/* Heading + Image + Stats */}
       <div className="flex flex-col items-center shrink-0">
         {/* Heading */}

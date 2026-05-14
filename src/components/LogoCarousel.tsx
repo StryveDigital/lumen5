@@ -14,14 +14,14 @@ const logos = [
 
 export default function LogoCarousel() {
   return (
-    <div className="bg-[#fafafa] flex flex-col gap-10 h-[328px] items-center justify-center py-[104px] relative w-full">
-      <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26] text-center whitespace-nowrap">
+    <div className="bg-[#fafafa] flex flex-col gap-5 items-center justify-center py-6 relative w-full">
+      <p className="font-heading font-semibold text-[14px] leading-[21px] text-[#201e26] text-center whitespace-nowrap">
         Trusted by marketing teams at
       </p>
-      <div className="flex h-[110px] items-center justify-between w-full max-w-[1280px] px-16">
+      <div className="flex items-center justify-between w-full max-w-[1280px] px-16">
         {logos.map(logo => (
-          <div key={logo.alt} className="flex h-[110px] items-center justify-center">
-            <img alt={logo.alt} className="max-h-[70px] max-w-[190px] object-contain grayscale opacity-70" src={logo.src} />
+          <div key={logo.alt} className="flex h-[70px] items-center justify-center">
+            <img alt={logo.alt} className="max-h-[60px] max-w-[180px] object-contain grayscale" src={logo.src} />
           </div>
         ))}
       </div>
