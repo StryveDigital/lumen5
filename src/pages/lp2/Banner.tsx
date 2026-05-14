@@ -3,6 +3,8 @@
 // Asset URLs below come from Figma MCP and expire ~7 days after generation.
 // Re-run get_design_context on the banner image node to refresh if any break.
 
+import { CTA } from '../../shared/cta-urls';
+
 const imgBgShape    = "https://www.figma.com/api/mcp/asset/87c51d73-811f-4d16-a734-982480b585b0"; // big green blob behind cards
 const imgArrowDown  = "https://www.figma.com/api/mcp/asset/597c0906-d6f1-4df5-92df-09c05ef2090f"; // curved arrow (bottom)
 const imgArrowUp    = "https://www.figma.com/api/mcp/asset/fc1a109d-dd65-4afb-83eb-af02106497bc"; // curved arrow (top)
@@ -65,9 +67,9 @@ export default function Banner() {
           <p className="font-body font-normal text-[22px] leading-[38px] text-[#fafafa]">
             The 43 people who watched it live were never the point. The 12 LinkedIn posts you&apos;ll publish from it are.
           </p>
-          <button className="bg-[#5645f5] px-8 py-5 rounded-full font-heading font-bold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap hover:opacity-90 transition-opacity">
+          <a href={CTA.signup} className="bg-[#5645f5] px-8 py-5 rounded-full font-heading font-bold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap hover:opacity-90 transition-opacity">
             Build my clip pack
-          </button>
+          </a>
         </div>
       </div>
 

@@ -1,6 +1,8 @@
 // LP3 — Enterprise banner: "AI video without the brand risk"
 // Figma node: 66:1790
 
+import { CTA } from '../../shared/cta-urls';
+
 const imgLogo = "/lumen5-logo.svg";
 
 // Decorative assets from Figma MCP. These URLs expire ~7 days after generation;
@@ -32,16 +34,16 @@ export default function Banner() {
             Locked brand kits. Multi-stage approval workflows. Regional rollouts that don&rsquo;t end in a CMO email.
           </p>
           <div className="flex gap-[18px] items-start mt-2">
-            <button className="bg-[#5645f5] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
+            <a href={CTA.demo} className="bg-[#5645f5] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
               <span className="font-heading font-bold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
                 Get a demo
               </span>
-            </button>
-            <button className="bg-[#fafafa] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
+            </a>
+            <a href={CTA.demo} className="bg-[#fafafa] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
               <span className="font-heading font-bold text-[16px] leading-[30px] text-[#5645f5] whitespace-nowrap">
                 Talk to sales
               </span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

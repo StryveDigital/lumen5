@@ -1,6 +1,8 @@
 // LP3 — two-column "Security and compliance" section
 // Figma node: 185:2235
 
+import { CTA } from '../../shared/cta-urls';
+
 const imgPrivacy = "https://www.figma.com/api/mcp/asset/43386d8b-40ff-4d32-ba2b-049f744dbb56";
 const imgArrow   = "https://www.figma.com/api/mcp/asset/235d7c86-d6fa-4b41-ac8d-5a04207a1e28";
 
@@ -27,17 +29,17 @@ export default function SecurityCompliance() {
           </ul>
         </div>
         <div className="flex gap-5 items-center mt-2">
-          <button className="bg-[#5645f5] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
+          <a href={CTA.trust} className="bg-[#5645f5] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
             <span className="font-heading font-bold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
               Visit our trust center
             </span>
-          </button>
-          <button className="flex gap-[10px] items-center justify-center px-2 py-4 rounded-full hover:opacity-80 transition-opacity">
+          </a>
+          <a href={CTA.demo} className="flex gap-[10px] items-center justify-center px-2 py-4 rounded-full hover:opacity-80 transition-opacity">
             <span className="font-heading font-bold text-[16px] leading-[30px] text-[#5645f5] whitespace-nowrap">
               Request Demo
             </span>
             <img alt="" src={imgArrow} width={11.5} height={8} className="block" />
-          </button>
+          </a>
         </div>
       </div>
     </div>

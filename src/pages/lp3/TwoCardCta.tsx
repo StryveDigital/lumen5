@@ -1,5 +1,6 @@
 // LP3 — final two-card CTA: "Two ways to see it work"
 // Figma node: 77:2088
+import { CTA } from '../../shared/cta-urls';
 
 const imgShape6 = "https://www.figma.com/api/mcp/asset/20ca6685-919c-47fc-bdd4-168eea659567"; // right-edge shape (pink/orange)
 const imgShape8 = "https://www.figma.com/api/mcp/asset/73a1329d-2708-41d3-95ab-539c25dfc8ec"; // left-edge shape (green)
@@ -9,6 +10,7 @@ type Card = {
   title: string;
   body: string;
   cta: string;
+  href: string;
 };
 
 const cards: Card[] = [
@@ -17,12 +19,14 @@ const cards: Card[] = [
     title: "Try it on your own content",
     body: "Free plan. No credit card. See your brand kit applied in real time.",
     cta: "Try now",
+    href: CTA.signup,
   },
   {
     eyebrow: "5-min walkthrough",
     title: "Talk to sales",
     body: "A quick walkthrough of the platform. If it’s a fit, we’ll book a deeper demo with the right team for your rollout.",
     cta: "Talk to sales",
+    href: CTA.demo,
   },
 ];
 
@@ -58,11 +62,11 @@ export default function TwoCardCta() {
                     {card.body}
                   </p>
                 </div>
-                <button className="absolute bg-[#5645f5] flex items-center justify-center left-6 top-[211px] px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
+                <a href={card.href} className="absolute bg-[#5645f5] flex items-center justify-center left-6 top-[211px] px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
                   <span className="font-heading font-bold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
                     {card.cta}
                   </span>
-                </button>
+                </a>
               </div>
             ))}
           </div>

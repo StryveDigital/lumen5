@@ -1,6 +1,8 @@
 // LP2 — final dark CTA module
 // Figma node: 57:1269
 
+import { CTA } from '../../shared/cta-urls';
+
 const imgShapeLeft  = "https://www.figma.com/api/mcp/asset/ad6c5deb-47ce-4c3f-81c3-efbbaeb8a2e4"; // pink decorative shape
 const imgShapeRight = "https://www.figma.com/api/mcp/asset/c11c764e-fe4a-49b6-97f1-69efdea117d3"; // green decorative shape
 
@@ -15,11 +17,11 @@ export default function CtaModule() {
         <p className="font-body font-normal text-[20px] leading-[36px] text-[#fafafa] text-center w-[669px]">
           Twenty minutes from upload to schedule clip pack.
         </p>
-        <button className="bg-[#5645f5] flex items-center justify-center px-8 py-5 rounded-full shrink-0 hover:opacity-90 transition-opacity mt-4">
-          <p className="font-heading font-bold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap">
+        <a href={CTA.signup} className="bg-[#5645f5] flex items-center justify-center px-8 py-5 rounded-full shrink-0 hover:opacity-90 transition-opacity mt-4">
+          <span className="font-heading font-bold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap">
             Build my clip pack
-          </p>
-        </button>
+          </span>
+        </a>
         <p className="font-body font-normal text-[16px] leading-[24px] text-[#fafafa] text-center opacity-70 mt-2">
           Free plan • No credit card required
         </p>
