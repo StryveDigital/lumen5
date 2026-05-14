@@ -6,10 +6,10 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-// Siemens HQ photo with the green leaf decoration baked in (mirrors LP1's
-// bw-hotel.png approach). The Figma asset for the photo is a vector
-// placeholder, so we render the actual building photo from /public/.
+// Siemens HQ photo (clean, no decoration baked in) + separate green leaf
+// shape that peeks above and to the left of the photo, matching Figma.
 const imgSiemensBuilding = "/siemens-building.png";
+const imgSiemensLeaf = "/siemens-leaf.png";
 const imgQuoteL  = "https://www.figma.com/api/mcp/asset/a6cae893-1b24-49d8-8ed4-0593668d8b74";
 const imgQuoteR  = "https://www.figma.com/api/mcp/asset/e55d9abe-a9dc-439d-b54b-29f8ae0f27d0";
 
@@ -81,9 +81,18 @@ export default function StatsModule() {
         </div>
         {/* Image + Stats — absolute layout to match Figma proportions */}
         <div ref={ref} className="h-[594px] relative w-[1230px]">
-          {/* Siemens HQ photo (green leaf decoration baked in) */}
+          {/* Siemens HQ photo with separate green leaf decoration peeking above-left */}
           <div className="absolute left-[56px] size-[479px] top-[115px]">
-            <img alt="Siemens headquarters" className="block size-full object-cover" src={imgSiemensBuilding} />
+            <img
+              alt=""
+              className="absolute -top-[42px] -left-[28px] w-[220px] h-[152px] z-0 pointer-events-none"
+              src={imgSiemensLeaf}
+            />
+            <img
+              alt="Siemens headquarters"
+              className="relative z-10 block size-full object-cover rounded-2xl"
+              src={imgSiemensBuilding}
+            />
           </div>
           {/* Stats */}
           <div className="absolute flex flex-col gap-10 items-start left-[633px] top-[153px] w-[544px]">
