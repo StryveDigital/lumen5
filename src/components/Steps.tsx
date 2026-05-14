@@ -1,6 +1,6 @@
-const imgStep1 = "https://www.figma.com/api/mcp/asset/8f0ed57e-60d4-491c-888e-7bd686744f19";
-const imgStep2 = "https://www.figma.com/api/mcp/asset/974a58d2-58e1-409f-a59c-b8f96ad2156c";
-const imgStep3 = "https://www.figma.com/api/mcp/asset/584dacf3-8f68-482f-9fc5-70c73bc5a5f6";
+const imgStep1 = "/step-1.png";
+const imgStep2 = "/step-2.png";
+const imgStep3 = "/step-3.png";
 
 const steps = [
   {
