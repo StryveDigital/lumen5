@@ -14,10 +14,10 @@ const imgStar2     = "https://www.figma.com/api/mcp/asset/2b220b1d-3912-40c0-ade
 function Logo() {
   return (
     <div className="flex items-center gap-2">
-      <svg width="28" height="36" viewBox="0 0 28 36" fill="none">
+      <svg width="34" height="44" viewBox="0 0 28 36" fill="none">
         <path d="M16 0L0 20h12L9 36 28 14H16L16 0z" fill="#5645f5"/>
       </svg>
-      <span className="font-heading font-bold text-[22px] text-[#fafafa] tracking-tight">lumen5</span>
+      <span className="font-heading font-bold text-[28px] text-[#fafafa] tracking-tight">lumen5</span>
     </div>
   );
 }
@@ -26,10 +26,10 @@ export default function Banner() {
   return (
     <div className="flex items-stretch relative bg-[#201e26]">
       {/* Left */}
-      <div className="bg-[#201e26] flex flex-col gap-12 items-start pl-[160px] py-[104px] flex-[1_0_0] min-w-0">
+      <div className="bg-[#201e26] flex flex-col gap-12 items-start pl-[110px] py-[104px] flex-[1_0_0] min-w-0">
         <Logo />
-        <div className="flex flex-col gap-8 items-start w-[480px]">
-          <h1 className="font-heading font-semibold text-[52px] leading-[66px] text-[#fafafa]">
+        <div className="flex flex-col gap-8 items-start w-[530px]">
+          <h1 className="font-heading font-semibold text-[58px] leading-[72px] text-[#fafafa]">
             Built for the marketer who has to press publish
           </h1>
           <p className="font-body font-normal text-[20px] leading-[36px] text-[#fafafa]">
