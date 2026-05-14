@@ -5,13 +5,12 @@
 // requestAnimationFrame ease-out cubic count-up).
 
 import { useEffect, useRef, useState } from 'react';
+import QuoteGlyph from './QuoteGlyph';
 
 // Siemens HQ photo (clean, no decoration baked in) + separate green leaf
 // shape that peeks above and to the left of the photo, matching Figma.
 const imgSiemensBuilding = "/siemens-building.png";
 const imgSiemensLeaf = "/siemens-leaf.png";
-const imgQuoteL  = "https://www.figma.com/api/mcp/asset/a6cae893-1b24-49d8-8ed4-0593668d8b74";
-const imgQuoteR  = "https://www.figma.com/api/mcp/asset/e55d9abe-a9dc-439d-b54b-29f8ae0f27d0";
 
 function useInView<T extends HTMLElement>(threshold = 0.3) {
   const [inView, setInView] = useState(false);
@@ -114,13 +113,8 @@ export default function StatsModule() {
 
       {/* Testimonial quote */}
       <div className="bg-[#fafafa] flex gap-12 items-start p-12 rounded-2xl w-[1120px]">
-        <div className="h-[93px] overflow-clip relative shrink-0 w-[120px]">
-          <div className="absolute inset-[0_0_0.23%_56.01%]">
-            <img alt="" className="absolute inset-0 block size-full" src={imgQuoteL} />
-          </div>
-          <div className="absolute inset-[0.23%_56%_0_0]">
-            <img alt="" className="absolute inset-0 block size-full" src={imgQuoteR} />
-          </div>
+        <div className="shrink-0">
+          <QuoteGlyph width={120} height={93} />
         </div>
         <div className="flex flex-col gap-6 flex-1 min-w-0">
           <p className="font-body font-normal text-[20px] leading-[36px] text-[#201e26]">

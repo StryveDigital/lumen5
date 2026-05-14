@@ -9,7 +9,7 @@ export default function CtaModule() {
     <div className="bg-[#201e26] relative w-full overflow-hidden" style={{ minHeight: 432 }}>
       {/* Centered content */}
       <div className="flex flex-col gap-3 items-center justify-center pt-[104px] pb-[104px] px-16 relative z-10">
-        <h2 className="font-heading font-semibold text-[42px] leading-[60px] text-[#fafafa] text-center w-[800px]">
+        <h2 className="font-heading font-semibold text-[42px] leading-[60px] text-[#fafafa] text-center whitespace-nowrap">
           Every webinar in your library can do more
         </h2>
         <p className="font-body font-normal text-[20px] leading-[36px] text-[#fafafa] text-center w-[669px]">
@@ -17,7 +17,7 @@ export default function CtaModule() {
         </p>
         <button className="bg-[#5645f5] flex items-center justify-center px-8 py-5 rounded-full shrink-0 hover:opacity-90 transition-opacity mt-4">
           <p className="font-heading font-bold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap">
-            Make my next video
+            Build my clip pack
           </p>
         </button>
         <p className="font-body font-normal text-[16px] leading-[24px] text-[#fafafa] text-center opacity-70 mt-2">
