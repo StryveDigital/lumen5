@@ -1,12 +1,32 @@
 // LP2 — CMS testimonial (quote box, no stats)
 // Figma node: 89:1897 (Testimonial 2)
 
-const imgQuoteL  = "https://www.figma.com/api/mcp/asset/e764e2cf-09a5-452c-a2ef-7dc884182543"; // purple left-half of quote glyph
-const imgQuoteR  = "https://www.figma.com/api/mcp/asset/47966036-9d88-4397-a774-f384ae366e28"; // purple right-half of quote glyph
 // The Figma asset for the CMS card is a vector placeholder that exports empty,
 // so we render the actual CMS office photo from /public/ (cropped from a Figma
 // node screenshot, mirrors the bw-hotel.png approach LP1 uses).
 const imgCmsCard = "/cms-card.png";
+
+// Stylized double-quote glyph: two curl shapes side-by-side, in Lumen5 purple.
+// Previously this rendered as two halves of a single Figma asset URL, but both
+// URLs returned the same single-curl SVG, producing a 12% horizontal gap. Now
+// inlined so it's deploy-stable (no Figma URL expiry) and tightly grouped.
+const CURL_PATH = "M40.4767 0L46.4645 9.742C46.4645 9.742 20.6157 21.8944 18.3035 47.6977C18.3035 47.6977 30.9582 41.6891 42.2496 49.7473C42.2496 49.7473 50.9041 55.7559 52.4972 65.0369C54.0903 74.3178 49.0564 85.468 41.1659 89.3367C41.1659 89.3367 23.7519 99.9858 9.73887 83.8744C-4.28418 67.768 -9.86244 26.1641 40.4767 0Z";
+
+function QuoteGlyph({ width, height }: { width: number; height: number }) {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="-10 0 122 100"
+      fill="#5645F5"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path d={CURL_PATH} />
+      <path d={CURL_PATH} transform="translate(55 0)" />
+    </svg>
+  );
+}
 
 export default function Testimonial() {
   return (
@@ -15,13 +35,8 @@ export default function Testimonial() {
         {/* Quote + CMS branded square (the CMS-logo square sits inside the quote slot) */}
         <div className="relative shrink-0">
           <img alt="CMS law tax future" src={imgCmsCard} width={197} height={198} className="block ml-[43px] mt-[27px]" />
-          <div className="absolute top-0 left-0 h-[69px] w-[89px] overflow-clip">
-            <div className="absolute inset-[0_0_0.23%_56.01%]">
-              <img alt="" src={imgQuoteL} className="absolute block inset-0 size-full" />
-            </div>
-            <div className="absolute inset-[0.23%_56%_0_0]">
-              <img alt="" src={imgQuoteR} className="absolute block inset-0 size-full" />
-            </div>
+          <div className="absolute top-0 left-0">
+            <QuoteGlyph width={89} height={69} />
           </div>
         </div>
         {/* Quote + creds */}
