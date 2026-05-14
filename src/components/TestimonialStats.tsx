@@ -1,12 +1,12 @@
 const imgShape8  = "https://www.figma.com/api/mcp/asset/f13670d4-4371-427e-8d29-37ce5f191469";
-const imgBW      = "https://www.figma.com/api/mcp/asset/817543d2-ca55-4ed0-9ec2-fb65b1df3519";
+const imgBW      = "/bw-hotel.png";
 const imgQuoteL  = "https://www.figma.com/api/mcp/asset/d032e11d-26f5-440a-8529-8d97763555d1";
 const imgQuoteR  = "https://www.figma.com/api/mcp/asset/bf236df1-57c5-4add-8f2b-422d84e9e661";
 
 const stats = [
-  { value: "97%",  label: "Reduced time to create videos." },
-  { value: "480+", label: "Videos created in one year." },
-  { value: "94%",  label: "Cost reduction compared to agency prices" },
+  { value: "0%",  label: "Reduced time to create videos." },
+  { value: "1+",  label: "Videos created in one year." },
+  { value: "0%",  label: "Cost reduction compared to agency prices" },
 ];
 
 export default function TestimonialStats() {
@@ -31,20 +31,16 @@ export default function TestimonialStats() {
               <img alt="" className="block h-[222px] w-[200px]" src={imgShape8} />
             </div>
           </div>
-          {/* Hotel photo — swap imgBW for the real asset once hosted */}
+          {/* Hotel photo */}
           <div className="absolute left-[56px] size-[479px] top-[115px]">
             <div className="absolute inset-0 rounded-3xl bg-[#e2e8f0] overflow-hidden">
-              <img alt="Best Western Hotels" className="absolute block inset-0 max-w-none size-full object-cover" src={imgBW}
-                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-              <div className="flex items-center justify-center size-full text-[#94a3b8] font-['Inter',sans-serif] text-sm">
-                Best Western hotel photo
-              </div>
+              <img alt="Best Western Hotels" className="absolute block inset-0 max-w-none size-full object-cover" src={imgBW} />
             </div>
           </div>
           {/* Stats */}
           <div className="absolute flex flex-col gap-10 items-start left-[633px] top-[153px] w-[544px]">
             {stats.map(({ value, label }) => (
-              <div key={value} className="flex items-center w-full">
+              <div key={label} className="flex items-center w-full">
                 <div className="h-[71px] overflow-clip relative shrink-0 w-[150px]">
                   <p className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[52px] leading-[66px] text-[#201e26] whitespace-nowrap">
                     {value}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="60" viewBox="0 0 300 60" preserveAspectRatio="xMidYMid meet">
+  <text x="150" y="48"
+        text-anchor="middle"
+        font-family="Helvetica, Arial, sans-serif"
+        font-weight="700"
+        font-size="56"
+        letter-spacing="-1"
+        fill="#000">SIEMENS</text>
+</svg>
