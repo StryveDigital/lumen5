@@ -112,7 +112,7 @@ export default function CalendarModule() {
         </div>
 
         {/* Checkmarks */}
-        <div className="flex flex-col gap-4 mt-6 ml-[79px] w-[601px] relative z-10">
+        <div className="flex flex-col gap-4 mt-6 ml-[79px] w-[720px] relative z-10">
           {[
             'Same content team, zero new headcount.',
             '46 videos snipped!',
