@@ -151,11 +151,7 @@ export default function CalendarModule() {
             "A CMO off your back about why you don't have a video team yet.",
           ].map(text => (
             <div key={text} className="flex items-center gap-6">
-              <div className="bg-[#46e378] rounded-full size-6 flex items-center justify-center shrink-0">
-                <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
-                  <path d="M1 4L4.5 7L11 1" stroke="#201e26" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
+              <img alt="" src="/check-icon.svg" width={24} height={24} className="block shrink-0" />
               <p className="font-['Inter',sans-serif] font-normal text-[18px] leading-[30px] text-[#201e26]">{text}</p>
             </div>
           ))}
