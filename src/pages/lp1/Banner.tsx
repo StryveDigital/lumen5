@@ -32,7 +32,7 @@ export default function Banner() {
           <p className="font-body font-normal text-[18px] leading-[30px] md:text-[22px] md:leading-[38px] text-[#fafafa]">
             Turn the blog you already wrote into a video that's on-brand and ready to ship in minutes.
           </p>
-          <a href={CTA.signup} className="bg-[#5645f5] px-8 py-5 rounded-full font-heading font-bold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap hover:opacity-90 transition-opacity">
+          <a href={CTA.signup} className="bg-[#5645f5] px-8 py-5 rounded-full font-heading font-semibold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap hover:opacity-90 transition-opacity">
             Make my next video
           </a>
         </div>

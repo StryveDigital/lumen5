@@ -7,10 +7,9 @@
 import { useEffect, useRef, useState } from 'react';
 import QuoteGlyph from './QuoteGlyph';
 
-// Siemens HQ photo (clean, no decoration baked in) + separate green leaf
-// shape that peeks above and to the left of the photo, matching Figma.
-const imgSiemensBuilding = "/siemens-building.png";
-const imgSiemensLeaf = "/siemens-leaf.png";
+// Case study image — frame with rounded corners, notched bottom-right, and
+// green leaf decoration extending above-left (all baked into the PNG).
+const imgSiemensCase = "/siemens-case.png";
 
 function useInView<T extends HTMLElement>(threshold = 0.3) {
   const [inView, setInView] = useState(false);
@@ -78,23 +77,16 @@ export default function StatsModule() {
             Siemens transformed digital communication with Lumen5
           </h2>
         </div>
-        {/* Image + Stats — stack on mobile, absolute Figma layout on desktop */}
-        <div ref={ref} className="relative w-full flex flex-col gap-10 items-center xl:block xl:h-[594px] xl:w-[1230px] md:max-w-[1230px]">
-          {/* Siemens HQ photo + green leaf decoration */}
-          <div className="relative size-[280px] sm:size-[360px] xl:absolute xl:left-[56px] xl:size-[479px] xl:top-[115px]">
-            <img
-              alt=""
-              className="absolute -top-[28px] -left-[18px] w-[140px] h-[96px] xl:-top-[42px] xl:-left-[28px] xl:w-[220px] xl:h-[152px] z-0 pointer-events-none"
-              src={imgSiemensLeaf}
-            />
-            <img
-              alt="Siemens headquarters"
-              className="relative z-10 block size-full object-cover rounded-2xl"
-              src={imgSiemensBuilding}
-            />
-          </div>
+        {/* Image + Stats — stacked on mobile, side-by-side flex on desktop with vertical centering */}
+        <div ref={ref} className="relative w-full flex flex-col xl:flex-row gap-10 xl:gap-[120px] items-center xl:items-center xl:justify-center xl:max-w-[1230px]">
+          {/* Case study image with rounded corners, notched bottom-right, and leaf baked in */}
+          <img
+            alt="Siemens headquarters"
+            src={imgSiemensCase}
+            className="block shrink-0 w-[280px] h-[282px] sm:w-[360px] sm:h-[362px] xl:w-[535px] xl:h-[539px] object-contain"
+          />
           {/* Stats */}
-          <div className="flex flex-col gap-6 md:gap-10 items-start w-full max-w-[544px] xl:absolute xl:left-[633px] xl:top-[153px] xl:w-[544px]">
+          <div className="flex flex-col gap-6 xl:gap-10 items-start w-full max-w-[544px] xl:w-[544px]">
             {STATS.map((stat, i) => (
               <div key={stat.label} className="flex items-center w-full gap-[17px]">
                 <div className="h-[71px] overflow-hidden relative shrink-0 w-[157px]">

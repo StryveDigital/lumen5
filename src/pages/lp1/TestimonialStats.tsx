@@ -4,7 +4,9 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-const imgBW      = "/bw-hotel.png";
+// Case study image — frame with rounded corners, notched bottom-right, and
+// green leaf decoration extending above-left (all baked into the PNG).
+const imgBW      = "/best-western-case.png";
 const imgQuoteL  = "https://www.figma.com/api/mcp/asset/d032e11d-26f5-440a-8529-8d97763555d1";
 const imgQuoteR  = "https://www.figma.com/api/mcp/asset/bf236df1-57c5-4add-8f2b-422d84e9e661";
 
@@ -71,16 +73,16 @@ export default function TestimonialStats() {
             How Best Western Hotels transformed its video marketing
           </p>
         </div>
-        {/* Image + Stats — stack on mobile, absolute Figma layout on desktop */}
-        <div ref={ref} className="relative w-full flex flex-col gap-10 items-center xl:block xl:h-[594px] xl:w-[1230px] md:max-w-[1230px]">
-          {/* Hotel photo (green leaf decoration is baked into the photo asset itself) */}
-          <div className="relative size-[280px] sm:size-[360px] xl:absolute xl:left-[56px] xl:size-[479px] xl:top-[115px]">
-            <div className="absolute inset-0 rounded-3xl bg-[#e2e8f0] overflow-hidden">
-              <img alt="Best Western Hotels" className="absolute block inset-0 max-w-none size-full object-cover" src={imgBW} />
-            </div>
-          </div>
+        {/* Image + Stats — stacked on mobile, side-by-side flex on desktop with vertical centering */}
+        <div ref={ref} className="relative w-full flex flex-col xl:flex-row gap-10 xl:gap-[120px] items-center xl:items-center xl:justify-center xl:max-w-[1230px]">
+          {/* Case study image with rounded corners, notched bottom-right, and leaf baked in */}
+          <img
+            alt="Best Western Hotels"
+            src={imgBW}
+            className="block shrink-0 w-[280px] h-[282px] sm:w-[360px] sm:h-[362px] xl:w-[535px] xl:h-[539px] object-contain"
+          />
           {/* Stats */}
-          <div className="flex flex-col gap-6 md:gap-10 items-start w-full max-w-[544px] xl:absolute xl:left-[633px] xl:top-[153px] xl:w-[544px]">
+          <div className="flex flex-col gap-6 xl:gap-10 items-start w-full max-w-[544px] xl:w-[544px]">
             {STATS.map((stat, i) => (
               <div key={stat.label} className="flex items-center w-full">
                 <div className="h-[71px] overflow-clip relative shrink-0 w-[150px]">

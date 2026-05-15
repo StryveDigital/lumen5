@@ -21,7 +21,7 @@ export default function Banner() {
   return (
     <div className="bg-[#201e26] flex flex-col xl:flex-row items-stretch w-full overflow-hidden">
       {/* Left: Logo + heading + buttons */}
-      <div className="flex-1 flex flex-col gap-8 md:gap-12 items-start justify-center px-6 xl:pl-[160px] xl:pr-0 py-[72px] md:py-[104px] min-w-px">
+      <div className="flex-1 flex flex-col gap-8 md:gap-12 items-start justify-center px-6 xl:pl-[110px] xl:pr-0 py-[72px] md:py-[104px] min-w-px">
         <img alt="Lumen5" src={imgLogo} width={200} height={53} className="block" />
         <div className="flex flex-col gap-6 md:gap-8 items-start w-full max-w-[503px]">
           <p className="font-heading font-semibold text-[18px] leading-[28px] md:text-[22px] md:leading-[48px] text-[#fafafa]">
@@ -35,12 +35,12 @@ export default function Banner() {
           </p>
           <div className="flex flex-wrap gap-[12px] md:gap-[18px] items-start mt-2">
             <a href={CTA.demo} className="bg-[#5645f5] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
-              <span className="font-heading font-bold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
+              <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
                 Get a demo
               </span>
             </a>
             <a href={CTA.demo} className="bg-[#fafafa] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
-              <span className="font-heading font-bold text-[16px] leading-[30px] text-[#5645f5] whitespace-nowrap">
+              <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#5645f5] whitespace-nowrap">
                 Talk to sales
               </span>
             </a>

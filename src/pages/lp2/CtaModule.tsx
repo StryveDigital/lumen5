@@ -18,7 +18,7 @@ export default function CtaModule() {
           Twenty minutes from upload to schedule clip pack.
         </p>
         <a href={CTA.signup} className="bg-[#5645f5] flex items-center justify-center px-8 py-5 rounded-full shrink-0 hover:opacity-90 transition-opacity mt-4">
-          <span className="font-heading font-bold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap">
+          <span className="font-heading font-semibold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap">
             Build my clip pack
           </span>
         </a>

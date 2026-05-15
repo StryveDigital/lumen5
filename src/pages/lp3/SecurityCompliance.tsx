@@ -30,12 +30,12 @@ export default function SecurityCompliance() {
         </div>
         <div className="flex flex-wrap gap-3 md:gap-5 items-center mt-2">
           <a href={CTA.trust} className="bg-[#5645f5] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
-            <span className="font-heading font-bold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
+            <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
               Visit our trust center
             </span>
           </a>
           <a href={CTA.demo} className="flex gap-[10px] items-center justify-center px-2 py-4 rounded-full hover:opacity-80 transition-opacity">
-            <span className="font-heading font-bold text-[16px] leading-[30px] text-[#5645f5] whitespace-nowrap">
+            <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#5645f5] whitespace-nowrap">
               Request Demo
             </span>
             <img alt="" src={imgArrow} width={11.5} height={8} className="block" />

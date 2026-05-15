@@ -7,7 +7,7 @@ export default function SmallCta() {
         Your blog post is already half a video
       </p>
       <a href={CTA.signup} className="bg-[#5645f5] flex items-center justify-center px-8 py-5 rounded-full shrink-0 hover:opacity-90 transition-opacity">
-        <span className="font-heading font-bold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap">
+        <span className="font-heading font-semibold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap">
           Make my next video
         </span>
       </a>

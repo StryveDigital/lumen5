@@ -46,11 +46,13 @@ export default function LogoMarquee({ heading, logos }: Props) {
     let startTime: number | null = null;
     let lastTime: number | null = null;
     let raf = 0;
-    // The track contains the logos twice; one "set" is half the track width.
-    let setWidth = t.scrollWidth / 2;
+    // The track contains the logos N times; one "set" is scrollWidth / N. More
+    // copies = the wrap-around point is further out, so it never visibly resets.
+    const REPEAT = 5;
+    let setWidth = t.scrollWidth / REPEAT;
 
     const measure = () => {
-      setWidth = t.scrollWidth / 2;
+      setWidth = t.scrollWidth / REPEAT;
     };
     window.addEventListener('resize', measure);
 
@@ -101,7 +103,9 @@ export default function LogoMarquee({ heading, logos }: Props) {
           ref={trackRef}
           className="flex items-center gap-16 w-max will-change-transform"
         >
-          {[...logos, ...logos].map((logo, i) => {
+          {/* 5 copies of the logo set — keep this in sync with REPEAT in the
+              effect above so the wrap math (scrollWidth / REPEAT) is correct. */}
+          {Array.from({ length: 5 }, () => logos).flat().map((logo, i) => {
             const { width, height } = logoSize(logo.aspect);
             return (
               <div key={`${logo.alt}-${i}`} className="flex h-[80px] items-center justify-center shrink-0" style={{ width: MAX_W }}>

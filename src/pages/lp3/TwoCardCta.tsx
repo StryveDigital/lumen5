@@ -63,7 +63,7 @@ export default function TwoCardCta() {
                   </p>
                 </div>
                 <a href={card.href} className="absolute bg-[#5645f5] flex items-center justify-center left-6 top-[211px] px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
-                  <span className="font-heading font-bold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
+                  <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
                     {card.cta}
                   </span>
                 </a>

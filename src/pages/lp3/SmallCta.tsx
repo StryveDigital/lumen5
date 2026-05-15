@@ -10,12 +10,12 @@ export default function SmallCta() {
       </p>
       <div className="flex flex-wrap gap-3 md:gap-5 items-center shrink-0">
         <a href={CTA.signup} className="bg-[#5645f5] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
-          <span className="font-heading font-bold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
-            Try with brand assets
+          <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
+            See it on my brand
           </span>
         </a>
         <a href={CTA.demo} className="bg-[#fafafa] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
-          <span className="font-heading font-bold text-[16px] leading-[30px] text-[#5645f5] whitespace-nowrap">
+          <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#5645f5] whitespace-nowrap">
             Talk to us
           </span>
         </a>

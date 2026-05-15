@@ -5,9 +5,9 @@
 import { useEffect, useRef, useState } from 'react';
 import QuoteGlyph from '../lp2/QuoteGlyph';
 
-const imgSwissReBuilding = "/swissre-building.png";
-// Green leaf decoration. Figma asset URL expires ~7 days; keep an eye on it.
-const imgLeaf = "https://www.figma.com/api/mcp/asset/cc850674-7ee7-4bb1-aa7a-9a0f17ca7e8b";
+// Case study image — frame with rounded corners, notched bottom-right, and
+// green leaf decoration extending above-left (all baked into the PNG).
+const imgSwissReCase = "/swiss-re-case.png";
 
 function useInView<T extends HTMLElement>(threshold = 0.3) {
   const [inView, setInView] = useState(false);
@@ -75,22 +75,15 @@ export default function StatsModule() {
             Swiss Re Banked on Lumen5 for Social Engagement
           </h2>
         </div>
-        <div ref={ref} className="relative w-full flex flex-col gap-10 items-center xl:block xl:h-[594px] xl:w-[1230px] md:max-w-[1230px]">
-          {/* Swiss Re photo with separate green leaf decoration peeking above-left */}
-          <div className="relative size-[280px] sm:size-[360px] xl:absolute xl:left-[56px] xl:size-[479px] xl:top-[115px]">
-            <img
-              alt=""
-              className="absolute -top-[26px] -left-[18px] w-[135px] h-[96px] xl:-top-[40px] xl:-left-[30px] xl:w-[210px] xl:h-[150px] z-0 pointer-events-none"
-              src={imgLeaf}
-            />
-            <img
-              alt="Swiss Re headquarters"
-              className="relative z-10 block size-full object-cover rounded-2xl"
-              src={imgSwissReBuilding}
-            />
-          </div>
+        <div ref={ref} className="relative w-full flex flex-col xl:flex-row gap-10 xl:gap-[120px] items-center xl:items-center xl:justify-center xl:max-w-[1230px]">
+          {/* Case study image with rounded corners, notched bottom-right, and leaf baked in */}
+          <img
+            alt="Swiss Re headquarters"
+            src={imgSwissReCase}
+            className="block shrink-0 w-[280px] h-[282px] sm:w-[360px] sm:h-[362px] xl:w-[535px] xl:h-[539px] object-contain"
+          />
           {/* Stats column */}
-          <div className="flex flex-col gap-6 md:gap-10 items-start w-full max-w-[544px] xl:absolute xl:left-[633px] xl:top-[153px] xl:w-[544px]">
+          <div className="flex flex-col gap-6 xl:gap-10 items-start w-full max-w-[544px] xl:w-[544px]">
             {STATS.map((stat, i) => (
               <div key={stat.label} className="flex items-center w-full gap-[17px]">
                 <div className="h-[71px] overflow-hidden relative shrink-0 w-[157px]">
