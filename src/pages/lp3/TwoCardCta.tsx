@@ -34,8 +34,8 @@ export default function TwoCardCta() {
   return (
     <div className="bg-[#201e26] relative w-full overflow-hidden py-[72px] md:py-[104px] px-6 md:px-16">
       {/* Decorative shapes peeking from edges (hidden on mobile) */}
-      <img alt="" src={imgShape8} className="hidden md:block absolute pointer-events-none" style={{ left: -36, top: 63, width: 200, height: 222, transform: 'rotate(94.9deg)' }} />
-      <img alt="" src={imgShape6} className="hidden md:block absolute pointer-events-none" style={{ right: -120, top: 380, width: 281, height: 294, transform: 'rotate(124.41deg)' }} />
+      <img alt="" src={imgShape8} className="hidden xl:block absolute pointer-events-none" style={{ left: -36, top: 63, width: 200, height: 222, transform: 'rotate(94.9deg)' }} />
+      <img alt="" src={imgShape6} className="hidden xl:block absolute pointer-events-none" style={{ right: -120, top: 380, width: 281, height: 294, transform: 'rotate(124.41deg)' }} />
 
       {/* Content */}
       <div className="relative flex flex-col gap-3 items-center justify-center z-10">
@@ -48,9 +48,9 @@ export default function TwoCardCta() {
           </p>
 
           {/* Two cards */}
-          <div className="flex flex-col md:flex-row gap-7 items-stretch md:items-center w-full md:w-auto">
+          <div className="flex flex-col xl:flex-row gap-7 items-stretch xl:items-center w-full md:w-auto">
             {cards.map(card => (
-              <div key={card.title} className="bg-[#fafafa] relative h-[305px] w-full md:w-[600px] rounded-2xl">
+              <div key={card.title} className="bg-[#fafafa] relative h-[305px] w-full xl:w-[600px] rounded-2xl">
                 <div className="absolute flex flex-col gap-[15px] items-start left-6 right-6 top-8">
                   <p className="font-heading font-semibold text-[20px] leading-[30px] text-black">
                     {card.eyebrow}

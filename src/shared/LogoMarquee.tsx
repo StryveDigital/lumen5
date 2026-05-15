@@ -86,7 +86,7 @@ export default function LogoMarquee({ heading, logos }: Props) {
 
   return (
     <div className="bg-[#fafafa] flex flex-col gap-7 items-center justify-center py-10 md:py-14 relative w-full">
-      <p className="font-heading font-semibold text-[16px] leading-[24px] text-[#201e26] text-center px-6 md:px-0">
+      <p className="font-heading font-semibold text-[16px] leading-[24px] text-[#201e26] text-center px-6 xl:px-0">
         {heading}
       </p>
       <div

@@ -21,9 +21,9 @@ function Logo() {
 
 export default function Banner() {
   return (
-    <div className="flex flex-col md:flex-row items-stretch relative bg-[#201e26]">
+    <div className="flex flex-col xl:flex-row items-stretch relative bg-[#201e26]">
       {/* Left */}
-      <div className="bg-[#201e26] flex flex-col gap-8 items-start px-6 md:pl-[110px] md:pr-0 py-[72px] md:py-[104px] flex-[1_0_0] min-w-0">
+      <div className="bg-[#201e26] flex flex-col gap-8 items-start px-6 xl:pl-[110px] xl:pr-0 py-[72px] md:py-[104px] flex-[1_0_0] min-w-0">
         <Logo />
         <div className="flex flex-col gap-6 items-start w-full max-w-[530px]">
           <h1 className="font-heading font-semibold text-[36px] leading-[44px] md:text-[58px] md:leading-[72px] text-[#fafafa]">
@@ -39,7 +39,7 @@ export default function Banner() {
       </div>
 
       {/* Right — hidden on mobile, shown on md+ */}
-      <div className="hidden md:block bg-[#201e26] h-[705px] overflow-clip relative shrink-0 w-[800px]">
+      <div className="hidden xl:block bg-[#201e26] h-[705px] overflow-clip relative shrink-0 w-[800px]">
         {/* Pink blob */}
         <img alt="" className="absolute block max-w-none h-[797px] w-[942px] left-[38px] top-[-140px]" src={imgShape3} />
 

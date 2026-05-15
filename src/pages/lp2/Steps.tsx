@@ -48,9 +48,9 @@ export default function Steps() {
         </p>
       </div>
       {/* Cards */}
-      <div className="flex flex-col md:flex-row gap-8 items-stretch justify-center w-full md:w-auto">
+      <div className="flex flex-col xl:flex-row gap-8 items-stretch justify-center w-full md:w-auto">
         {steps.map(({ badge, badgeColor, title, desc, caption, img }) => (
-          <div key={title} className="bg-white flex flex-col justify-between gap-[41px] items-start px-6 py-8 rounded-2xl w-full md:w-[352px]">
+          <div key={title} className="bg-white flex flex-col justify-between gap-[41px] items-start px-6 py-8 rounded-2xl w-full xl:w-[352px]">
             {/* Top: tag + heading + body */}
             <div className="flex flex-col gap-6 items-start w-full">
               <div className={`${badgeColor} flex items-center justify-center px-4 py-2 rounded-full shrink-0`}>
@@ -66,8 +66,8 @@ export default function Steps() {
               <div className="aspect-[352/198] relative rounded-2xl w-full overflow-hidden bg-[#fafafa]">
                 <img alt={title} className="absolute inset-0 size-full object-contain" src={img} />
               </div>
-              <div className="bg-[#efecff] flex items-center px-3 py-[6px] rounded-full">
-                <p className="font-body font-normal text-[12px] leading-[21px] text-[#201e26] whitespace-nowrap">{caption}</p>
+              <div className="bg-[#efecff] flex items-center px-3 py-[6px] rounded-full max-w-full">
+                <p className="font-body font-normal text-[12px] leading-[21px] text-[#201e26]">{caption}</p>
               </div>
             </div>
           </div>

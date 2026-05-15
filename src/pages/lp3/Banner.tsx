@@ -19,9 +19,9 @@ const imgBrandFrame   = "https://www.figma.com/api/mcp/asset/f1caa9ce-4f68-419a-
 
 export default function Banner() {
   return (
-    <div className="bg-[#201e26] flex flex-col md:flex-row items-stretch w-full overflow-hidden">
+    <div className="bg-[#201e26] flex flex-col xl:flex-row items-stretch w-full overflow-hidden">
       {/* Left: Logo + heading + buttons */}
-      <div className="flex-1 flex flex-col gap-8 md:gap-12 items-start justify-center px-6 md:pl-[160px] md:pr-0 py-[72px] md:py-[104px] min-w-px">
+      <div className="flex-1 flex flex-col gap-8 md:gap-12 items-start justify-center px-6 xl:pl-[160px] xl:pr-0 py-[72px] md:py-[104px] min-w-px">
         <img alt="Lumen5" src={imgLogo} width={200} height={53} className="block" />
         <div className="flex flex-col gap-6 md:gap-8 items-start w-full max-w-[503px]">
           <p className="font-heading font-semibold text-[18px] leading-[28px] md:text-[22px] md:leading-[48px] text-[#fafafa]">
@@ -49,7 +49,7 @@ export default function Banner() {
       </div>
 
       {/* Right: video illustration with decorative cards — hidden on mobile */}
-      <div className="hidden md:block relative shrink-0 w-[800px] h-[705px] overflow-hidden">
+      <div className="hidden xl:block relative shrink-0 w-[800px] h-[705px] overflow-hidden">
         {/* Large purple blob behind everything */}
         <img alt="" src={imgShape3} className="absolute pointer-events-none" style={{ width: 920, height: 110, left: 10, top: 600, transform: 'rotate(-81.86deg)', transformOrigin: 'top left' }} />
 

@@ -10,8 +10,8 @@ const imgCmsCard = "/cms-card.png";
 
 export default function Testimonial() {
   return (
-    <div className="bg-white flex flex-col items-center py-[72px] md:py-[104px] w-full px-6 md:px-0">
-      <div className="bg-[#fafafa] flex flex-col md:flex-row gap-8 md:gap-12 items-start p-8 md:p-12 rounded-2xl w-full max-w-[1120px]">
+    <div className="bg-white flex flex-col items-center py-[72px] md:py-[104px] w-full px-6 xl:px-0">
+      <div className="bg-[#fafafa] flex flex-col xl:flex-row gap-8 md:gap-12 items-start p-8 md:p-12 rounded-2xl w-full max-w-[1120px]">
         {/* Quote + CMS branded square (the CMS-logo square sits inside the quote slot) */}
         <div className="relative shrink-0">
           <img alt="CMS law tax future" src={imgCmsCard} width={197} height={198} className="block ml-[43px] mt-[27px]" />

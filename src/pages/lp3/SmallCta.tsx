@@ -4,7 +4,7 @@ import { CTA } from '../../shared/cta-urls';
 
 export default function SmallCta() {
   return (
-    <div className="bg-[#201e26] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-12 px-6 md:px-16 py-10 md:py-16 w-full">
+    <div className="bg-[#201e26] flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6 md:gap-12 px-6 md:px-16 py-10 md:py-16 w-full">
       <p className="font-heading font-semibold text-[24px] leading-[36px] md:text-[36px] md:leading-[60px] text-[#fafafa] w-full max-w-[829px]">
         Your governance shouldn&rsquo;t live in a Slack thread. See it run on your own content.
       </p>

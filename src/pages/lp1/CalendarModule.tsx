@@ -38,13 +38,13 @@ function PlayIcon() {
 
 export default function CalendarModule() {
   return (
-    <div className="bg-white flex flex-col gap-16 md:gap-[97px] items-center py-[72px] md:py-[104px] w-full px-6 md:px-0">
+    <div className="bg-white flex flex-col gap-16 md:gap-[97px] items-center py-[72px] md:py-[104px] w-full px-6 xl:px-0">
       {/* Heading */}
       <div className="flex flex-col gap-3 items-center text-center w-full max-w-[1080px]">
         <p className="font-heading font-semibold text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] text-[#201e26]">
           A real customer's quarter
         </p>
-        <p className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[60px] text-[#201e26] w-full md:whitespace-nowrap">
+        <p className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[60px] text-[#201e26] w-full xl:whitespace-nowrap">
           What a weekly cadence actually looks like
         </p>
         <div className="flex flex-wrap items-center justify-center gap-2">
@@ -61,16 +61,16 @@ export default function CalendarModule() {
       {/* Calendar + shapes */}
       <div className="relative w-full max-w-[1230px]">
         {/* Green diamond — top left (hidden on mobile) */}
-        <div className="hidden md:block absolute left-0 top-5 w-[213px] h-[286px] pointer-events-none z-0">
+        <div className="hidden xl:block absolute left-0 top-5 w-[213px] h-[286px] pointer-events-none z-0">
           <img alt="" className="block size-full" src={imgShape2} />
         </div>
         {/* Rotated blob — bottom right (hidden on mobile) */}
-        <div className="hidden md:block absolute right-[-40px] bottom-[220px] w-[260px] h-[220px] pointer-events-none rotate-[132.6deg] z-0">
+        <div className="hidden xl:block absolute right-[-40px] bottom-[220px] w-[260px] h-[220px] pointer-events-none rotate-[132.6deg] z-0">
           <img alt="" className="block size-full" src={imgShape3} />
         </div>
 
         {/* Desktop calendar — days as rows, weeks as columns */}
-        <div className="hidden md:block relative md:ml-[79px] w-[1119px] z-10">
+        <div className="hidden xl:block relative xl:ml-[79px] w-[1119px] z-10">
           <div className="absolute inset-0 translate-x-3 translate-y-2.5 bg-[#5645f5] border border-[#201e26] rounded-lg" />
           <div className="relative bg-white border border-[#201e26] rounded-lg overflow-hidden">
             <div className="border-b border-[#201e26] flex items-center justify-center py-4">
@@ -108,7 +108,7 @@ export default function CalendarModule() {
         </div>
 
         {/* Mobile calendar — transposed: weeks as rows, days as columns. Fits in 390px viewport. */}
-        <div className="block md:hidden relative w-full z-10">
+        <div className="block xl:hidden relative w-full z-10">
           <div className="absolute inset-0 translate-x-2 translate-y-2 bg-[#5645f5] border border-[#201e26] rounded-lg" />
           <div className="relative bg-white border border-[#201e26] rounded-lg overflow-hidden">
             <div className="border-b border-[#201e26] flex items-center justify-center py-3">
@@ -144,7 +144,7 @@ export default function CalendarModule() {
         </div>
 
         {/* Checkmarks */}
-        <div className="flex flex-col gap-4 mt-14 md:ml-[79px] w-full max-w-[720px] relative z-10">
+        <div className="flex flex-col gap-4 mt-14 xl:ml-[79px] w-full max-w-[720px] relative z-10">
           {[
             'Same content team, zero new headcount.',
             '46 videos snipped!',
@@ -163,7 +163,7 @@ export default function CalendarModule() {
       </div>
 
       {/* Testimonial */}
-      <div className="bg-[#fafafa] flex flex-col md:flex-row gap-6 md:gap-12 items-start p-8 md:p-12 rounded-2xl w-full max-w-[1120px]">
+      <div className="bg-[#fafafa] flex flex-col xl:flex-row gap-6 md:gap-12 items-start p-8 md:p-12 rounded-2xl w-full max-w-[1120px]">
         <div className="h-[93px] overflow-clip relative shrink-0 w-[120px]">
           <div className="absolute inset-[0_0_0.23%_56.01%]">
             <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgQuoteL} />

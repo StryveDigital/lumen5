@@ -59,7 +59,7 @@ export default function TestimonialStats() {
   const values = [v1, v2, v3];
 
   return (
-    <div className="bg-white flex flex-col gap-16 md:gap-[120px] items-center justify-center py-[80px] md:py-[140px] w-full px-6 md:px-0">
+    <div className="bg-white flex flex-col gap-16 md:gap-[120px] items-center justify-center py-[80px] md:py-[140px] w-full px-6 xl:px-0">
       {/* Heading + Image + Stats */}
       <div className="flex flex-col items-center w-full">
         {/* Heading */}
@@ -72,15 +72,15 @@ export default function TestimonialStats() {
           </p>
         </div>
         {/* Image + Stats — stack on mobile, absolute Figma layout on desktop */}
-        <div ref={ref} className="relative w-full flex flex-col gap-10 items-center md:block md:h-[594px] md:w-[1230px] md:max-w-[1230px]">
+        <div ref={ref} className="relative w-full flex flex-col gap-10 items-center xl:block xl:h-[594px] xl:w-[1230px] md:max-w-[1230px]">
           {/* Hotel photo (green leaf decoration is baked into the photo asset itself) */}
-          <div className="relative size-[280px] sm:size-[360px] md:absolute md:left-[56px] md:size-[479px] md:top-[115px]">
+          <div className="relative size-[280px] sm:size-[360px] xl:absolute xl:left-[56px] xl:size-[479px] xl:top-[115px]">
             <div className="absolute inset-0 rounded-3xl bg-[#e2e8f0] overflow-hidden">
               <img alt="Best Western Hotels" className="absolute block inset-0 max-w-none size-full object-cover" src={imgBW} />
             </div>
           </div>
           {/* Stats */}
-          <div className="flex flex-col gap-6 md:gap-10 items-start w-full max-w-[544px] md:absolute md:left-[633px] md:top-[153px] md:w-[544px]">
+          <div className="flex flex-col gap-6 md:gap-10 items-start w-full max-w-[544px] xl:absolute xl:left-[633px] xl:top-[153px] xl:w-[544px]">
             {STATS.map((stat, i) => (
               <div key={stat.label} className="flex items-center w-full">
                 <div className="h-[71px] overflow-clip relative shrink-0 w-[150px]">
@@ -98,7 +98,7 @@ export default function TestimonialStats() {
       </div>
 
       {/* Testimonial quote */}
-      <div className="bg-[#fafafa] flex flex-col md:flex-row gap-6 md:gap-12 items-start p-8 md:p-12 rounded-2xl w-full max-w-[1120px]">
+      <div className="bg-[#fafafa] flex flex-col xl:flex-row gap-6 md:gap-12 items-start p-8 md:p-12 rounded-2xl w-full max-w-[1120px]">
         <div className="h-[93px] overflow-clip relative shrink-0 w-[120px]">
           <div className="absolute inset-[0_0_0.23%_56.01%]">
             <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgQuoteL} />

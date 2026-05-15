@@ -46,4 +46,5 @@
 @tailwind utilities;
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+html, body { overflow-x: clip; }
+body { font-family: 'Inter', sans-serif; }

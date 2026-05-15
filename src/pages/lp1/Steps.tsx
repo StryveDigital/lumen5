@@ -39,9 +39,9 @@ export default function Steps() {
         </p>
       </div>
       {/* Cards */}
-      <div className="flex flex-col md:flex-row gap-8 items-stretch justify-center w-full md:w-auto">
+      <div className="flex flex-col xl:flex-row gap-8 items-stretch justify-center w-full md:w-auto">
         {steps.map(({ badge, badgeColor, title, desc, img }) => (
-          <div key={title} className="bg-white flex flex-col justify-between gap-[41px] items-start px-6 py-8 rounded-2xl w-full md:w-[352px]">
+          <div key={title} className="bg-white flex flex-col justify-between gap-[41px] items-start px-6 py-8 rounded-2xl w-full xl:w-[352px]">
             <div className="flex flex-col gap-6 items-start w-full">
               <div className={`${badgeColor} flex items-center justify-center px-4 py-2 rounded-full shrink-0`}>
                 <p className="font-heading font-semibold text-[14px] leading-[21px] text-[#201e26] whitespace-nowrap">{badge}</p>

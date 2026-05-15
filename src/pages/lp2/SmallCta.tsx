@@ -4,7 +4,7 @@ import { CTA } from '../../shared/cta-urls';
 
 export default function SmallCta() {
   return (
-    <div className="bg-[#201e26] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-0 px-6 md:px-16 py-10 md:py-12 w-full">
+    <div className="bg-[#201e26] flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6 md:gap-0 px-6 md:px-16 py-10 md:py-12 w-full">
       <p className="font-heading font-semibold text-[24px] leading-[32px] md:text-[32px] md:leading-[44px] text-[#fafafa]">
         One webinar in. A whole quarter of clips out.
       </p>

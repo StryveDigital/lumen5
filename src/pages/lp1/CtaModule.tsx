@@ -24,8 +24,8 @@ export default function CtaModule() {
         </p>
       </div>
       {/* Decorative shapes — peek in from the edges (hidden on mobile) */}
-      <img alt="" className="hidden md:block absolute h-[294px] left-[-107px] top-[77px] w-[281px] pointer-events-none" src={imgShapeLeft} />
-      <img alt="" className="hidden md:block absolute h-[231px] right-[-107px] top-[139px] w-[273px] pointer-events-none" src={imgShapeRight} />
+      <img alt="" className="hidden xl:block absolute h-[294px] left-[-107px] top-[77px] w-[281px] pointer-events-none" src={imgShapeLeft} />
+      <img alt="" className="hidden xl:block absolute h-[231px] right-[-107px] top-[139px] w-[273px] pointer-events-none" src={imgShapeRight} />
     </div>
   );
 }

@@ -64,7 +64,7 @@ export default function StatsModule() {
   const values = [v1, v2, v3];
 
   return (
-    <div className="bg-white flex flex-col gap-16 md:gap-[97px] items-center justify-center py-[72px] md:py-[104px] w-full px-6 md:px-0">
+    <div className="bg-white flex flex-col gap-16 md:gap-[97px] items-center justify-center py-[72px] md:py-[104px] w-full px-6 xl:px-0">
       {/* Heading + Image + Stats */}
       <div className="flex flex-col items-center w-full">
         <div className="flex flex-col gap-3 items-center text-center w-full max-w-[736px] mb-12">
@@ -75,12 +75,12 @@ export default function StatsModule() {
             Swiss Re Banked on Lumen5 for Social Engagement
           </h2>
         </div>
-        <div ref={ref} className="relative w-full flex flex-col gap-10 items-center md:block md:h-[594px] md:w-[1230px] md:max-w-[1230px]">
+        <div ref={ref} className="relative w-full flex flex-col gap-10 items-center xl:block xl:h-[594px] xl:w-[1230px] md:max-w-[1230px]">
           {/* Swiss Re photo with separate green leaf decoration peeking above-left */}
-          <div className="relative size-[280px] sm:size-[360px] md:absolute md:left-[56px] md:size-[479px] md:top-[115px]">
+          <div className="relative size-[280px] sm:size-[360px] xl:absolute xl:left-[56px] xl:size-[479px] xl:top-[115px]">
             <img
               alt=""
-              className="absolute -top-[26px] -left-[18px] w-[135px] h-[96px] md:-top-[40px] md:-left-[30px] md:w-[210px] md:h-[150px] z-0 pointer-events-none"
+              className="absolute -top-[26px] -left-[18px] w-[135px] h-[96px] xl:-top-[40px] xl:-left-[30px] xl:w-[210px] xl:h-[150px] z-0 pointer-events-none"
               src={imgLeaf}
             />
             <img
@@ -90,7 +90,7 @@ export default function StatsModule() {
             />
           </div>
           {/* Stats column */}
-          <div className="flex flex-col gap-6 md:gap-10 items-start w-full max-w-[544px] md:absolute md:left-[633px] md:top-[153px] md:w-[544px]">
+          <div className="flex flex-col gap-6 md:gap-10 items-start w-full max-w-[544px] xl:absolute xl:left-[633px] xl:top-[153px] xl:w-[544px]">
             {STATS.map((stat, i) => (
               <div key={stat.label} className="flex items-center w-full gap-[17px]">
                 <div className="h-[71px] overflow-hidden relative shrink-0 w-[157px]">
@@ -108,7 +108,7 @@ export default function StatsModule() {
       </div>
 
       {/* Testimonial quote */}
-      <div className="bg-[#fafafa] flex flex-col md:flex-row gap-6 md:gap-12 items-start p-8 md:p-12 rounded-2xl w-full max-w-[1120px]">
+      <div className="bg-[#fafafa] flex flex-col xl:flex-row gap-6 md:gap-12 items-start p-8 md:p-12 rounded-2xl w-full max-w-[1120px]">
         <div className="shrink-0">
           <QuoteGlyph width={120} height={93} />
         </div>
