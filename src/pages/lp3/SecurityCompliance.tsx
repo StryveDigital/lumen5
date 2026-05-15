@@ -8,16 +8,16 @@ const imgArrow   = "https://www.figma.com/api/mcp/asset/235d7c86-d6fa-4b41-ac8d-
 
 export default function SecurityCompliance() {
   return (
-    <div className="bg-[#fafafa] flex items-center justify-between px-[160px] py-[104px] w-full">
+    <div className="bg-[#fafafa] flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0 px-6 md:px-[160px] py-[72px] md:py-[104px] w-full">
       {/* Left: illustration */}
-      <img alt="" src={imgPrivacy} className="block shrink-0 w-[598px] h-[424px] object-cover" />
+      <img alt="" src={imgPrivacy} className="block shrink-0 w-full max-w-[598px] md:w-[598px] md:h-[424px] object-cover" />
 
       {/* Right: heading + description + buttons */}
-      <div className="flex-1 flex flex-col gap-6 items-start ml-12 min-w-px">
-        <h2 className="font-heading font-semibold text-[36px] leading-[60px] text-[#201e26]">
+      <div className="flex-1 flex flex-col gap-6 items-start md:ml-12 min-w-px w-full">
+        <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[36px] md:leading-[60px] text-[#201e26]">
           Security and compliance
         </h2>
-        <div className="font-body font-normal text-[20px] leading-[36px] text-[#201e26]">
+        <div className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]">
           <p>
             Security isn&rsquo;t an afterthought at Lumen5, it&rsquo;s foundational. We meet the highest standards in security, compliance, and AI governance, so your team can create with confidence.
           </p>
@@ -28,7 +28,7 @@ export default function SecurityCompliance() {
             <li>AI governance controls to meet your compliance requirements</li>
           </ul>
         </div>
-        <div className="flex gap-5 items-center mt-2">
+        <div className="flex flex-wrap gap-3 md:gap-5 items-center mt-2">
           <a href={CTA.trust} className="bg-[#5645f5] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
             <span className="font-heading font-bold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
               Visit our trust center

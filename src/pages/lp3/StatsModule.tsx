@@ -64,23 +64,23 @@ export default function StatsModule() {
   const values = [v1, v2, v3];
 
   return (
-    <div className="bg-white flex flex-col gap-[97px] items-center justify-center py-[104px] w-full">
+    <div className="bg-white flex flex-col gap-16 md:gap-[97px] items-center justify-center py-[72px] md:py-[104px] w-full px-6 md:px-0">
       {/* Heading + Image + Stats */}
-      <div className="flex flex-col items-center">
-        <div className="flex flex-col gap-3 items-center text-center w-[736px] mb-12">
-          <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26]">
+      <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col gap-3 items-center text-center w-full max-w-[736px] mb-12">
+          <p className="font-heading font-semibold text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] text-[#201e26]">
             A real customer&rsquo;s machine
           </p>
-          <h2 className="font-heading font-semibold text-[36px] leading-[60px] text-[#201e26]">
+          <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[36px] md:leading-[60px] text-[#201e26]">
             Swiss Re Banked on Lumen5 for Social Engagement
           </h2>
         </div>
-        <div ref={ref} className="h-[594px] relative w-[1230px]">
+        <div ref={ref} className="relative w-full flex flex-col gap-10 items-center md:block md:h-[594px] md:w-[1230px] md:max-w-[1230px]">
           {/* Swiss Re photo with separate green leaf decoration peeking above-left */}
-          <div className="absolute left-[56px] size-[479px] top-[115px]">
+          <div className="relative size-[280px] sm:size-[360px] md:absolute md:left-[56px] md:size-[479px] md:top-[115px]">
             <img
               alt=""
-              className="absolute -top-[40px] -left-[30px] w-[210px] h-[150px] z-0 pointer-events-none"
+              className="absolute -top-[26px] -left-[18px] w-[135px] h-[96px] md:-top-[40px] md:-left-[30px] md:w-[210px] md:h-[150px] z-0 pointer-events-none"
               src={imgLeaf}
             />
             <img
@@ -90,7 +90,7 @@ export default function StatsModule() {
             />
           </div>
           {/* Stats column */}
-          <div className="absolute flex flex-col gap-10 items-start left-[633px] top-[153px] w-[544px]">
+          <div className="flex flex-col gap-6 md:gap-10 items-start w-full max-w-[544px] md:absolute md:left-[633px] md:top-[153px] md:w-[544px]">
             {STATS.map((stat, i) => (
               <div key={stat.label} className="flex items-center w-full gap-[17px]">
                 <div className="h-[71px] overflow-hidden relative shrink-0 w-[157px]">
@@ -108,11 +108,11 @@ export default function StatsModule() {
       </div>
 
       {/* Testimonial quote */}
-      <div className="bg-[#fafafa] flex gap-12 items-start p-12 rounded-2xl w-[1120px]">
+      <div className="bg-[#fafafa] flex flex-col md:flex-row gap-6 md:gap-12 items-start p-8 md:p-12 rounded-2xl w-full max-w-[1120px]">
         <div className="shrink-0">
           <QuoteGlyph width={120} height={93} />
         </div>
-        <div className="flex flex-col gap-6 flex-1 min-w-0">
+        <div className="flex flex-col gap-6 flex-1 min-w-0 w-full">
           <p className="font-body font-normal text-[20px] leading-[36px] text-[#201e26]">
             Lumen5 was ultimately the best fit for our needs. Other tools were either too complicated or far too limited in scope. Its artificial intelligence and text-to-video features caught the interest of everyone in communications.
           </p>

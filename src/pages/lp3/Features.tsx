@@ -37,25 +37,25 @@ const cards: Card[] = [
 
 export default function Features() {
   return (
-    <div className="bg-white flex flex-col gap-16 items-center justify-center px-16 py-[104px] w-full">
+    <div className="bg-white flex flex-col gap-12 md:gap-16 items-center justify-center px-6 md:px-16 py-[72px] md:py-[104px] w-full">
       {/* Header */}
-      <div className="flex flex-col gap-3 items-center text-center w-[985px]">
-        <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26]">
+      <div className="flex flex-col gap-3 items-center text-center w-full max-w-[985px]">
+        <p className="font-heading font-semibold text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] text-[#201e26]">
           Built for governance
         </p>
-        <h2 className="font-heading font-semibold text-[36px] leading-[60px] text-[#201e26]">
+        <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[36px] md:leading-[60px] text-[#201e26]">
           The features your compliance team actually wants
         </h2>
-        <p className="font-body font-normal text-[20px] leading-[36px] text-[#201e26]">
+        <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]">
           Not just &ldquo;enterprise as a pricing tier.&rdquo; Real controls &mdash; built into the product, not bolted on.
         </p>
       </div>
 
-      {/* 2x2 card grid */}
-      <div className="grid grid-cols-2 gap-8">
+      {/* Cards: 1 col mobile → 2 col desktop */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-[1232px]">
         {cards.map(card => (
-          <div key={card.title} className="bg-[#fafafa] flex flex-col h-[261px] items-start px-6 py-8 rounded-2xl w-[600px]">
-            <div className="flex flex-col gap-6 items-start w-[552px] flex-1">
+          <div key={card.title} className="bg-[#fafafa] flex flex-col min-h-[261px] items-start px-6 py-8 rounded-2xl w-full">
+            <div className="flex flex-col gap-6 items-start w-full flex-1">
               <span
                 className="flex items-center justify-center px-4 py-2 rounded-full"
                 style={{ backgroundColor: card.badgeBg }}

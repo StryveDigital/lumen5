@@ -59,28 +59,28 @@ export default function TestimonialStats() {
   const values = [v1, v2, v3];
 
   return (
-    <div className="bg-white flex flex-col gap-[120px] items-center justify-center py-[140px] w-full">
+    <div className="bg-white flex flex-col gap-16 md:gap-[120px] items-center justify-center py-[80px] md:py-[140px] w-full px-6 md:px-0">
       {/* Heading + Image + Stats */}
-      <div className="flex flex-col items-center shrink-0">
+      <div className="flex flex-col items-center w-full">
         {/* Heading */}
-        <div className="flex flex-col gap-3 items-start text-center w-[800px] mb-12">
-          <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26] w-full">
+        <div className="flex flex-col gap-3 items-center text-center w-full max-w-[800px] mb-12">
+          <p className="font-heading font-semibold text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] text-[#201e26]">
             A real customer's machine
           </p>
-          <p className="font-heading font-semibold text-[42px] leading-[60px] text-[#201e26] w-full">
+          <p className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[60px] text-[#201e26]">
             How Best Western Hotels transformed its video marketing
           </p>
         </div>
-        {/* Image + Stats — matches Figma absolute layout */}
-        <div ref={ref} className="h-[594px] relative shrink-0 w-[1230px]">
+        {/* Image + Stats — stack on mobile, absolute Figma layout on desktop */}
+        <div ref={ref} className="relative w-full flex flex-col gap-10 items-center md:block md:h-[594px] md:w-[1230px] md:max-w-[1230px]">
           {/* Hotel photo (green leaf decoration is baked into the photo asset itself) */}
-          <div className="absolute left-[56px] size-[479px] top-[115px]">
+          <div className="relative size-[280px] sm:size-[360px] md:absolute md:left-[56px] md:size-[479px] md:top-[115px]">
             <div className="absolute inset-0 rounded-3xl bg-[#e2e8f0] overflow-hidden">
               <img alt="Best Western Hotels" className="absolute block inset-0 max-w-none size-full object-cover" src={imgBW} />
             </div>
           </div>
           {/* Stats */}
-          <div className="absolute flex flex-col gap-10 items-start left-[633px] top-[153px] w-[544px]">
+          <div className="flex flex-col gap-6 md:gap-10 items-start w-full max-w-[544px] md:absolute md:left-[633px] md:top-[153px] md:w-[544px]">
             {STATS.map((stat, i) => (
               <div key={stat.label} className="flex items-center w-full">
                 <div className="h-[71px] overflow-clip relative shrink-0 w-[150px]">
@@ -98,7 +98,7 @@ export default function TestimonialStats() {
       </div>
 
       {/* Testimonial quote */}
-      <div className="bg-[#fafafa] flex gap-12 items-start p-12 rounded-2xl shrink-0 w-[1120px]">
+      <div className="bg-[#fafafa] flex flex-col md:flex-row gap-6 md:gap-12 items-start p-8 md:p-12 rounded-2xl w-full max-w-[1120px]">
         <div className="h-[93px] overflow-clip relative shrink-0 w-[120px]">
           <div className="absolute inset-[0_0_0.23%_56.01%]">
             <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgQuoteL} />
@@ -107,7 +107,7 @@ export default function TestimonialStats() {
             <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgQuoteR} />
           </div>
         </div>
-        <div className="flex flex-col gap-6 flex-1 min-w-0">
+        <div className="flex flex-col gap-6 flex-1 min-w-0 w-full">
           <p className="font-['Inter',sans-serif] font-normal text-[20px] leading-[36px] text-[#201e26]">
             Lumen5 cuts down on countless hours of work, and it's also fun to use. It doesn't feel like an addition to anyone's workload, and users are proud of what they're creating.
           </p>

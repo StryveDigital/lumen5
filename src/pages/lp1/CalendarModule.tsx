@@ -38,39 +38,39 @@ function PlayIcon() {
 
 export default function CalendarModule() {
   return (
-    <div className="bg-white flex flex-col gap-[97px] items-center py-[104px] w-full">
+    <div className="bg-white flex flex-col gap-16 md:gap-[97px] items-center py-[72px] md:py-[104px] w-full px-6 md:px-0">
       {/* Heading */}
-      <div className="flex flex-col gap-3 items-center text-center w-[1080px]">
-        <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26]">
+      <div className="flex flex-col gap-3 items-center text-center w-full max-w-[1080px]">
+        <p className="font-heading font-semibold text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] text-[#201e26]">
           A real customer's quarter
         </p>
-        <p className="font-heading font-semibold text-[42px] leading-[60px] text-[#201e26] w-full whitespace-nowrap">
+        <p className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[60px] text-[#201e26] w-full md:whitespace-nowrap">
           What a weekly cadence actually looks like
         </p>
-        <div className="flex items-center gap-2">
-          <span className="font-['Inter',sans-serif] font-normal text-[20px] leading-[36px] text-[#201e26]">
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <span className="font-['Inter',sans-serif] font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]">
             The 13 week Q2 2026. Every
           </span>
           <PlayIcon />
-          <span className="font-['Inter',sans-serif] font-normal text-[20px] leading-[36px] text-[#201e26]">
+          <span className="font-['Inter',sans-serif] font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]">
             is a video shipped to LinkedIn.
           </span>
         </div>
       </div>
 
-      {/* Calendar + shapes */}
-      <div className="relative w-[1230px]">
-        {/* Green diamond — top left */}
-        <div className="absolute left-0 top-5 w-[213px] h-[286px] pointer-events-none z-0">
+      {/* Calendar + shapes — scrollable horizontally on mobile (calendar grid is desktop-sized) */}
+      <div className="relative w-full max-w-[1230px] overflow-x-auto md:overflow-x-visible">
+        {/* Green diamond — top left (hidden on mobile) */}
+        <div className="hidden md:block absolute left-0 top-5 w-[213px] h-[286px] pointer-events-none z-0">
           <img alt="" className="block size-full" src={imgShape2} />
         </div>
-        {/* Rotated blob — bottom right */}
-        <div className="absolute right-[-40px] bottom-[220px] w-[260px] h-[220px] pointer-events-none rotate-[132.6deg] z-0">
+        {/* Rotated blob — bottom right (hidden on mobile) */}
+        <div className="hidden md:block absolute right-[-40px] bottom-[220px] w-[260px] h-[220px] pointer-events-none rotate-[132.6deg] z-0">
           <img alt="" className="block size-full" src={imgShape3} />
         </div>
 
         {/* Calendar card with purple shadow */}
-        <div className="relative ml-[79px] w-[1119px] z-10">
+        <div className="relative md:ml-[79px] w-[1119px] z-10">
           <div className="absolute inset-0 translate-x-3 translate-y-2.5 bg-[#5645f5] border border-[#201e26] rounded-lg" />
           <div className="relative bg-white border border-[#201e26] rounded-lg overflow-hidden">
             {/* Header */}
@@ -112,7 +112,7 @@ export default function CalendarModule() {
         </div>
 
         {/* Checkmarks */}
-        <div className="flex flex-col gap-4 mt-14 ml-[79px] w-[720px] relative z-10">
+        <div className="flex flex-col gap-4 mt-14 md:ml-[79px] w-full max-w-[720px] relative z-10">
           {[
             'Same content team, zero new headcount.',
             '46 videos snipped!',
@@ -131,7 +131,7 @@ export default function CalendarModule() {
       </div>
 
       {/* Testimonial */}
-      <div className="bg-[#fafafa] flex gap-12 items-start p-12 rounded-2xl shrink-0 w-[1120px]">
+      <div className="bg-[#fafafa] flex flex-col md:flex-row gap-6 md:gap-12 items-start p-8 md:p-12 rounded-2xl w-full max-w-[1120px]">
         <div className="h-[93px] overflow-clip relative shrink-0 w-[120px]">
           <div className="absolute inset-[0_0_0.23%_56.01%]">
             <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgQuoteL} />
@@ -140,7 +140,7 @@ export default function CalendarModule() {
             <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgQuoteR} />
           </div>
         </div>
-        <div className="flex flex-col gap-6 flex-1 min-w-0">
+        <div className="flex flex-col gap-6 flex-1 min-w-0 w-full">
           <p className="font-['Inter',sans-serif] font-normal text-[20px] leading-[36px] text-[#201e26]">
             Lumen5 helped us reduce video creation time from days to just six minutes.
           </p>

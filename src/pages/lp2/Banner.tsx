@@ -56,15 +56,15 @@ function ClipThumb() {
 
 export default function Banner() {
   return (
-    <div className="flex items-stretch relative bg-[#201e26]">
+    <div className="flex flex-col md:flex-row items-stretch relative bg-[#201e26]">
       {/* Left */}
-      <div className="bg-[#201e26] flex flex-col gap-8 items-start pl-[110px] py-[104px] flex-[1_0_0] min-w-0">
+      <div className="bg-[#201e26] flex flex-col gap-8 items-start px-6 md:pl-[110px] md:pr-0 py-[72px] md:py-[104px] flex-[1_0_0] min-w-0">
         <Logo />
-        <div className="flex flex-col gap-6 items-start w-[530px]">
-          <h1 className="font-heading font-semibold text-[58px] leading-[72px] text-[#fafafa]">
+        <div className="flex flex-col gap-6 items-start w-full max-w-[530px]">
+          <h1 className="font-heading font-semibold text-[36px] leading-[44px] md:text-[58px] md:leading-[72px] text-[#fafafa]">
             Turn your webinar into a marketing machine
           </h1>
-          <p className="font-body font-normal text-[22px] leading-[38px] text-[#fafafa]">
+          <p className="font-body font-normal text-[18px] leading-[30px] md:text-[22px] md:leading-[38px] text-[#fafafa]">
             The 43 people who watched it live were never the point. The 12 LinkedIn posts you&apos;ll publish from it are.
           </p>
           <a href={CTA.signup} className="bg-[#5645f5] px-8 py-5 rounded-full font-heading font-bold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap hover:opacity-90 transition-opacity">
@@ -73,8 +73,8 @@ export default function Banner() {
         </div>
       </div>
 
-      {/* Right */}
-      <div className="bg-[#201e26] h-[705px] overflow-clip relative shrink-0 w-[800px]">
+      {/* Right — hidden on mobile */}
+      <div className="hidden md:block bg-[#201e26] h-[705px] overflow-clip relative shrink-0 w-[800px]">
         {/* Green blob backdrop */}
         <div className="absolute flex h-[1213px] items-center justify-center left-[-168px] top-[-337px] w-[1224px] pointer-events-none">
           <div className="flex-none rotate-[-49.87deg]">

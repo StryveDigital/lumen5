@@ -19,21 +19,21 @@ const imgBrandFrame   = "https://www.figma.com/api/mcp/asset/f1caa9ce-4f68-419a-
 
 export default function Banner() {
   return (
-    <div className="bg-[#201e26] flex items-stretch w-full overflow-hidden">
+    <div className="bg-[#201e26] flex flex-col md:flex-row items-stretch w-full overflow-hidden">
       {/* Left: Logo + heading + buttons */}
-      <div className="flex-1 flex flex-col gap-12 items-start justify-center pl-[160px] py-[104px] min-w-px">
+      <div className="flex-1 flex flex-col gap-8 md:gap-12 items-start justify-center px-6 md:pl-[160px] md:pr-0 py-[72px] md:py-[104px] min-w-px">
         <img alt="Lumen5" src={imgLogo} width={200} height={53} className="block" />
-        <div className="flex flex-col gap-8 items-start w-[503px]">
-          <p className="font-heading font-semibold text-[22px] leading-[48px] text-[#fafafa]">
+        <div className="flex flex-col gap-6 md:gap-8 items-start w-full max-w-[503px]">
+          <p className="font-heading font-semibold text-[18px] leading-[28px] md:text-[22px] md:leading-[48px] text-[#fafafa]">
             For enterprise brand teams
           </p>
-          <h1 className="font-heading font-semibold text-[52px] leading-[66px] text-[#fafafa]">
+          <h1 className="font-heading font-semibold text-[32px] leading-[40px] md:text-[52px] md:leading-[66px] text-[#fafafa]">
             AI video without the brand risk
           </h1>
-          <p className="font-body font-normal text-[20px] leading-[36px] text-[#fafafa]">
+          <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#fafafa]">
             Locked brand kits. Multi-stage approval workflows. Regional rollouts that don&rsquo;t end in a CMO email.
           </p>
-          <div className="flex gap-[18px] items-start mt-2">
+          <div className="flex flex-wrap gap-[12px] md:gap-[18px] items-start mt-2">
             <a href={CTA.demo} className="bg-[#5645f5] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
               <span className="font-heading font-bold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
                 Get a demo
@@ -48,8 +48,8 @@ export default function Banner() {
         </div>
       </div>
 
-      {/* Right: video illustration with decorative cards */}
-      <div className="relative shrink-0 w-[800px] h-[705px] overflow-hidden">
+      {/* Right: video illustration with decorative cards — hidden on mobile */}
+      <div className="hidden md:block relative shrink-0 w-[800px] h-[705px] overflow-hidden">
         {/* Large purple blob behind everything */}
         <img alt="" src={imgShape3} className="absolute pointer-events-none" style={{ width: 920, height: 110, left: 10, top: 600, transform: 'rotate(-81.86deg)', transformOrigin: 'top left' }} />
 

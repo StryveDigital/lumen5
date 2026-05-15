@@ -10,8 +10,8 @@ const imgCmsCard = "/cms-card.png";
 
 export default function Testimonial() {
   return (
-    <div className="bg-white flex flex-col items-center py-[104px] w-full">
-      <div className="bg-[#fafafa] flex gap-12 items-start p-12 rounded-2xl w-[1120px]">
+    <div className="bg-white flex flex-col items-center py-[72px] md:py-[104px] w-full px-6 md:px-0">
+      <div className="bg-[#fafafa] flex flex-col md:flex-row gap-8 md:gap-12 items-start p-8 md:p-12 rounded-2xl w-full max-w-[1120px]">
         {/* Quote + CMS branded square (the CMS-logo square sits inside the quote slot) */}
         <div className="relative shrink-0">
           <img alt="CMS law tax future" src={imgCmsCard} width={197} height={198} className="block ml-[43px] mt-[27px]" />
@@ -20,7 +20,7 @@ export default function Testimonial() {
           </div>
         </div>
         {/* Quote + creds */}
-        <div className="flex flex-col gap-6 items-start flex-1 min-w-0 w-[709px]">
+        <div className="flex flex-col gap-6 items-start flex-1 min-w-0 w-full md:max-w-[709px]">
           <p className="font-body font-normal text-[20px] leading-[36px] text-[#201e26]">
             Producing the video from start to &lsquo;go live&rsquo; used to take us about a week for a short one. Longer videos were even more time-consuming. We were no longer happy with this timeframe. Now creating 29 videos per month vs. fewer than 10 per year before. LinkedIn followers up 47%. Leads up 14%.
           </p>
