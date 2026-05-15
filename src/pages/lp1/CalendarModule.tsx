@@ -58,8 +58,8 @@ export default function CalendarModule() {
         </div>
       </div>
 
-      {/* Calendar + shapes — scrollable horizontally on mobile (calendar grid is desktop-sized) */}
-      <div className="relative w-full max-w-[1230px] overflow-x-auto md:overflow-x-visible">
+      {/* Calendar + shapes */}
+      <div className="relative w-full max-w-[1230px]">
         {/* Green diamond — top left (hidden on mobile) */}
         <div className="hidden md:block absolute left-0 top-5 w-[213px] h-[286px] pointer-events-none z-0">
           <img alt="" className="block size-full" src={imgShape2} />
@@ -69,19 +69,16 @@ export default function CalendarModule() {
           <img alt="" className="block size-full" src={imgShape3} />
         </div>
 
-        {/* Calendar card with purple shadow */}
-        <div className="relative md:ml-[79px] w-[1119px] z-10">
+        {/* Desktop calendar — days as rows, weeks as columns */}
+        <div className="hidden md:block relative md:ml-[79px] w-[1119px] z-10">
           <div className="absolute inset-0 translate-x-3 translate-y-2.5 bg-[#5645f5] border border-[#201e26] rounded-lg" />
           <div className="relative bg-white border border-[#201e26] rounded-lg overflow-hidden">
-            {/* Header */}
             <div className="border-b border-[#201e26] flex items-center justify-center py-4">
               <p className="font-heading font-semibold text-[20px] leading-[30px] text-[#201e26]">
                 Content Marketing Calendar
               </p>
             </div>
-            {/* Grid */}
             <div className="flex">
-              {/* Day-label column */}
               <div className="flex flex-col w-[145px] shrink-0">
                 <div className="bg-[#201e26] border-t border-[#fafafa] flex items-center px-6 py-4 h-[72px]">
                   <p className="font-heading font-semibold text-[16px] leading-6 text-[#fafafa]">Week</p>
@@ -94,7 +91,6 @@ export default function CalendarModule() {
                   </div>
                 ))}
               </div>
-              {/* Week columns */}
               {calendarData.map((week, wi) => (
                 <div key={wi} className="flex flex-col flex-1 min-w-0">
                   <div className="bg-[#f7f5cb] border-b border-l border-r border-[#201e26] flex items-center justify-center px-2 py-4 h-[72px]">
@@ -108,6 +104,42 @@ export default function CalendarModule() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Mobile calendar — transposed: weeks as rows, days as columns. Fits in 390px viewport. */}
+        <div className="block md:hidden relative w-full z-10">
+          <div className="absolute inset-0 translate-x-2 translate-y-2 bg-[#5645f5] border border-[#201e26] rounded-lg" />
+          <div className="relative bg-white border border-[#201e26] rounded-lg overflow-hidden">
+            <div className="border-b border-[#201e26] flex items-center justify-center py-3">
+              <p className="font-heading font-semibold text-[16px] leading-[24px] text-[#201e26]">
+                Content Marketing Calendar
+              </p>
+            </div>
+            {/* Day header row */}
+            <div className="flex">
+              <div className="bg-[#201e26] border-t border-[#fafafa] flex items-center justify-center w-[64px] h-[48px] shrink-0">
+                <p className="font-heading font-semibold text-[13px] leading-[18px] text-[#fafafa]">Week</p>
+              </div>
+              {['M', 'T', 'W', 'T', 'F'].map((d, i) => (
+                <div key={i} className="bg-[#201e26] border-t border-l border-[#fafafa] flex items-center justify-center flex-1 h-[48px]">
+                  <p className="font-heading font-semibold text-[13px] leading-[18px] text-[#fafafa]">{d}</p>
+                </div>
+              ))}
+            </div>
+            {/* Week rows */}
+            {calendarData.map((week, wi) => (
+              <div key={wi} className="flex">
+                <div className="bg-[#f7f5cb] border-t border-l border-r border-[#201e26] flex items-center justify-center w-[64px] h-[48px] shrink-0">
+                  <p className="font-heading font-semibold text-[13px] leading-[18px] text-[#201e26]">{wi + 1}</p>
+                </div>
+                {week.map((cell, di) => (
+                  <div key={di} className={`${cellBg[cell]} border border-[#201e26] flex items-center justify-center flex-1 h-[48px]`}>
+                    {cell !== '' && <PlayIcon />}
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
 
