@@ -23,9 +23,9 @@ const cards: Card[] = [
   },
   {
     eyebrow: "5-min walkthrough",
-    title: "Talk to sales",
+    title: "Talk to us",
     body: "A quick walkthrough of the platform. If it’s a fit, we’ll book a deeper demo with the right team for your rollout.",
-    cta: "Talk to sales",
+    cta: "Talk to us",
     href: CTA.demo,
   },
 ];
@@ -44,7 +44,7 @@ export default function TwoCardCta() {
         </h2>
         <div className="flex flex-col gap-9 items-center w-full">
           <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#fafafa] text-center w-full max-w-[996px]">
-            Try it on your own content right now. Or talk to sales &mdash; they&rsquo;ll walk you through the platform in five minutes and book a deeper demo if it&rsquo;s a fit.
+            Try it on your own content right now. Or talk to us &mdash; we&rsquo;ll walk you through the platform in five minutes and book a deeper demo if it&rsquo;s a fit.
           </p>
 
           {/* Two cards */}
