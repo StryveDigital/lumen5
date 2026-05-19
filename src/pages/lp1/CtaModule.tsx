@@ -1,7 +1,7 @@
 import { CTA } from '../../shared/cta-urls';
 
-const imgShapeLeft  = "https://www.figma.com/api/mcp/asset/3dc2b1f2-76d1-416f-b915-ba94cd520903";
-const imgShapeRight = "https://www.figma.com/api/mcp/asset/9d3a1f06-cd84-4bbc-b23b-f24216545a20";
+const imgShapeLeft  = "/shape-cta-pink.svg";
+const imgShapeRight = "/shape-cta-green.svg";
 
 export default function CtaModule() {
   return (

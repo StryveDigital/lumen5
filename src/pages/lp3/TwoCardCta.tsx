@@ -2,8 +2,8 @@
 // Figma node: 77:2088
 import { CTA } from '../../shared/cta-urls';
 
-const imgShape6 = "https://www.figma.com/api/mcp/asset/20ca6685-919c-47fc-bdd4-168eea659567"; // right-edge shape (pink/orange)
-const imgShape8 = "https://www.figma.com/api/mcp/asset/73a1329d-2708-41d3-95ab-539c25dfc8ec"; // left-edge shape (green)
+const imgShape6 = "/shape-cta-pink.svg";  // right-edge shape (pink/orange)
+const imgShape8 = "/shape-cta-green.svg"; // left-edge shape (green)
 
 type Card = {
   eyebrow: string;

@@ -1,7 +1,7 @@
-const imgShape3 = "https://www.figma.com/api/mcp/asset/3ced1f4e-9e10-41b4-83e6-c54d80be5547";
-const imgShape2 = "https://www.figma.com/api/mcp/asset/8e96e144-bff3-46de-8ff4-d1a7c9300aa7";
-const imgQuoteL = "https://www.figma.com/api/mcp/asset/5da95ec6-db2a-4bbd-b4fd-36c5942bac59";
-const imgQuoteR = "https://www.figma.com/api/mcp/asset/71d65935-0ece-42e5-a91a-4c53973d30cc";
+const imgShape3 = "/shape-calendar-yellow.svg";
+const imgShape2 = "/shape-calendar-green.svg";
+const imgQuoteL = "/quote-left.svg";
+const imgQuoteR = "/quote-right.svg";
 
 type Cell = '' | 'light' | 'medium' | 'dark';
 

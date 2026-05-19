@@ -4,9 +4,9 @@
 
 // Step illustrations come from Figma MCP and expire in ~7 days. Re-pull
 // design context on node 57:1266 to refresh.
-const imgStep1 = "https://www.figma.com/api/mcp/asset/3fca232b-79f4-43ba-84bd-624d97cf3766"; // upload arrow + cloud
-const imgStep2 = "https://www.figma.com/api/mcp/asset/6d643122-65f6-4250-9fb3-504ee3dd5d13"; // AI scissors / clips
-const imgStep3 = "https://www.figma.com/api/mcp/asset/85f3c828-018e-4496-a1ba-76f63cc01693"; // calendar / send
+const imgStep1 = "/step-upload.png";  // upload arrow + cloud
+const imgStep2 = "/step-ai.png";       // AI scissors / clips
+const imgStep3 = "/step-publish.png";  // calendar / send
 
 const steps = [
   {

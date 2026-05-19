@@ -3,8 +3,8 @@
 
 import { CTA } from '../../shared/cta-urls';
 
-const imgShapeLeft  = "https://www.figma.com/api/mcp/asset/ad6c5deb-47ce-4c3f-81c3-efbbaeb8a2e4"; // pink decorative shape
-const imgShapeRight = "https://www.figma.com/api/mcp/asset/c11c764e-fe4a-49b6-97f1-69efdea117d3"; // green decorative shape
+const imgShapeLeft  = "/shape-cta-pink.svg";  // pink decorative shape
+const imgShapeRight = "/shape-cta-green.svg"; // green decorative shape
 
 export default function CtaModule() {
   return (

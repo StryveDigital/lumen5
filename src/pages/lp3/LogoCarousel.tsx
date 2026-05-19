@@ -3,10 +3,10 @@
 import LogoMarquee, { type LogoItem } from '../../shared/LogoMarquee';
 
 const imgSiemens     = "/siemens-logo.svg";
-const imgBestWestern = "https://www.figma.com/api/mcp/asset/8c265300-354b-43c7-89a7-4396e7b47044";
-const imgCisco       = "https://www.figma.com/api/mcp/asset/89b34976-7a64-4021-9463-6223ae140b75";
+const imgBestWestern = "/logo-bestwestern.svg";
+const imgCisco       = "/logo-cisco.svg";
 const imgCMS         = "/cms-logo.png";
-const imgElectrolux  = "https://www.figma.com/api/mcp/asset/cd3d2dbd-d0be-49fa-be24-e87428d6bb94";
+const imgElectrolux  = "/logo-electrolux.svg";
 
 const logos: LogoItem[] = [
   { src: imgSiemens,     alt: "Siemens",                       aspect: 300 / 60 },

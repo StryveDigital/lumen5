@@ -3,8 +3,8 @@
 
 import { CTA } from '../../shared/cta-urls';
 
-const imgPrivacy = "https://www.figma.com/api/mcp/asset/43386d8b-40ff-4d32-ba2b-049f744dbb56";
-const imgArrow   = "https://www.figma.com/api/mcp/asset/235d7c86-d6fa-4b41-ac8d-5a04207a1e28";
+const imgPrivacy = "/security-privacy.png";
+const imgArrow   = "/arrow-right.svg";
 
 export default function SecurityCompliance() {
   return (

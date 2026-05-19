@@ -7,8 +7,8 @@ import { useEffect, useRef, useState } from 'react';
 // Case study image — frame with rounded corners, notched bottom-right, and
 // green leaf decoration extending above-left (all baked into the PNG).
 const imgBW      = "/best-western-case.png";
-const imgQuoteL  = "https://www.figma.com/api/mcp/asset/d032e11d-26f5-440a-8529-8d97763555d1";
-const imgQuoteR  = "https://www.figma.com/api/mcp/asset/bf236df1-57c5-4add-8f2b-422d84e9e661";
+const imgQuoteL  = "/quote-left.svg";
+const imgQuoteR  = "/quote-right.svg";
 
 function useInView<T extends HTMLElement>(threshold = 0.3) {
   const [inView, setInView] = useState(false);
