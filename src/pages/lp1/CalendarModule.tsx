@@ -64,8 +64,8 @@ export default function CalendarModule() {
         <div className="hidden xl:block absolute left-0 top-5 w-[213px] h-[286px] pointer-events-none z-0">
           <img alt="" className="block size-full" src={imgShape2} />
         </div>
-        {/* Rotated blob — bottom right (hidden on mobile) */}
-        <div className="hidden xl:block absolute right-[-40px] bottom-[220px] w-[260px] h-[220px] pointer-events-none rotate-[132.6deg] z-0">
+        {/* Yellow blob — bottom right (hidden on mobile) */}
+        <div className="hidden xl:block absolute right-[-40px] bottom-[80px] w-[224px] h-[214px] pointer-events-none z-0">
           <img alt="" className="block size-full" src={imgShape3} />
         </div>
 

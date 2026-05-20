@@ -2,8 +2,8 @@
 // Figma node: 77:2088
 import { CTA } from '../../shared/cta-urls';
 
-const imgShape6 = "/shape-cta-pink.svg";  // right-edge shape (pink/orange)
-const imgShape8 = "/shape-cta-green.svg"; // left-edge shape (green)
+const imgShapeLeft  = "/shape-lp3-pink.svg";   // top-left shape (pink wedge)
+const imgShapeRight = "/shape-lp3-yellow.svg"; // right-edge shape (yellow chevron)
 
 type Card = {
   eyebrow: string;
@@ -34,8 +34,8 @@ export default function TwoCardCta() {
   return (
     <div className="bg-[#201e26] relative w-full overflow-hidden py-[72px] md:py-[104px] px-6 md:px-16">
       {/* Decorative shapes peeking from edges (hidden on mobile) */}
-      <img alt="" src={imgShape8} className="hidden xl:block absolute pointer-events-none" style={{ left: -36, top: 63, width: 200, height: 222, transform: 'rotate(94.9deg)' }} />
-      <img alt="" src={imgShape6} className="hidden xl:block absolute pointer-events-none" style={{ right: -120, top: 380, width: 281, height: 294, transform: 'rotate(124.41deg)' }} />
+      <img alt="" src={imgShapeLeft}  className="hidden xl:block absolute pointer-events-none" style={{ left: -80, top: 40, width: 239, height: 218 }} />
+      <img alt="" src={imgShapeRight} className="hidden xl:block absolute pointer-events-none" style={{ right: -80, top: 360, width: 246, height: 295 }} />
 
       {/* Content */}
       <div className="relative flex flex-col gap-3 items-center justify-center z-10">
