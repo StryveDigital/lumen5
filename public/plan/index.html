@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Lumen5 · Animated Explainer Launch Campaign</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,300;1,9..144,400&family=Inter+Tight:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0a0a0a;
+  --paper: #f4f1ea;
+  --paper-deep: #eae6d9;
+  --purple: #5645F5;
+  --purple-light: #eae8fe;
+  --purple-mid: #8a7ef8;
+  --teal: #3bd9eb;
+  --teal-light: #d8f9fc;
+  --accent: #ff4d1a;
+  --muted: #6b665d;
+  --line: rgba(10,10,10,0.10);
+  --line-soft: rgba(10,10,10,0.05);
+  --serif: 'Fraunces', 'Times New Roman', serif;
+  --sans: 'Inter Tight', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.5; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+body::before {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 100; opacity: 0.28; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+}
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  padding: 14px 48px; display: flex; justify-content: space-between; align-items: center;
+  background: rgba(244,241,234,0.90); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line-soft);
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+}
+nav .brand { font-weight: 700; color: var(--ink); }
+nav .brand span { color: var(--purple); }
+nav .links { display: flex; gap: 20px; }
+nav .links a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+nav .links a:hover { color: var(--ink); }
+
+/* ── SECTIONS ── */
+section { min-height: 100vh; padding: 130px 60px 90px; position: relative; border-bottom: 1px solid var(--line); }
+.container { max-width: 1280px; margin: 0 auto; }
+
+.eyebrow {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--purple); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+}
+.eyebrow .tag {
+  margin-left: auto; font-size: 9px; color: var(--muted); letter-spacing: 0.15em;
+  padding: 3px 8px; border: 1px dashed var(--muted);
+}
+.eyebrow-light { color: rgba(244,241,234,0.5); }
+.eyebrow-light .tag { color: rgba(244,241,234,0.4); border-color: rgba(244,241,234,0.3); }
+
+h2.stitle {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(48px, 6.5vw, 88px); line-height: 0.95; letter-spacing: -0.03em;
+  margin-bottom: 36px;
+}
+h2.stitle em { font-style: italic; color: var(--purple); font-weight: 300; }
+h2.stitle em.teal { color: var(--teal); }
+
+p.lead { font-family: var(--serif); font-size: 22px; line-height: 1.45; font-weight: 300; max-width: 740px; color: var(--ink); }
+p.lead-light { color: rgba(244,241,234,0.85); }
+
+/* ── COVER ── */
+#cover {
+  background: var(--ink); color: var(--paper);
+  display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;
+}
+#cover::after {
+  content: ''; position: absolute; right: -200px; top: -100px; width: 800px; height: 800px;
+  background: radial-gradient(circle, var(--purple) 0%, transparent 65%);
+  opacity: 0.3; filter: blur(80px); pointer-events: none;
+}
+#cover::before {
+  content: ''; position: absolute; left: -100px; bottom: -100px; width: 600px; height: 600px;
+  background: radial-gradient(circle, var(--teal) 0%, transparent 65%);
+  opacity: 0.12; filter: blur(80px); pointer-events: none;
+  z-index: 0;
+}
+#cover .container { position: relative; z-index: 1; display: flex; flex-direction: column; min-height: calc(100vh - 60px); justify-content: space-between; }
+.cover-top { display: flex; justify-content: space-between; align-items: flex-start; font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(244,241,234,0.5); }
+.cover-top strong { color: var(--paper); }
+.cover-h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(68px, 10vw, 160px); line-height: 0.88; letter-spacing: -0.04em; margin: 60px 0 32px; }
+.cover-h1 em { font-style: italic; color: var(--purple-mid); }
+.cover-sub { font-family: var(--serif); font-style: italic; font-size: clamp(20px, 2.5vw, 30px); font-weight: 300; color: rgba(244,241,234,0.7); max-width: 640px; line-height: 1.3; }
+.cover-bottom { display: flex; justify-content: space-between; align-items: flex-end; font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(244,241,234,0.4); padding-top: 48px; }
+.cover-bottom strong { color: rgba(244,241,234,0.8); }
+.marquee { position: absolute; bottom: 10px; left: 0; right: 0; overflow: hidden; white-space: nowrap; font-family: var(--serif); font-style: italic; font-size: 130px; font-weight: 300; color: rgba(86,69,245,0.10); letter-spacing: -0.03em; line-height: 1; pointer-events: none; user-select: none; }
+.marquee-inner { display: inline-block; animation: scroll 40s linear infinite; }
+@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ── POSITIONING ── */
+#positioning { background: var(--paper); }
+.pos-shift { margin-top: 56px; display: grid; grid-template-columns: 1fr 80px 1fr; gap: 0; align-items: stretch; max-width: 1080px; }
+.pos-card { padding: 44px 40px; display: flex; flex-direction: column; gap: 14px; }
+.pos-from { background: var(--paper-deep); border: 1px solid var(--line); }
+.pos-to { background: var(--ink); color: var(--paper); border: 1px solid var(--ink); }
+.pos-card .pc-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; }
+.pos-from .pc-label { color: var(--muted); }
+.pos-to .pc-label { color: var(--teal); }
+.pos-card .pc-term { font-family: var(--serif); font-size: 34px; font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; }
+.pos-from .pc-term { color: var(--muted); }
+.pos-to .pc-term { color: var(--paper); }
+.pos-to .pc-term em { font-style: italic; color: var(--purple-mid); }
+.pos-card .pc-desc { font-size: 14px; line-height: 1.6; }
+.pos-from .pc-desc { color: var(--muted); }
+.pos-to .pc-desc { color: rgba(244,241,234,0.7); }
+.pos-card .pc-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto; padding-top: 16px; }
+.pos-arrow-col { display: flex; align-items: center; justify-content: center; }
+.pos-arrow { font-family: var(--serif); font-style: italic; font-size: 40px; color: var(--purple); }
+.pos-note { margin-top: 40px; max-width: 820px; font-family: var(--serif); font-size: 19px; line-height: 1.5; font-weight: 300; color: var(--ink); }
+.pos-note em { font-style: italic; color: var(--purple); }
+
+/* ── PRODUCTION PATHS ── */
+#production { background: var(--ink); color: var(--paper); }
+.path-grid { margin-top: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.path-card { background: rgba(244,241,234,0.04); border: 1px solid rgba(244,241,234,0.1); padding: 40px 36px; display: flex; flex-direction: column; gap: 18px; }
+.path-card .pa-tag { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purple-mid); }
+.path-card.b .pa-tag { color: var(--teal); }
+.path-card .pa-title { font-family: var(--serif); font-size: 30px; font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; color: var(--paper); }
+.path-card .pa-desc { font-size: 14px; line-height: 1.6; color: rgba(244,241,234,0.7); }
+.path-card .pa-list { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+.path-card .pa-row { display: grid; grid-template-columns: 100px 1fr; gap: 14px; font-size: 13px; line-height: 1.5; padding: 10px 0; border-top: 1px solid rgba(244,241,234,0.08); }
+.path-card .pa-row .k { font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,241,234,0.4); padding-top: 2px; }
+.path-card .pa-row .v { color: rgba(244,241,234,0.85); }
+.path-card .pa-row .v strong { color: var(--paper); }
+.path-pro { color: var(--teal); }
+.path-con { color: #ff8c6b; }
+.workflow { margin-top: 56px; }
+.workflow-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purple-mid); margin-bottom: 24px; }
+.workflow-flow { display: flex; align-items: stretch; gap: 0; flex-wrap: wrap; }
+.wf-step { flex: 1; min-width: 160px; background: rgba(244,241,234,0.05); border: 1px solid rgba(244,241,234,0.1); padding: 22px 20px; display: flex; flex-direction: column; gap: 8px; }
+.wf-step .wf-owner { font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 8px; align-self: flex-start; border-radius: 2px; }
+.wf-owner.stryve { background: rgba(86,69,245,0.25); color: var(--purple-mid); }
+.wf-owner.crew { background: rgba(255,77,26,0.18); color: #ff8c6b; }
+.wf-owner.lumen { background: rgba(59,217,235,0.15); color: var(--teal); }
+.wf-step .wf-name { font-family: var(--serif); font-size: 18px; font-weight: 400; color: var(--paper); line-height: 1.15; }
+.wf-step .wf-desc { font-size: 12px; color: rgba(244,241,234,0.6); line-height: 1.5; }
+.wf-arrow { display: flex; align-items: center; justify-content: center; flex: 0 0 32px; font-family: var(--mono); font-size: 16px; color: rgba(244,241,234,0.25); }
+.honest-note { margin-top: 40px; background: rgba(86,69,245,0.12); border-left: 3px solid var(--purple); padding: 20px 24px; font-family: var(--serif); font-size: 17px; line-height: 1.5; font-weight: 300; color: rgba(244,241,234,0.9); max-width: 820px; }
+.honest-note strong { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--purple-mid); display: block; margin-bottom: 8px; font-weight: 500; }
+
+/* ── EXAMPLES GALLERY ── */
+#examples { background: var(--paper-deep); }
+.ex-tier { margin-top: 48px; }
+.ex-tier-title { font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purple); margin: 48px 0 20px; display: flex; align-items: center; gap: 14px; }
+.ex-tier-title::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+.ex-tier-title.teal { color: #0a8a96; }
+.ex-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.ex-card { background: var(--paper); border: 1px solid var(--line); padding: 28px 28px; display: flex; flex-direction: column; gap: 12px; transition: transform 0.2s; }
+.ex-card:hover { transform: translateY(-3px); }
+.ex-card .ex-brand { font-family: var(--serif); font-size: 22px; font-weight: 500; letter-spacing: -0.02em; }
+.ex-card .ex-what { font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--purple); }
+.ex-card.teal .ex-what { color: #0a8a96; }
+.ex-card .ex-why { font-size: 13px; line-height: 1.6; color: var(--muted); }
+.ex-card .ex-take { font-size: 13px; line-height: 1.55; color: var(--ink); padding-top: 12px; border-top: 1px dashed var(--line); }
+.ex-card .ex-take strong { font-weight: 600; }
+.ex-disclaimer { margin-top: 16px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; color: var(--muted); line-height: 1.6; max-width: 740px; }
+.ex-link { display: inline-flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple); text-decoration: none; margin-top: 4px; padding-top: 12px; border-top: 1px dashed var(--line); transition: gap 0.2s; }
+.ex-card.teal .ex-link { color: #0a8a96; }
+.ex-link:hover { gap: 12px; }
+.ex-link .arr { font-size: 12px; }
+
+/* ── VIDEO STORYBOARD ── */
+#storyboard { background: var(--ink); color: var(--paper); }
+.ref-block { margin-top: 56px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; }
+.ref-img-wrap { position: relative; border: 1px solid rgba(244,241,234,0.15); overflow: hidden; }
+.ref-img-wrap img { width: 100%; display: block; }
+.ref-img-tag { position: absolute; top: 12px; left: 12px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; background: rgba(10,10,10,0.7); color: var(--teal); padding: 5px 10px; backdrop-filter: blur(4px); }
+.ref-text .rt-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purple-mid); margin-bottom: 14px; }
+.ref-text h3 { font-family: var(--serif); font-size: 26px; font-weight: 400; line-height: 1.15; color: var(--paper); margin-bottom: 16px; letter-spacing: -0.02em; }
+.ref-text ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.ref-text li { font-size: 14px; line-height: 1.55; color: rgba(244,241,234,0.8); padding-left: 22px; position: relative; }
+.ref-text li::before { content: '›'; position: absolute; left: 0; color: var(--teal); font-family: var(--mono); }
+.ref-text li strong { color: var(--paper); font-weight: 600; }
+.ref-credit { font-family: var(--mono); font-size: 10px; color: rgba(244,241,234,0.4); margin-top: 16px; letter-spacing: 0.05em; }
+
+.sb-board-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purple-mid); margin: 64px 0 24px; display: flex; align-items: center; gap: 14px; }
+.sb-board-label::after { content: ''; flex: 1; height: 1px; background: rgba(244,241,234,0.15); }
+.sb-board-label.teal { color: var(--teal); }
+
+.sb-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.sb-frame { display: flex; flex-direction: column; gap: 0; }
+.frame-screen {
+  aspect-ratio: 16/9; position: relative; overflow: hidden;
+  border: 1px solid rgba(244,241,234,0.15);
+  display: flex; align-items: center; justify-content: center;
+}
+.frame-screen.cam { background: linear-gradient(135deg, #2a3a32 0%, #1a2620 100%); }
+.frame-screen.screen { background: linear-gradient(135deg, #1a1633 0%, #0f0d1f 100%); }
+.frame-screen.beta { background: linear-gradient(135deg, #2a1410 0%, #1a0c08 100%); }
+.frame-screen.endcard { background: var(--purple); }
+
+/* talking head silhouette */
+.head-sil { width: 38%; aspect-ratio: 1; position: relative; }
+.head-sil::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 50%; aspect-ratio: 1; border-radius: 50%; background: rgba(244,241,234,0.18); }
+.head-sil::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 55%; border-radius: 45% 45% 0 0; background: rgba(244,241,234,0.18); }
+
+/* lower third */
+.lower-third { position: absolute; bottom: 14px; left: 14px; z-index: 3; }
+.lower-third .lt-name { font-family: var(--serif); font-size: 16px; color: white; font-weight: 500; line-height: 1; margin-bottom: 3px; }
+.lower-third .lt-role { font-family: var(--sans); font-size: 10px; color: rgba(255,255,255,0.85); letter-spacing: 0.02em; }
+
+/* product mock inside screen frame */
+.prod-mock { width: 78%; height: 70%; background: rgba(244,241,234,0.06); border: 1px solid rgba(244,241,234,0.12); border-radius: 4px; display: flex; flex-direction: column; padding: 10px; gap: 6px; }
+.prod-mock .pm-bar { height: 8px; background: rgba(86,69,245,0.4); border-radius: 2px; width: 40%; }
+.prod-mock .pm-line { height: 5px; background: rgba(244,241,234,0.12); border-radius: 2px; }
+.prod-mock .pm-line.s { width: 60%; }
+.prod-mock .pm-canvas { flex: 1; background: rgba(59,217,235,0.1); border: 1px dashed rgba(59,217,235,0.3); border-radius: 3px; margin-top: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 8px; color: var(--teal); letter-spacing: 0.1em; text-transform: uppercase; }
+.feat-row { display: flex; gap: 8px; width: 80%; }
+.feat-chip { flex: 1; aspect-ratio: 1; background: rgba(244,241,234,0.06); border: 1px solid rgba(244,241,234,0.12); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+
+.play-circ { width: 44px; height: 44px; border-radius: 50%; background: rgba(244,241,234,0.15); display: flex; align-items: center; justify-content: center; }
+.play-tri { width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 13px solid white; margin-left: 3px; }
+.beta-badge { position: absolute; top: 12px; right: 12px; font-family: var(--mono); font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; background: rgba(255,77,26,0.25); color: #ff8c6b; padding: 4px 8px; }
+.endcard-logo { font-family: var(--serif); font-size: 24px; color: white; font-weight: 500; }
+.endcard-cta { font-family: var(--mono); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-top: 8px; }
+
+.frame-tc { position: absolute; top: 12px; left: 12px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; color: rgba(244,241,234,0.6); background: rgba(10,10,10,0.5); padding: 3px 7px; z-index: 3; }
+.frame-meta { background: rgba(244,241,234,0.04); border: 1px solid rgba(244,241,234,0.1); border-top: none; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+.frame-meta .fm-top { display: flex; align-items: center; gap: 8px; }
+.fm-shot { font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 7px; border-radius: 2px; }
+.fm-shot.cam { background: rgba(86,69,245,0.25); color: var(--purple-mid); }
+.fm-shot.screen { background: rgba(59,217,235,0.15); color: var(--teal); }
+.fm-shot.beta { background: rgba(255,77,26,0.18); color: #ff8c6b; }
+.fm-shot.endcard { background: rgba(244,241,234,0.12); color: rgba(244,241,234,0.7); }
+.fm-num { font-family: var(--mono); font-size: 10px; color: rgba(244,241,234,0.4); margin-left: auto; }
+.fm-line { font-family: var(--serif); font-size: 14px; line-height: 1.4; color: rgba(244,241,234,0.9); font-style: italic; }
+.fm-note { font-size: 11px; color: rgba(244,241,234,0.5); line-height: 1.45; }
+
+.cutrhythm { margin-top: 56px; }
+.cut-strip { display: flex; align-items: center; gap: 0; flex-wrap: wrap; margin-top: 16px; }
+.cut-seg { flex: 1; min-width: 70px; padding: 14px 8px; text-align: center; border: 1px solid rgba(244,241,234,0.12); }
+.cut-seg.cam { background: rgba(86,69,245,0.18); }
+.cut-seg.screen { background: rgba(59,217,235,0.1); }
+.cut-seg.beta { background: rgba(255,77,26,0.12); }
+.cut-seg .cs-label { font-family: var(--mono); font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(244,241,234,0.6); line-height: 1.3; }
+.cut-seg .cs-time { font-family: var(--mono); font-size: 9px; color: rgba(244,241,234,0.4); margin-top: 4px; }
+
+/* ── ECOSYSTEM MAP ── */
+#ecosystem { background: var(--ink); color: var(--paper); }
+.eco-map {
+  margin-top: 56px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 0;
+}
+.eco-row { display: flex; align-items: stretch; gap: 0; }
+.eco-row + .eco-row { margin-top: 2px; }
+
+/* Center anchor */
+.eco-anchor {
+  background: var(--purple);
+  padding: 36px 40px;
+  display: flex; flex-direction: column; justify-content: center; gap: 10px;
+  flex: 0 0 340px;
+  position: relative;
+}
+.eco-anchor .label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(244,241,234,0.7); }
+.eco-anchor .title { font-family: var(--serif); font-size: 28px; font-weight: 400; line-height: 1.1; color: white; }
+.eco-anchor .sub { font-size: 13px; color: rgba(244,241,234,0.75); line-height: 1.5; margin-top: 6px; }
+.eco-anchor::after {
+  content: '→';
+  position: absolute; right: -22px; top: 50%; transform: translateY(-50%);
+  font-family: var(--mono); font-size: 20px; color: var(--purple); z-index: 2;
+}
+
+.eco-arrow-col { display: flex; align-items: center; justify-content: center; flex: 0 0 44px; }
+.eco-arrow { font-family: var(--mono); font-size: 18px; color: var(--purple-mid); }
+.eco-arrow.down { transform: rotate(90deg); }
+.eco-arrow.left { transform: rotate(180deg); }
+
+.eco-assets { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+
+.asset-card {
+  background: rgba(244,241,234,0.05);
+  border: 1px solid rgba(244,241,234,0.08);
+  padding: 22px 26px;
+  display: flex; align-items: flex-start; gap: 18px;
+  transition: background 0.2s;
+  cursor: default;
+}
+.asset-card:hover { background: rgba(244,241,234,0.09); }
+.asset-card .ac-num { font-family: var(--mono); font-size: 11px; color: var(--purple-mid); letter-spacing: 0.1em; flex-shrink: 0; padding-top: 2px; }
+.asset-card .ac-body {}
+.asset-card .ac-type { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(244,241,234,0.4); margin-bottom: 5px; }
+.asset-card .ac-name { font-family: var(--serif); font-size: 18px; font-weight: 400; color: var(--paper); line-height: 1.2; margin-bottom: 5px; }
+.asset-card .ac-desc { font-size: 12px; color: rgba(244,241,234,0.6); line-height: 1.5; }
+.asset-card .ac-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.pill { font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; }
+.pill-purple { background: rgba(86,69,245,0.25); color: var(--purple-mid); }
+.pill-teal { background: rgba(59,217,235,0.18); color: var(--teal); }
+.pill-orange { background: rgba(255,77,26,0.2); color: #ff8c6b; }
+.pill-gray { background: rgba(244,241,234,0.08); color: rgba(244,241,234,0.5); }
+
+.lp-anchor {
+  background: var(--teal);
+  padding: 36px 40px;
+  display: flex; flex-direction: column; justify-content: center; gap: 10px;
+  flex: 0 0 340px;
+}
+.lp-anchor .label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(10,10,10,0.55); }
+.lp-anchor .title { font-family: var(--serif); font-size: 28px; font-weight: 400; line-height: 1.1; color: var(--ink); }
+.lp-anchor .sub { font-size: 13px; color: rgba(10,10,10,0.65); line-height: 1.5; margin-top: 6px; }
+
+.connector-label {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(244,241,234,0.3); text-align: center; padding: 10px 0;
+}
+
+/* ── ASSETS DETAIL ── */
+#assets { background: var(--paper-deep); }
+.assets-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 56px; }
+.asset-detail {
+  background: var(--paper); padding: 40px 36px;
+  border: 1px solid var(--line); display: flex; flex-direction: column; gap: 18px;
+  transition: transform 0.25s;
+}
+.asset-detail:hover { transform: translateY(-3px); }
+.ad-eyebrow { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purple); }
+.ad-title { font-family: var(--serif); font-size: 26px; font-weight: 400; line-height: 1.15; letter-spacing: -0.02em; }
+.ad-desc { font-size: 14px; line-height: 1.6; color: var(--muted); max-width: 100%; }
+.ad-channels { display: flex; gap: 6px; flex-wrap: wrap; }
+.ad-divider { height: 1px; background: var(--line); }
+.ad-role { font-size: 13px; line-height: 1.55; }
+.ad-role strong { font-weight: 600; color: var(--ink); }
+
+/* hero asset — full width */
+.asset-detail.hero { grid-column: 1 / -1; background: var(--ink); color: var(--paper); flex-direction: row; gap: 60px; align-items: center; }
+.asset-detail.hero .ad-eyebrow { color: var(--purple-mid); }
+.asset-detail.hero .ad-title { color: var(--paper); font-size: 36px; }
+.asset-detail.hero .ad-desc { color: rgba(244,241,234,0.7); }
+.asset-detail.hero .ad-role { color: rgba(244,241,234,0.8); }
+.asset-detail.hero .ad-role strong { color: var(--paper); }
+.asset-detail.hero .ad-divider { background: rgba(244,241,234,0.12); }
+.hero-left { flex: 0 0 420px; }
+.hero-right { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+
+/* shot sequence visual */
+.shot-seq { display: flex; align-items: center; gap: 0; margin-top: 8px; }
+.shot-block {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 14px 10px; flex: 1; text-align: center;
+}
+.shot-block .sb-num { font-family: var(--mono); font-size: 9px; color: var(--purple-mid); letter-spacing: 0.1em; }
+.shot-block .sb-icon { font-size: 20px; }
+.shot-block .sb-label { font-family: var(--mono); font-size: 8px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(244,241,234,0.5); line-height: 1.3; }
+.shot-block.cam { background: rgba(86,69,245,0.2); border: 1px solid rgba(86,69,245,0.4); }
+.shot-block.screen { background: rgba(59,217,235,0.1); border: 1px solid rgba(59,217,235,0.25); }
+.shot-block.beta { background: rgba(255,77,26,0.12); border: 1px solid rgba(255,77,26,0.3); }
+.shot-arrow { font-family: var(--mono); font-size: 14px; color: rgba(244,241,234,0.2); flex-shrink: 0; padding: 0 2px; }
+
+/* ── ROLLOUT ── */
+#rollout { background: var(--paper); }
+.timeline { margin-top: 56px; display: flex; flex-direction: column; gap: 2px; }
+.phase-row {
+  display: grid; grid-template-columns: 220px 60px 1fr;
+  align-items: stretch; gap: 0;
+}
+.phase-label {
+  padding: 32px 30px; display: flex; flex-direction: column; justify-content: center; gap: 8px;
+}
+.phase-label .ph-num { font-family: var(--mono); font-size: 10px; color: var(--purple); letter-spacing: 0.2em; text-transform: uppercase; }
+.phase-label .ph-name { font-family: var(--serif); font-size: 22px; font-weight: 400; line-height: 1.1; }
+.phase-label .ph-date { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+
+.phase-dot-col { display: flex; flex-direction: column; align-items: center; padding: 32px 0; gap: 0; }
+.ph-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--purple); flex-shrink: 0; margin-top: 6px; }
+.ph-line { flex: 1; width: 2px; background: var(--line); }
+.ph-dot.teal { background: var(--teal); }
+.ph-dot.orange { background: var(--accent); }
+
+.phase-content {
+  padding: 32px 36px; display: flex; flex-direction: column; gap: 16px;
+  border-left: 1px solid var(--line);
+}
+.phase-row.soft .phase-content { background: var(--paper-deep); }
+.phase-row.full .phase-content { background: var(--ink); color: var(--paper); border-left-color: var(--purple); }
+.phase-row.full .phase-label { background: var(--purple); color: var(--paper); }
+.phase-row.full .phase-label .ph-num { color: rgba(244,241,234,0.6); }
+.phase-row.full .phase-label .ph-date { color: rgba(244,241,234,0.6); }
+.phase-row.full .ph-dot { background: var(--teal); }
+
+.phase-items { display: flex; flex-direction: column; gap: 10px; }
+.phase-item { display: flex; gap: 14px; align-items: flex-start; padding: 12px 16px; background: rgba(10,10,10,0.03); }
+.phase-row.full .phase-item { background: rgba(244,241,234,0.04); }
+.pi-tag { font-family: var(--mono); font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 6px; flex-shrink: 0; margin-top: 1px; }
+.pi-tag.purple { background: var(--purple-light); color: var(--purple); }
+.pi-tag.teal { background: var(--teal-light); color: #0a8a96; }
+.pi-tag.orange { background: #fff0eb; color: #c03000; }
+.phase-row.full .pi-tag.purple { background: rgba(86,69,245,0.25); color: var(--purple-mid); }
+.phase-row.full .pi-tag.teal { background: rgba(59,217,235,0.15); color: var(--teal); }
+.phase-row.full .pi-tag.orange { background: rgba(255,77,26,0.15); color: #ff8c6b; }
+.pi-body {}
+.pi-name { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.pi-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.phase-row.full .pi-desc { color: rgba(244,241,234,0.55); }
+.phase-row.full .pi-name { color: var(--paper); }
+
+.rationale-box {
+  background: var(--purple-light); padding: 20px 24px;
+  border-left: 3px solid var(--purple);
+  font-family: var(--serif); font-style: italic; font-size: 18px; line-height: 1.45; color: var(--ink);
+  max-width: 780px; margin-top: 10px;
+}
+.rationale-box strong { font-style: normal; font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--purple); display: block; margin-bottom: 6px; }
+
+/* ── LP WIREFRAME ── */
+#lp { background: var(--paper-deep); }
+.lp-frame { margin-top: 56px; border: 1px solid var(--line); background: white; overflow: hidden; max-width: 960px; }
+.lp-bar { background: var(--ink); padding: 10px 20px; display: flex; gap: 8px; align-items: center; }
+.lp-bar-dot { width: 10px; height: 10px; border-radius: 50%; }
+.lp-bar-url { font-family: var(--mono); font-size: 10px; color: rgba(244,241,234,0.4); margin-left: 12px; letter-spacing: 0.08em; }
+.lp-section { padding: 40px 48px; border-bottom: 1px solid #eee; position: relative; }
+.lp-section-label {
+  position: absolute; right: 18px; top: 12px;
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--purple); background: var(--purple-light); padding: 3px 8px;
+}
+.lp-hero { background: var(--ink); color: var(--paper); padding: 64px 48px 52px; }
+.lp-hero .lp-section-label { background: rgba(86,69,245,0.3); color: var(--purple-mid); }
+.lp-hero-eyebrow { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; }
+.lp-hero-h1 { font-family: var(--serif); font-size: clamp(32px, 4vw, 52px); font-weight: 300; line-height: 1.0; letter-spacing: -0.03em; color: var(--paper); margin-bottom: 20px; }
+.lp-hero-h1 em { font-style: italic; color: var(--purple-mid); }
+.lp-hero-sub { font-size: 15px; color: rgba(244,241,234,0.65); max-width: 540px; line-height: 1.55; margin-bottom: 32px; }
+.lp-cta-row { display: flex; gap: 12px; align-items: center; }
+.lp-cta { display: inline-block; background: var(--purple); color: white; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 28px; }
+.lp-cta.sec { background: transparent; color: rgba(244,241,234,0.7); border: 1px solid rgba(244,241,234,0.2); }
+.lp-logos { display: flex; gap: 28px; align-items: center; padding: 20px 48px; background: rgba(10,10,10,0.03); flex-wrap: wrap; }
+.lp-logo-pill { font-family: var(--mono); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); border: 1px solid #ddd; padding: 5px 12px; }
+.lp-logos .label { font-family: var(--mono); font-size: 9px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.lp-video-block { background: #f0eeff; display: flex; align-items: center; justify-content: center; height: 200px; flex-direction: column; gap: 12px; }
+.lp-play { width: 56px; height: 56px; border-radius: 50%; background: var(--purple); display: flex; align-items: center; justify-content: center; }
+.lp-play-tri { width: 0; height: 0; border-top: 11px solid transparent; border-bottom: 11px solid transparent; border-left: 18px solid white; margin-left: 4px; }
+.lp-video-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--purple); }
+.lp-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.lp-feature-item { display: flex; flex-direction: column; gap: 8px; }
+.lf-num { font-family: var(--mono); font-size: 10px; color: var(--purple); letter-spacing: 0.1em; }
+.lf-title { font-family: var(--serif); font-size: 18px; font-weight: 400; }
+.lf-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.lp-quote { background: var(--purple); color: white; padding: 32px 40px; }
+.lp-quote blockquote { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.4; font-weight: 300; margin-bottom: 16px; }
+.lp-quote cite { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.6); font-style: normal; }
+.lp-examples { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.lp-example { background: #f7f7f7; height: 120px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 6px; border: 1px solid #eee; }
+.lp-example .ex-label { font-family: var(--mono); font-size: 9px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.lp-example .ex-co { font-family: var(--serif); font-size: 15px; font-weight: 400; color: var(--ink); }
+.lp-final-cta { background: var(--ink); color: var(--paper); text-align: center; padding: 56px 48px; }
+.lp-final-cta h3 { font-family: var(--serif); font-weight: 300; font-size: 32px; color: var(--paper); margin-bottom: 24px; letter-spacing: -0.02em; }
+.lp-final-cta h3 em { font-style: italic; color: var(--teal); }
+
+/* ── OPEN ITEMS ── */
+#next { background: var(--ink); color: var(--paper); }
+.items-grid { margin-top: 56px; display: flex; flex-direction: column; gap: 2px; }
+.item-row { display: grid; grid-template-columns: 48px 1fr 180px 160px; gap: 0; align-items: stretch; background: rgba(244,241,234,0.04); border: 1px solid rgba(244,241,234,0.07); }
+.item-row.header { background: rgba(86,69,245,0.2); border-color: rgba(86,69,245,0.4); }
+.item-cell { padding: 16px 20px; display: flex; align-items: center; font-size: 13px; }
+.item-cell + .item-cell { border-left: 1px solid rgba(244,241,234,0.07); }
+.item-row.header .item-cell { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--purple-mid); font-weight: 500; }
+.item-num { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--purple-mid); }
+.item-text { line-height: 1.5; color: rgba(244,241,234,0.85); }
+.item-owner { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: rgba(244,241,234,0.5); }
+.item-due { font-family: var(--mono); font-size: 11px; color: var(--teal); letter-spacing: 0.06em; }
+.item-due.urgent { color: #ff8c6b; }
+
+/* ── FOOTER ── */
+footer { background: var(--ink); color: rgba(244,241,234,0.4); padding: 40px 60px; display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; border-top: 1px solid rgba(244,241,234,0.08); }
+footer strong { color: rgba(244,241,234,0.7); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">LUMEN5 <span>×</span> STRYVE</div>
+  <div class="links">
+    <a href="#cover">Overview</a>
+    <a href="#positioning">Positioning</a>
+    <a href="#ecosystem">Ecosystem</a>
+    <a href="#production">Production</a>
+    <a href="#examples">Examples</a>
+    <a href="#storyboard">Storyboard</a>
+    <a href="#assets">Assets</a>
+    <a href="#rollout">Rollout</a>
+    <a href="#lp">Landing Page</a>
+    <a href="#next">Open Items</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- COVER                                          -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="cover">
+  <div class="container">
+    <div class="cover-top">
+      <span><strong>Lumen5</strong> · Phase 2 Launch</span>
+      <span>Stryve · June 2026</span>
+      <span>Confidential</span>
+    </div>
+    <div>
+      <div class="cover-h1">The<br><em>Explainer</em><br>Launch.</div>
+      <div class="cover-sub">A full campaign strategy for Lumen5's animated explainer video product — from the hero asset to the landing page to the September push.</div>
+    </div>
+    <div class="cover-bottom">
+      <span>Animated Explainer Videos · GA August 2026 · Full Push <strong>September</strong></span>
+      <span>Prepared by <strong>Ryan Burgio</strong> · Stryve</span>
+    </div>
+  </div>
+  <div class="marquee"><span class="marquee-inner">Launch · Explain · Publish · Launch · Explain · Publish · Launch · Explain · Publish · &nbsp;</span></div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- POSITIONING                                    -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="positioning">
+  <div class="container">
+    <div class="eyebrow">
+      The Strategic Frame <span class="tag">Why this launch matters</span>
+    </div>
+    <h2 class="stitle">Not a new product.<br>A new <em>identity.</em></h2>
+    <p class="lead">A second product changes what Lumen5 is. One product is a tool. Two products is a platform. That shift is the most valuable thing about this launch — and the messaging should lean into it deliberately.</p>
+
+    <div class="pos-shift">
+      <div class="pos-card pos-from">
+        <div class="pc-label">Today</div>
+        <div class="pc-term">"AI video tool"</div>
+        <div class="pc-desc">A crowded category. Dozens of competitors on price, speed, and novelty. Hard to defend, hard to charge enterprise money for, easy to be compared against a $29/month alternative.</div>
+        <div class="pc-tags">
+          <span class="pill pill-gray">Commodity</span>
+          <span class="pill pill-gray">Single use</span>
+          <span class="pill pill-gray">Price-pressured</span>
+        </div>
+      </div>
+      <div class="pos-arrow-col"><div class="pos-arrow">→</div></div>
+      <div class="pos-card pos-to">
+        <div class="pc-label">After launch</div>
+        <div class="pc-term">"Video <em>platform</em>"</div>
+        <div class="pc-desc">A suite serious content teams build on. Stickier, more enterprise-credible, harder to displace. The two-product moment is the proof point — Lumen5 isn't one trick, it's where B2B video lives.</div>
+        <div class="pc-tags">
+          <span class="pill pill-purple">Enterprise-credible</span>
+          <span class="pill pill-teal">Sticky</span>
+          <span class="pill pill-purple">Defensible</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pos-note">Every asset in this campaign carries that frame quietly underneath. The launch isn't <em>"we made an explainer tool."</em> It's <em>"we became a platform — and here's the first proof."</em> Website and GA messaging should make the platform move on purpose.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- ECOSYSTEM MAP                                  -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="ecosystem">
+  <div class="container">
+    <div class="eyebrow eyebrow-light">
+      Campaign Architecture <span class="tag">How it all connects</span>
+    </div>
+    <h2 class="stitle" style="color:var(--paper);">Every asset<br>feeds the <em>same</em><br>destination.</h2>
+    <p class="lead lead-light">One landing page. Four content streams flowing into it. Everything is interconnected — the launch video generates awareness, the client examples provide proof, the blog drives SEO, the ads keep it all in market.</p>
+
+    <div class="eco-map">
+
+      <!-- Top row: assets flowing in from left -->
+      <div class="eco-row" style="margin-bottom:2px;">
+        <div class="eco-assets">
+          <div class="asset-card">
+            <div class="ac-num">01</div>
+            <div class="ac-body">
+              <div class="ac-type">Hero Asset</div>
+              <div class="ac-name">Michael (or Pius) Launch Video</div>
+              <div class="ac-desc">Founder on camera + product cutaways. The centerpiece of the entire launch. Runs as LinkedIn post, LP4 hero, and paid video ad.</div>
+              <div class="ac-pills">
+                <span class="pill pill-purple">LinkedIn</span>
+                <span class="pill pill-teal">Landing Page</span>
+                <span class="pill pill-orange">Paid Ad</span>
+              </div>
+            </div>
+          </div>
+          <div class="asset-card">
+            <div class="ac-num">02</div>
+            <div class="ac-body">
+              <div class="ac-type">Organic Content</div>
+              <div class="ac-name">Client Example Posts</div>
+              <div class="ac-desc">Beta customer outputs shown as standalone LinkedIn posts. Real brand, real explainer, time-to-publish stat. Feeds into LP4 as proof section.</div>
+              <div class="ac-pills">
+                <span class="pill pill-purple">LinkedIn</span>
+                <span class="pill pill-teal">Landing Page</span>
+              </div>
+            </div>
+          </div>
+          <div class="asset-card">
+            <div class="ac-num">03</div>
+            <div class="ac-body">
+              <div class="ac-type">Content</div>
+              <div class="ac-name">Launch Blog Post</div>
+              <div class="ac-desc">Formal written announcement. Supports SEO for "animated explainer video" terms. Embeds the launch video. Links to LP4.</div>
+              <div class="ac-pills">
+                <span class="pill pill-gray">SEO</span>
+                <span class="pill pill-teal">Landing Page</span>
+                <span class="pill pill-gray">Lumen5 Blog</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- arrow -->
+        <div class="eco-arrow-col"><div class="eco-arrow">→</div></div>
+
+        <!-- Landing page anchor -->
+        <div class="lp-anchor">
+          <div class="label">Destination · LP4</div>
+          <div class="title">get.lumen5.com<br>/explainer</div>
+          <div class="sub">All roads lead here. Demo video above the fold, client examples, feature proof, dual CTA: free trial + book demo.</div>
+        </div>
+
+        <!-- arrow out right -->
+        <div class="eco-arrow-col"><div class="eco-arrow">→</div></div>
+
+        <!-- Outcomes -->
+        <div class="eco-assets">
+          <div class="asset-card">
+            <div class="ac-num" style="color:var(--teal);">↗</div>
+            <div class="ac-body">
+              <div class="ac-type" style="color:rgba(244,241,234,0.3);">Outcome A</div>
+              <div class="ac-name">Free Trial Sign-up</div>
+              <div class="ac-desc">Self-serve conversion. The fast path. Tracks via GA4.</div>
+              <div class="ac-pills"><span class="pill pill-teal">Self-serve</span></div>
+            </div>
+          </div>
+          <div class="asset-card">
+            <div class="ac-num" style="color:var(--teal);">↗</div>
+            <div class="ac-body">
+              <div class="ac-type" style="color:rgba(244,241,234,0.3);">Outcome B</div>
+              <div class="ac-name">Book a Demo</div>
+              <div class="ac-desc">Enterprise path. Routes to Pius / AE team.</div>
+              <div class="ac-pills"><span class="pill pill-purple">Enterprise</span></div>
+            </div>
+          </div>
+          <div class="asset-card">
+            <div class="ac-num" style="color:var(--teal);">↗</div>
+            <div class="ac-body">
+              <div class="ac-type" style="color:rgba(244,241,234,0.3);">Outcome C</div>
+              <div class="ac-name">Existing Customer Upsell</div>
+              <div class="ac-desc">Soft launch targets current enterprise base first.</div>
+              <div class="ac-pills"><span class="pill pill-orange">Add-on</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom row: paid campaigns -->
+      <div class="connector-label" style="color:rgba(244,241,234,0.25); text-align:left; padding: 10px 0 4px; font-family:var(--mono); font-size:9px; letter-spacing:0.15em; text-transform:uppercase;">
+        ↑ Paid media amplifies all four content streams into the same destination ↑
+      </div>
+      <div class="eco-row">
+        <div class="eco-assets" style="flex-direction:row; gap:2px;">
+          <div class="asset-card" style="flex:1;">
+            <div class="ac-num">04</div>
+            <div class="ac-body">
+              <div class="ac-type">Paid</div>
+              <div class="ac-name">LinkedIn Video Ads</div>
+              <div class="ac-desc">Launch video repurposed as paid creative. Target: Content Marketing Managers, Directors of Comms, 500–10k employees.</div>
+              <div class="ac-pills"><span class="pill pill-purple">LinkedIn</span><span class="pill pill-orange">Paid</span></div>
+            </div>
+          </div>
+          <div class="asset-card" style="flex:1;">
+            <div class="ac-num">05</div>
+            <div class="ac-body">
+              <div class="ac-type">Paid</div>
+              <div class="ac-name">Google Search — New Campaign</div>
+              <div class="ac-desc">New keyword cluster: "animated explainer video software," "explainer video maker B2B," "create explainer video." Separate from existing 5 campaigns.</div>
+              <div class="ac-pills"><span class="pill pill-teal">Google</span><span class="pill pill-orange">Paid</span></div>
+            </div>
+          </div>
+          <div class="asset-card" style="flex:1;">
+            <div class="ac-num">06</div>
+            <div class="ac-body">
+              <div class="ac-type">Organic Amplifier</div>
+              <div class="ac-name">Michael LinkedIn — Warm-up Posts</div>
+              <div class="ac-desc">2–3 perspective posts before GA. Problem-framing, no product mention yet. "Why enterprise explainers cost $10k." Plants the flag.</div>
+              <div class="ac-pills"><span class="pill pill-purple">LinkedIn</span><span class="pill pill-gray">Organic</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- PRODUCTION PATHS                               -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="production">
+  <div class="container">
+    <div class="eyebrow eyebrow-light">
+      Making the Hero Video <span class="tag">Two paths · your call</span>
+    </div>
+    <h2 class="stitle" style="color:var(--paper);">Stryve doesn't<br>shoot video.<br><em class="teal">But we direct it.</em></h2>
+    <p class="lead lead-light">We're a strategy and messaging shop, not a production house — and we're not local to your office. So we're honest about that. There are two clean ways to make the hero video, and we'd storyboard and direct either one. Here's the open menu.</p>
+
+    <div class="path-grid">
+
+      <!-- Path A: Live action -->
+      <div class="path-card a">
+        <div class="pa-tag">Path A</div>
+        <div class="pa-title">Founder-led, live action</div>
+        <div class="pa-desc">Michael or Pius on camera, founder energy, intercut with product cutaways. The version in the original storyboard. Needs a crew — which means finding a local video team near your office, or using internal Lumen5 resources if you have them.</div>
+        <div class="pa-list">
+          <div class="pa-row"><div class="k">Stryve</div><div class="v"><strong>Storyboard + script + direction.</strong> We hand a shoot-ready package to whoever holds the camera.</div></div>
+          <div class="pa-row"><div class="k">Shoot</div><div class="v">Local video team (we can help vet + brief) <span class="path-con">or</span> Lumen5 internal resource if available.</div></div>
+          <div class="pa-row"><div class="k">Post</div><div class="v">Could be O&amp;R for post-production — overlays, captions, cutaway compositing, brand polish.</div></div>
+          <div class="pa-row"><div class="k path-pro">Strength</div><div class="v">Human, authentic, founder voice. Performs well on LinkedIn.</div></div>
+          <div class="pa-row"><div class="k path-con">Cost</div><div class="v">Crew + travel + post. Most moving parts. Scheduling dependency on Michael.</div></div>
+        </div>
+      </div>
+
+      <!-- Path B: Made in tool -->
+      <div class="path-card b">
+        <div class="pa-tag">Path B</div>
+        <div class="pa-title">Animated, made in Lumen5</div>
+        <div class="pa-desc">An animated explainer — about the explainer product — made entirely in the new module. The medium is the proof. No crew, no travel, no scheduling. And Stryve has already made a Lumen5 video this way (the proposal companion video), so we know the workflow holds.</div>
+        <div class="pa-list">
+          <div class="pa-row"><div class="k">Stryve</div><div class="v"><strong>Script + storyboard + build it in the tool.</strong> End to end, no external dependency.</div></div>
+          <div class="pa-row"><div class="k">Shoot</div><div class="v">None. It's animated, made in-product.</div></div>
+          <div class="pa-row"><div class="k">Post</div><div class="v">Light — optional O&amp;R polish on overlays if we want extra shine.</div></div>
+          <div class="pa-row"><div class="k path-pro">Strength</div><div class="v">Self-proving. "Made with the product it's announcing." Fast, cheap, fully in our control.</div></div>
+          <div class="pa-row"><div class="k path-con">Trade-off</div><div class="v">No founder face. Less personal. Leans on the product to carry the emotion.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- workflow if Path A -->
+    <div class="workflow">
+      <div class="workflow-label">If we go Path A — the handoff chain</div>
+      <div class="workflow-flow">
+        <div class="wf-step"><div class="wf-owner stryve">Stryve</div><div class="wf-name">Storyboard + script</div><div class="wf-desc">Shot-by-shot, shoot-ready. Already drafted.</div></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><div class="wf-owner crew">Crew</div><div class="wf-name">Shoot</div><div class="wf-desc">Local team or Lumen5 internal. We brief + direct remotely.</div></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><div class="wf-owner lumen">Lumen5</div><div class="wf-name">Product cutaways</div><div class="wf-desc">Screen recordings of the module in action.</div></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><div class="wf-owner crew">O&amp;R</div><div class="wf-name">Post + overlays</div><div class="wf-desc">Edit, captions, compositing, brand polish.</div></div>
+      </div>
+    </div>
+
+    <div class="honest-note">
+      <strong>Our honest read</strong>
+      Both work. But Path B has a quiet edge: announcing the explainer product with an explainer made in the product is the strongest possible demonstration — the pitch makes itself. We'd keep Path A on the table if you want Michael's face on it, and we're glad to help vet a local crew either way. We just want to be upfront that production isn't our core service, so the budget and logistics there are yours to own.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- EXAMPLES GALLERY                               -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="examples">
+  <div class="container">
+    <div class="eyebrow">
+      In Market <span class="tag">The two references</span>
+    </div>
+    <h2 class="stitle">One reference<br>per <em>path.</em></h2>
+    <p class="lead">No long shortlist. Just the one video that nails each direction — both real, both linked. Pull them up in the kickoff and let them make the case.</p>
+
+    <div class="ex-tier">
+      <div class="ex-grid">
+
+        <!-- Path A -->
+        <div class="ex-card">
+          <div class="ex-what">Path A · Founder-led live action</div>
+          <div class="ex-brand">Claude Fable — launch film</div>
+          <div class="ex-why">A product manager on camera, lower-third name and title, intercut with animation throughout. The exact "expert explains, product demonstrates" format we'd run for Michael — real person, real office, cut back and forth between talking head and motion.</div>
+          <div class="ex-take"><strong>Why this one:</strong> It's the closest thing in market to the storyboard we built. The lower-third treatment and the cut rhythm are lifted straight from here.</div>
+          <a class="ex-link" href="https://www.youtube.com/watch?v=Y9Wz2PV404E" target="_blank" rel="noopener">Watch the reference <span class="arr">→</span></a>
+        </div>
+
+        <!-- Path B -->
+        <div class="ex-card teal">
+          <div class="ex-what">Path B · Animated / made-in-tool</div>
+          <div class="ex-brand">Lumen5 — made in Lumen5</div>
+          <div class="ex-why">Stryve already made a Lumen5 video using the platform itself — the proposal companion video. The workflow is proven and the output is on brand. Path B just points that same capability at the launch announcement.</div>
+          <div class="ex-take"><strong>Why this one:</strong> The strongest argument for the animated path is the one we can already demonstrate. The medium is the proof — and it's ours.</div>
+          <span class="ex-link">Pull the companion video for the call <span class="arr">→</span></span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="ex-disclaimer">
+      Path A link is the Claude Fable launch film referenced in the storyboard. Path B is the Stryve-made Lumen5 companion video from the proposal — confirm it's handy before the kickoff so we can play it live.
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- VIDEO STORYBOARD                               -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="storyboard">
+  <div class="container">
+    <div class="eyebrow eyebrow-light">
+      The Hero Video, Wireframed <span class="tag">Storyboard</span>
+    </div>
+    <h2 class="stitle" style="color:var(--paper);">On camera.<br>Then product.<br><em class="teal">Cut. Repeat.</em></h2>
+    <p class="lead lead-light">The format you flagged: a real person on camera, lower-third name and title, intercut with product and animation. Talking head sets up the why, the cutaway shows the how, cut back to land it. Here's the reference, then the shot-by-shot board.</p>
+
+    <!-- REFERENCE -->
+    <div class="ref-block">
+      <div class="ref-img-wrap">
+        <span class="ref-img-tag">Reference · format we want</span>
+        <img src="data:image/jpeg;base64,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" alt="Launch film reference frame — person on camera with lower-third name and title" />
+      </div>
+      <div class="ref-text">
+        <div class="rt-label">What to steal from it</div>
+        <h3>The "expert explains, product demonstrates" format.</h3>
+        <ul>
+          <li><strong>Lower third:</strong> name and role in a clean serif, bottom-left. Signals a real builder, not a spokesperson.</li>
+          <li><strong>Cut rhythm:</strong> talking head for the why, animation for the how, back to land the point. Energy stays up.</li>
+          <li><strong>Environment:</strong> real office, soft depth of field. Warm and cinematic, not a sterile studio.</li>
+          <li><strong>Restraint:</strong> no hype, no music swells. The person and the product carry it.</li>
+        </ul>
+        <div class="ref-credit">Reference frame from the Claude Fable launch film, shown as a format example. Pull the live video in the kickoff.</div>
+      </div>
+    </div>
+
+    <!-- ANNOUNCEMENT VIDEO BOARD -->
+    <div class="sb-board-label">The Announcement Video · shot by shot</div>
+    <div class="sb-grid">
+
+      <!-- Frame 1 -->
+      <div class="sb-frame">
+        <div class="frame-screen cam">
+          <div class="frame-tc">00:00</div>
+          <div class="head-sil"></div>
+          <div class="lower-third"><div class="lt-name">Michael Cheng</div><div class="lt-role">Founder &amp; CEO, Lumen5</div></div>
+        </div>
+        <div class="frame-meta">
+          <div class="fm-top"><span class="fm-shot cam">On camera</span><span class="fm-num">Shot 01 · Cold open</span></div>
+          <div class="fm-line">"Explainer videos cost ten thousand dollars and take six weeks. We think that's insane."</div>
+          <div class="fm-note">Lower third fades in 2s after he starts. No intro, no logo. Straight into the hook.</div>
+        </div>
+      </div>
+
+      <!-- Frame 2 -->
+      <div class="sb-frame">
+        <div class="frame-screen screen">
+          <div class="frame-tc">00:08</div>
+          <div class="prod-mock">
+            <div class="pm-bar"></div>
+            <div class="pm-line"></div>
+            <div class="pm-line s"></div>
+            <div class="pm-canvas">Explainer building…</div>
+          </div>
+        </div>
+        <div class="frame-meta">
+          <div class="fm-top"><span class="fm-shot screen">Cutaway A</span><span class="fm-num">Shot 02 · Product</span></div>
+          <div class="fm-line">Blank canvas → user types a topic → the explainer starts assembling in real time.</div>
+          <div class="fm-note">Screen recording from product team. No voiceover — let the product move.</div>
+        </div>
+      </div>
+
+      <!-- Frame 3 -->
+      <div class="sb-frame">
+        <div class="frame-screen cam">
+          <div class="frame-tc">00:16</div>
+          <div class="head-sil"></div>
+          <div class="lower-third"><div class="lt-name">Michael Cheng</div><div class="lt-role">Founder &amp; CEO, Lumen5</div></div>
+        </div>
+        <div class="frame-meta">
+          <div class="fm-top"><span class="fm-shot cam">On camera</span><span class="fm-num">Shot 03 · Announcement</span></div>
+          <div class="fm-line">"Today we're launching something new. Animated explainer videos. Built right into Lumen5."</div>
+          <div class="fm-note">The reveal. Same framing as shot 01 so the cut feels clean.</div>
+        </div>
+      </div>
+
+      <!-- Frame 4 -->
+      <div class="sb-frame">
+        <div class="frame-screen screen">
+          <div class="frame-tc">00:26</div>
+          <div class="feat-row">
+            <div class="feat-chip">🎨</div>
+            <div class="feat-chip">▶</div>
+            <div class="feat-chip">⤢</div>
+          </div>
+        </div>
+        <div class="frame-meta">
+          <div class="fm-top"><span class="fm-shot screen">Cutaway B</span><span class="fm-num">Shot 04 · Features</span></div>
+          <div class="fm-line">Three quick beats: brand kit auto-applies, animation style picker, one-click resize.</div>
+          <div class="fm-note">Fast montage. Three sub-clips, ~2s each. Animation does the explaining.</div>
+        </div>
+      </div>
+
+      <!-- Frame 5 -->
+      <div class="sb-frame">
+        <div class="frame-screen cam">
+          <div class="frame-tc">00:34</div>
+          <div class="head-sil"></div>
+          <div class="lower-third"><div class="lt-name">Michael Cheng</div><div class="lt-role">Founder &amp; CEO, Lumen5</div></div>
+        </div>
+        <div class="frame-meta">
+          <div class="fm-top"><span class="fm-shot cam">On camera</span><span class="fm-num">Shot 05 · Explanation</span></div>
+          <div class="fm-line">"Type a topic. Your brand loads automatically. Pick a style. You're done. We had customers in beta for months. Here's one of theirs."</div>
+          <div class="fm-note">Plain language. Hands him off to the proof moment.</div>
+        </div>
+      </div>
+
+      <!-- Frame 6 -->
+      <div class="sb-frame">
+        <div class="frame-screen beta">
+          <div class="frame-tc">00:48</div>
+          <span class="beta-badge">Beta output</span>
+          <div class="play-circ"><div class="play-tri"></div></div>
+        </div>
+        <div class="frame-meta">
+          <div class="fm-top"><span class="fm-shot beta">Beta output</span><span class="fm-num">Shot 06 · Proof</span></div>
+          <div class="fm-line">A real beta customer's finished explainer plays. Music only, no voiceover.</div>
+          <div class="fm-note">The emotional peak. Viewer sees the output and thinks "that's actually good." TBC with Pius.</div>
+        </div>
+      </div>
+
+      <!-- Frame 7 -->
+      <div class="sb-frame">
+        <div class="frame-screen cam">
+          <div class="frame-tc">01:02</div>
+          <div class="head-sil"></div>
+          <div class="lower-third"><div class="lt-name">Michael Cheng</div><div class="lt-role">Founder &amp; CEO, Lumen5</div></div>
+        </div>
+        <div class="frame-meta">
+          <div class="fm-top"><span class="fm-shot cam">On camera</span><span class="fm-num">Shot 07 · Close</span></div>
+          <div class="fm-line">"It's live today. Link in the comments if you want to try it."</div>
+          <div class="fm-note">Short. Confident. No hard sell.</div>
+        </div>
+      </div>
+
+      <!-- Frame 8: end card -->
+      <div class="sb-frame">
+        <div class="frame-screen endcard">
+          <div class="frame-tc" style="color:rgba(255,255,255,0.7); background:rgba(0,0,0,0.2);">01:10</div>
+          <div style="text-align:center;">
+            <div class="endcard-logo">Lumen5</div>
+            <div class="endcard-cta">Animated Explainer Videos · Live now</div>
+          </div>
+        </div>
+        <div class="frame-meta">
+          <div class="fm-top"><span class="fm-shot endcard">End card</span><span class="fm-num">Shot 08 · Outro</span></div>
+          <div class="fm-line">Logo lockup, product name, one CTA. 2 seconds.</div>
+          <div class="fm-note">Pill-style white logo on brand purple. Borna SemiBold.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CUT RHYTHM -->
+    <div class="cutrhythm">
+      <div class="sb-board-label" style="margin-top:48px;">The cut rhythm · ~75 seconds</div>
+      <div class="cut-strip">
+        <div class="cut-seg cam"><div class="cs-label">Michael<br>Hook</div><div class="cs-time">0:00</div></div>
+        <div class="cut-seg screen"><div class="cs-label">Product<br>Canvas</div><div class="cs-time">0:08</div></div>
+        <div class="cut-seg cam"><div class="cs-label">Michael<br>Announce</div><div class="cs-time">0:16</div></div>
+        <div class="cut-seg screen"><div class="cs-label">Product<br>Features</div><div class="cs-time">0:26</div></div>
+        <div class="cut-seg cam"><div class="cs-label">Michael<br>Explain</div><div class="cs-time">0:34</div></div>
+        <div class="cut-seg beta"><div class="cs-label">Beta<br>Output</div><div class="cs-time">0:48</div></div>
+        <div class="cut-seg cam"><div class="cs-label">Michael<br>Close</div><div class="cs-time">1:02</div></div>
+      </div>
+    </div>
+
+    <!-- CLIENT VIDEO TEMPLATE -->
+    <div class="sb-board-label teal">The Client Video · repeatable template</div>
+    <p class="lead lead-light" style="font-size:18px; max-width:760px; margin-bottom:8px;">Same DNA, pointed at proof. One per beta customer — spin these out as standalone posts and case studies. The customer (or their output) carries it instead of Michael.</p>
+    <div class="sb-grid" style="margin-top:32px;">
+
+      <div class="sb-frame">
+        <div class="frame-screen cam" style="background:linear-gradient(135deg,#23323a 0%,#16222a 100%);">
+          <div class="frame-tc">00:00</div>
+          <div class="head-sil"></div>
+          <div class="lower-third"><div class="lt-name">[Customer Name]</div><div class="lt-role">[Title] · [Company]</div></div>
+        </div>
+        <div class="frame-meta">
+          <div class="fm-top"><span class="fm-shot cam">On camera / VO</span><span class="fm-num">Beat 01 · Intro</span></div>
+          <div class="fm-line">"We needed explainer videos. We didn't have a budget for an agency."</div>
+          <div class="fm-note">Customer on camera, or voiceover over their workspace if they prefer not to film.</div>
+        </div>
+      </div>
+
+      <div class="sb-frame">
+        <div class="frame-screen screen" style="background:linear-gradient(135deg,#142a2e 0%,#0b1a1d 100%);">
+          <div class="frame-tc">00:10</div>
+          <div class="play-circ" style="background:rgba(59,217,235,0.2);"><div class="play-tri"></div></div>
+        </div>
+        <div class="frame-meta">
+          <div class="fm-top"><span class="fm-shot screen">Their output</span><span class="fm-num">Beat 02 · The work</span></div>
+          <div class="fm-line">Their actual explainer plays. Real brand, real output.</div>
+          <div class="fm-note">This is the hero of a client video — the proof that a real team shipped real work.</div>
+        </div>
+      </div>
+
+      <div class="sb-frame">
+        <div class="frame-screen cam" style="background:linear-gradient(135deg,#23323a 0%,#16222a 100%);">
+          <div class="frame-tc">00:22</div>
+          <div class="head-sil"></div>
+          <div class="lower-third"><div class="lt-name">[Customer Name]</div><div class="lt-role">[Title] · [Company]</div></div>
+        </div>
+        <div class="frame-meta">
+          <div class="fm-top"><span class="fm-shot cam">On camera / VO</span><span class="fm-num">Beat 03 · Result</span></div>
+          <div class="fm-line">"We shipped 14 explainers in three days. On brand. No agency."</div>
+          <div class="fm-note">The stat is the payoff. Pull it as the post caption and the case-study headline.</div>
+        </div>
+      </div>
+
+      <div class="sb-frame">
+        <div class="frame-screen endcard" style="background:var(--teal);">
+          <div class="frame-tc" style="color:rgba(10,10,10,0.6); background:rgba(255,255,255,0.3);">00:30</div>
+          <div style="text-align:center;">
+            <div class="endcard-logo" style="color:var(--ink);">[Company] × Lumen5</div>
+            <div class="endcard-cta" style="color:rgba(10,10,10,0.7);">See what your team could make</div>
+          </div>
+        </div>
+        <div class="frame-meta">
+          <div class="fm-top"><span class="fm-shot endcard">End card</span><span class="fm-num">Beat 04 · Outro</span></div>
+          <div class="fm-line">Co-branded lockup + CTA to LP4.</div>
+          <div class="fm-note">Each client video is its own asset: LinkedIn post, LP4 proof section, sales case study.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="honest-note" style="margin-top:48px;">
+      <strong>One template, many assets</strong>
+      The client video is deliberately modular. Film or capture once per beta customer, and the same footage becomes a standalone LinkedIn post, a proof block on LP4, and a sales-ready case study. That's how three beta customers turn into nine assets without nine shoots.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- ASSETS DETAIL                                  -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="assets">
+  <div class="container">
+    <div class="eyebrow">
+      The Assets <span class="tag">What we're making</span>
+    </div>
+    <h2 class="stitle">Seven things.<br>One <em>story.</em></h2>
+    <p class="lead">Every asset has one job and feeds one destination. Here's what each piece is, why it exists, and what it does in the campaign.</p>
+
+    <div class="assets-grid">
+
+      <!-- Hero: full width -->
+      <div class="asset-detail hero">
+        <div class="hero-left">
+          <div class="ad-eyebrow">01 · Hero Asset</div>
+          <div class="ad-title">The Launch Video</div>
+          <div class="ad-desc">The centerpiece. Two possible directions (see the next section): a founder-led video with product cutaways, or an animated explainer made in the product itself. Either way, it leads with output and closes on real proof. One asset, every channel.</div>
+          <div class="ad-divider" style="margin:16px 0;"></div>
+          <div class="ad-role"><strong>Runtime:</strong> 60–90 seconds<br><strong>Production:</strong> Path open — Stryve storyboards either way<br><strong>Cutaways / output:</strong> Product team screen recordings<br><strong>Proof moment:</strong> Beta customer finished explainer (TBC with Pius)</div>
+        </div>
+        <div class="hero-right">
+          <div style="font-family:var(--mono); font-size:9px; letter-spacing:0.15em; text-transform:uppercase; color:rgba(244,241,234,0.4); margin-bottom:8px;">Shot sequence</div>
+          <div class="shot-seq">
+            <div class="shot-block cam"><div class="sb-num">01</div><div class="sb-icon">🎬</div><div class="sb-label">Cold open<br>Michael</div></div>
+            <div class="shot-arrow">›</div>
+            <div class="shot-block screen"><div class="sb-num">02</div><div class="sb-icon">💻</div><div class="sb-label">Cutaway A<br>Product</div></div>
+            <div class="shot-arrow">›</div>
+            <div class="shot-block cam"><div class="sb-num">03</div><div class="sb-icon">🎬</div><div class="sb-label">Announce-<br>ment</div></div>
+            <div class="shot-arrow">›</div>
+            <div class="shot-block screen"><div class="sb-num">04</div><div class="sb-icon">💻</div><div class="sb-label">Cutaway B<br>Features</div></div>
+            <div class="shot-arrow">›</div>
+            <div class="shot-block cam"><div class="sb-num">05</div><div class="sb-icon">🎬</div><div class="sb-label">Explain-<br>ation</div></div>
+            <div class="shot-arrow">›</div>
+            <div class="shot-block beta"><div class="sb-num">06</div><div class="sb-icon">▶</div><div class="sb-label">Beta<br>output</div></div>
+            <div class="shot-arrow">›</div>
+            <div class="shot-block cam"><div class="sb-num">07</div><div class="sb-icon">🎬</div><div class="sb-label">Close<br>+ CTA</div></div>
+          </div>
+          <div style="margin-top:20px; display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="pill pill-purple">Michael LinkedIn Post</span>
+            <span class="pill pill-teal">LP4 Hero</span>
+            <span class="pill pill-orange">LinkedIn Paid Video Ad</span>
+          </div>
+          <div style="font-family:var(--serif); font-style:italic; font-size:16px; color:rgba(244,241,234,0.55); line-height:1.5; margin-top:12px; max-width:440px;">The product demo is the ad. An enterprise buyer watches a polished, on-brand animated explainer about the animated explainer product — the pitch is already made before anyone says a word.</div>
+        </div>
+      </div>
+
+      <!-- Client examples -->
+      <div class="asset-detail">
+        <div class="ad-eyebrow">02 · Organic Content</div>
+        <div class="ad-title">Client Example Posts</div>
+        <div class="ad-desc">Standalone LinkedIn posts showing beta customer outputs in the wild. Each post leads with the finished explainer video, followed by a brief caption: the company, the use case, and a time-to-publish number. No fluff. Just proof.</div>
+        <div class="ad-divider" style="margin:14px 0;"></div>
+        <div class="ad-role"><strong>Format:</strong> LinkedIn native video post<br><strong>Caption structure:</strong> Company name → use case → "[X] explainers in [Y] days"<br><strong>Quantity:</strong> 2–3 posts, staggered across launch week and the week after</div>
+        <div class="ad-channels" style="margin-top:14px;">
+          <span class="pill pill-purple">LinkedIn Organic</span>
+          <span class="pill pill-teal">Feeds LP4 Proof Section</span>
+        </div>
+      </div>
+
+      <!-- Blog post -->
+      <div class="asset-detail">
+        <div class="ad-eyebrow">03 · Content</div>
+        <div class="ad-title">The Launch Blog Post</div>
+        <div class="ad-desc">A proper written announcement on the Lumen5 blog. SEO-targeted at "animated explainer video" terms. Embeds the launch video. Tells the story of why the product was built, who it's for, and what makes it different from agency-built or DIY alternatives.</div>
+        <div class="ad-divider" style="margin:14px 0;"></div>
+        <div class="ad-role"><strong>Target keywords:</strong> "animated explainer video software," "B2B explainer video tool"<br><strong>Length:</strong> ~900 words<br><strong>Embed:</strong> Launch video above the fold<br><strong>CTA:</strong> Links to LP4</div>
+        <div class="ad-channels" style="margin-top:14px;">
+          <span class="pill pill-gray">SEO</span>
+          <span class="pill pill-gray">Lumen5 Blog</span>
+          <span class="pill pill-teal">LP4 Link</span>
+        </div>
+      </div>
+
+      <!-- LinkedIn paid -->
+      <div class="asset-detail">
+        <div class="ad-eyebrow">04 · Paid Media</div>
+        <div class="ad-title">LinkedIn Video Ad Campaign</div>
+        <div class="ad-desc">The launch video cut to 30–45 seconds for paid. Same ICP targeting as existing campaigns — Content Marketing Managers, Heads of Brand, Directors of Comms, 500–10k employee companies. New creative set, new campaign, separate budget.</div>
+        <div class="ad-divider" style="margin:14px 0;"></div>
+        <div class="ad-role"><strong>Creative:</strong> Launch video edit<br><strong>Audience:</strong> Content & comms leaders, 500–10k employees<br><strong>Destination:</strong> LP4<br><strong>Launch timing:</strong> September (full push)</div>
+        <div class="ad-channels" style="margin-top:14px;">
+          <span class="pill pill-purple">LinkedIn</span>
+          <span class="pill pill-orange">Paid</span>
+        </div>
+      </div>
+
+      <!-- Google search -->
+      <div class="asset-detail">
+        <div class="ad-eyebrow">05 · Paid Media</div>
+        <div class="ad-title">Google Search — Campaign 6</div>
+        <div class="ad-desc">New campaign targeting the explainer video keyword cluster. Different buyer psychology than existing campaigns — these are people actively looking for a tool, not already in the Lumen5 orbit. Ads and landing page do more education work up front.</div>
+        <div class="ad-divider" style="margin:14px 0;"></div>
+        <div class="ad-role"><strong>Keywords:</strong> "animated explainer video," "explainer video maker," "create explainer video B2B"<br><strong>Start:</strong> Build Quality Score in July/August. Full spend September.</div>
+        <div class="ad-channels" style="margin-top:14px;">
+          <span class="pill pill-teal">Google Search</span>
+          <span class="pill pill-orange">Paid</span>
+        </div>
+      </div>
+
+      <!-- Michael warmup -->
+      <div class="asset-detail">
+        <div class="ad-eyebrow">06 · Organic Amplifier</div>
+        <div class="ad-title">Michael Warm-up Posts</div>
+        <div class="ad-desc">2–3 perspective posts in the weeks before GA. No product mention yet — just Michael staking out a point of view on why explainer videos are broken. Builds anticipation without giving it away. Primes his audience so the launch post lands louder.</div>
+        <div class="ad-divider" style="margin:14px 0;"></div>
+        <div class="ad-role"><strong>Sample hook:</strong> "Your agency just quoted you $12,000 for a 90-second explainer. Here's why that number exists — and why it doesn't have to."<br><strong>Timing:</strong> 2–3 weeks before GA</div>
+        <div class="ad-channels" style="margin-top:14px;">
+          <span class="pill pill-purple">Michael LinkedIn</span>
+          <span class="pill pill-gray">Organic</span>
+        </div>
+      </div>
+
+      <!-- CSM soft-launch email -->
+      <div class="asset-detail">
+        <div class="ad-eyebrow">07 · Direct · Soft Launch</div>
+        <div class="ad-title">The CSM "We Built This For You" Email</div>
+        <div class="ad-desc">A one-to-one email to existing enterprise customers during the August soft launch. From a CSM or Account Manager — not a marketing template. "We thought of you when we built this. Want an early look?" Makes them feel like insiders, not targets. A personal note outperforms any campaign email for this audience.</div>
+        <div class="ad-divider" style="margin:14px 0;"></div>
+        <div class="ad-role"><strong>From:</strong> CSM / Account Manager (real person)<br><strong>To:</strong> Existing enterprise customers only<br><strong>Offer:</strong> Guided demo or early onboarding session<br><strong>Timing:</strong> Phase 1 — August soft launch</div>
+        <div class="ad-channels" style="margin-top:14px;">
+          <span class="pill pill-orange">Email · 1:1</span>
+          <span class="pill pill-gray">Existing customers</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- ROLLOUT STRATEGY                               -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="rollout">
+  <div class="container">
+    <div class="eyebrow">
+      Rollout Strategy <span class="tag">Phased launch plan</span>
+    </div>
+    <h2 class="stitle">Soft now.<br>Full <em>ham</em><br>in September.</h2>
+    <p class="lead">August is a graveyard for enterprise attention. We use it to build the runway — existing customers, proof assets, campaign infrastructure. September is when we open the throttle.</p>
+
+    <div class="rationale-box">
+      <strong>The logic</strong>
+      "August is dead" is a real phenomenon in B2B. Decision-makers are on holiday. Budgets aren't moving. Any hard launch in August gets half the eyeballs and costs the same. So we soft launch to the existing customer base (the easiest conversion), capture the proof we need, and go full push in September when enterprise buyers are back at their desks with Q4 budget conversations starting.
+    </div>
+
+    <div class="timeline">
+
+      <!-- Phase 0: now -->
+      <div class="phase-row">
+        <div class="phase-label">
+          <div class="ph-num">Phase 0</div>
+          <div class="ph-name">Build the Runway</div>
+          <div class="ph-date">Now — July</div>
+        </div>
+        <div class="phase-dot-col">
+          <div class="ph-dot"></div>
+          <div class="ph-line"></div>
+        </div>
+        <div class="phase-content">
+          <div class="phase-items">
+            <div class="phase-item">
+              <div class="pi-tag purple">Stryve</div>
+              <div class="pi-body">
+                <div class="pi-name">Storyboard + produce the launch video</div>
+                <div class="pi-desc">Stryve storyboards and directs. Production path TBD (see Production section) — animated in-tool, or live-action via a local crew / Lumen5 internal. Edit delivered 2 weeks before soft launch.</div>
+              </div>
+            </div>
+            <div class="phase-item">
+              <div class="pi-tag orange">Lumen5</div>
+              <div class="pi-body">
+                <div class="pi-name">Confirm 1–2 beta customers for feature</div>
+                <div class="pi-desc">Pius to identify customers willing to be named at launch. We need: finished explainer video file + permission to share + ideally a time-to-publish stat.</div>
+              </div>
+            </div>
+            <div class="phase-item">
+              <div class="pi-tag purple">Stryve</div>
+              <div class="pi-body">
+                <div class="pi-name">Build LP4 (get.lumen5.com/explainer)</div>
+                <div class="pi-desc">Landing page live and tracking before soft launch. Same GA4 setup as LP1–LP3. Placeholder for beta examples until confirmed.</div>
+              </div>
+            </div>
+            <div class="phase-item">
+              <div class="pi-tag teal">Google</div>
+              <div class="pi-body">
+                <div class="pi-name">Launch Campaign 6 (low spend)</div>
+                <div class="pi-desc">Get the campaign live in July to start accruing Quality Score before full spend in September. Budget: minimal — this is infrastructure, not acquisition.</div>
+              </div>
+            </div>
+            <div class="phase-item">
+              <div class="pi-tag purple">Stryve</div>
+              <div class="pi-body">
+                <div class="pi-name">Michael warm-up posts begin</div>
+                <div class="pi-desc">2–3 perspective posts on the explainer video problem. No product mention. Starts 3 weeks before GA.</div>
+              </div>
+            </div>
+            <div class="phase-item">
+              <div class="pi-tag orange">Lumen5</div>
+              <div class="pi-body">
+                <div class="pi-name">In-product "coming soon" waitlist</div>
+                <div class="pi-desc">A banner or module inside the app for existing free and self-serve users. "Your explainer video era starts in August. Get early access." Seeds pipeline from the warmest possible audience before GA.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 1: soft launch -->
+      <div class="phase-row soft">
+        <div class="phase-label">
+          <div class="ph-num">Phase 1</div>
+          <div class="ph-name">Soft Launch</div>
+          <div class="ph-date">August 2026</div>
+        </div>
+        <div class="phase-dot-col">
+          <div class="ph-dot teal"></div>
+          <div class="ph-line"></div>
+        </div>
+        <div class="phase-content">
+          <div class="phase-items">
+            <div class="phase-item">
+              <div class="pi-tag orange">Lumen5</div>
+              <div class="pi-body">
+                <div class="pi-name">GA to existing enterprise customers first</div>
+                <div class="pi-desc">Announce to the existing base via email and Pius / AE outreach. Easiest conversion, fastest proof-of-revenue before the full public push.</div>
+              </div>
+            </div>
+            <div class="phase-item">
+              <div class="pi-tag purple">Stryve</div>
+              <div class="pi-body">
+                <div class="pi-name">Michael GA announcement post</div>
+                <div class="pi-desc">The launch video goes live on Michael's LinkedIn. This is the News &amp; Announcements bucket — the one that moves the needle. Publish on GA day.</div>
+              </div>
+            </div>
+            <div class="phase-item">
+              <div class="pi-tag purple">Stryve</div>
+              <div class="pi-body">
+                <div class="pi-name">Blog post publishes</div>
+                <div class="pi-desc">Written announcement live on the Lumen5 blog. Embeds launch video. Links to LP4.</div>
+              </div>
+            </div>
+            <div class="phase-item">
+              <div class="pi-tag teal">Google</div>
+              <div class="pi-body">
+                <div class="pi-name">Campaign 6 stays low-spend</div>
+                <div class="pi-desc">August is not the time to spend hard on enterprise paid. Keep the campaign live for Quality Score. Ramp in September.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 2: full push -->
+      <div class="phase-row full">
+        <div class="phase-label">
+          <div class="ph-num">Phase 2</div>
+          <div class="ph-name">Full Push</div>
+          <div class="ph-date">September 2026</div>
+        </div>
+        <div class="phase-dot-col">
+          <div class="ph-dot orange"></div>
+          <div class="ph-line"></div>
+        </div>
+        <div class="phase-content">
+          <div class="phase-items">
+            <div class="phase-item">
+              <div class="pi-tag orange">All Channels</div>
+              <div class="pi-body">
+                <div class="pi-name">Open the throttle</div>
+                <div class="pi-desc">Enterprise buyers are back. Q4 budget conversations starting. This is when every asset is live, every campaign is at full spend, and every channel is active simultaneously.</div>
+              </div>
+            </div>
+            <div class="phase-item">
+              <div class="pi-tag teal">LinkedIn</div>
+              <div class="pi-body">
+                <div class="pi-name">LinkedIn paid video campaign launches</div>
+                <div class="pi-desc">Launch video cut to 30–45s. New creative set. Full budget. Same targeting as existing LinkedIn campaigns.</div>
+              </div>
+            </div>
+            <div class="phase-item">
+              <div class="pi-tag teal">Google</div>
+              <div class="pi-body">
+                <div class="pi-name">Campaign 6 — full spend</div>
+                <div class="pi-desc">Quality Score built. Ramp to full budget. "Animated explainer video" terms now capture real enterprise intent.</div>
+              </div>
+            </div>
+            <div class="phase-item">
+              <div class="pi-tag purple">Content</div>
+              <div class="pi-body">
+                <div class="pi-name">Client example posts roll out</div>
+                <div class="pi-desc">2–3 posts across the month showing beta customer outputs. Each one is its own proof asset, staggered to keep the feed alive.</div>
+              </div>
+            </div>
+            <div class="phase-item">
+              <div class="pi-tag purple">Michael</div>
+              <div class="pi-body">
+                <div class="pi-name">Michael perspective posts continue</div>
+                <div class="pi-desc">Ongoing founder voice content using the explainer launch as editorial spine. Keeps the product top-of-mind without burning the announcement again.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- LP WIREFRAME                                   -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="lp">
+  <div class="container">
+    <div class="eyebrow">
+      LP4 Concept <span class="tag">The destination</span>
+    </div>
+    <h2 class="stitle">The page<br>everything<br><em>points to.</em></h2>
+    <p class="lead">get.lumen5.com/explainer — a dedicated landing page for the animated explainer product. Same composable shell as LP1–3, new message. Build it first, before anything else is live.</p>
+
+    <div style="margin-top:40px; margin-bottom:16px; font-family:var(--mono); font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted);">LP4 Wireframe · get.lumen5.com/explainer</div>
+
+    <div class="lp-frame">
+      <!-- Browser chrome -->
+      <div class="lp-bar">
+        <div class="lp-bar-dot" style="background:#ff5f57;"></div>
+        <div class="lp-bar-dot" style="background:#febc2e;"></div>
+        <div class="lp-bar-dot" style="background:#28c840;"></div>
+        <div class="lp-bar-url">get.lumen5.com/explainer</div>
+      </div>
+
+      <!-- Hero -->
+      <div class="lp-section lp-hero">
+        <div class="lp-section-label">Hero · Fixed</div>
+        <div class="lp-hero-eyebrow">Introducing Animated Explainer Videos</div>
+        <div class="lp-hero-h1">Your product<br>deserves a better<br><em>explainer.</em></div>
+        <div class="lp-hero-sub">Make it yourself. On brand. In minutes. No agency. No $10,000 quote. No six-week wait.</div>
+        <div class="lp-cta-row">
+          <div class="lp-cta">Start free →</div>
+          <div class="lp-cta sec">Book a demo</div>
+        </div>
+      </div>
+
+      <!-- Logo bar -->
+      <div class="lp-logos">
+        <div class="label">Trusted by</div>
+        <div class="lp-logo-pill">Dell</div>
+        <div class="lp-logo-pill">Siemens</div>
+        <div class="lp-logo-pill">Nasdaq</div>
+        <div class="lp-logo-pill">Deloitte</div>
+        <div class="lp-logo-pill">+ more</div>
+      </div>
+
+      <!-- Launch video embed -->
+      <div class="lp-section">
+        <div class="lp-section-label">Video · Swap per campaign</div>
+        <div style="font-family:var(--mono); font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:12px;">See it in action</div>
+        <div class="lp-video-block">
+          <div class="lp-play"><div class="lp-play-tri"></div></div>
+          <div class="lp-video-label">Launch video — Michael introducing the product</div>
+        </div>
+      </div>
+
+      <!-- How it works -->
+      <div class="lp-section">
+        <div class="lp-section-label">How it works · Swap</div>
+        <div style="font-family:var(--serif); font-size:22px; font-weight:400; margin-bottom:28px; letter-spacing:-0.02em;">Three steps. That's it.</div>
+        <div class="lp-two-col">
+          <div class="lp-feature-item">
+            <div class="lf-num">01</div>
+            <div class="lf-title">Type your topic</div>
+            <div class="lf-desc">A product, a process, a value proposition. Anything your audience needs to understand.</div>
+          </div>
+          <div class="lp-feature-item">
+            <div class="lf-num">02</div>
+            <div class="lf-title">Your brand loads automatically</div>
+            <div class="lf-desc">Colors, fonts, logo. Brand kit applied from the first frame. No manual tweaking.</div>
+          </div>
+          <div class="lp-feature-item">
+            <div class="lf-num">03</div>
+            <div class="lf-title">Pick your animation style</div>
+            <div class="lf-desc">A library of motion styles built for B2B. Pick one. Publish.</div>
+          </div>
+          <div class="lp-feature-item">
+            <div class="lf-num">→</div>
+            <div class="lf-title">Works as an add-on</div>
+            <div class="lf-desc">Already a Lumen5 customer? It's right there in your dashboard. New here? Start free.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Client examples -->
+      <div class="lp-section" style="background:#fafafa;">
+        <div class="lp-section-label">Proof · Swap</div>
+        <div style="font-family:var(--serif); font-size:22px; font-weight:400; margin-bottom:8px; letter-spacing:-0.02em;">From beta. In the wild.</div>
+        <div style="font-size:13px; color:var(--muted); margin-bottom:24px;">Real outputs from real teams. Made with this product.</div>
+        <div class="lp-examples">
+          <div class="lp-example">
+            <div class="ex-label">Beta Customer A</div>
+            <div class="ex-co">[Video placeholder]</div>
+            <div style="font-family:var(--mono); font-size:9px; color:var(--muted); margin-top:4px; letter-spacing:0.08em;">14 explainers · 3 days</div>
+          </div>
+          <div class="lp-example">
+            <div class="ex-label">Beta Customer B</div>
+            <div class="ex-co">[Video placeholder]</div>
+            <div style="font-family:var(--mono); font-size:9px; color:var(--muted); margin-top:4px; letter-spacing:0.08em;">Confirm with Pius</div>
+          </div>
+          <div class="lp-example">
+            <div class="ex-label">Beta Customer C</div>
+            <div class="ex-co">[Video placeholder]</div>
+            <div style="font-family:var(--mono); font-size:9px; color:var(--muted); margin-top:4px; letter-spacing:0.08em;">Confirm with Pius</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quote -->
+      <div class="lp-quote">
+        <div class="lp-section-label" style="background:rgba(255,255,255,0.15); color:rgba(255,255,255,0.8);">Testimonial · Swap</div>
+        <blockquote>"[Beta customer quote — to be confirmed with Pius before LP goes live]"</blockquote>
+        <cite>Name, Title · Company</cite>
+      </div>
+
+      <!-- Final CTA -->
+      <div class="lp-final-cta">
+        <h3>Ready to make your first<br><em>explainer?</em></h3>
+        <div class="lp-cta-row" style="justify-content:center; gap:16px;">
+          <div class="lp-cta" style="background:var(--teal); color:var(--ink);">Start free →</div>
+          <div class="lp-cta sec">Talk to sales</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- OPEN ITEMS                                     -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="next">
+  <div class="container">
+    <div class="eyebrow eyebrow-light">
+      Before We Move <span class="tag">Open items</span>
+    </div>
+    <h2 class="stitle" style="color:var(--paper);">Six things<br>we need to<br><em>unlock</em> this.</h2>
+
+    <div class="items-grid">
+      <div class="item-row header">
+        <div class="item-cell">#</div>
+        <div class="item-cell">Item</div>
+        <div class="item-cell">Owner</div>
+        <div class="item-cell">Needed by</div>
+      </div>
+      <div class="item-row">
+        <div class="item-cell"><div class="item-num">1</div></div>
+        <div class="item-cell"><div class="item-text">Confirmed GA date (specific week in August, not just "August")</div></div>
+        <div class="item-cell"><div class="item-owner">Michael / Pius</div></div>
+        <div class="item-cell"><div class="item-due urgent">ASAP</div></div>
+      </div>
+      <div class="item-row">
+        <div class="item-cell"><div class="item-num">2</div></div>
+        <div class="item-cell"><div class="item-text">1–2 beta customers for feature at launch (video output + permission to share + stat)</div></div>
+        <div class="item-cell"><div class="item-owner">Pius</div></div>
+        <div class="item-cell"><div class="item-due urgent">End of June</div></div>
+      </div>
+      <div class="item-row">
+        <div class="item-cell"><div class="item-num">3</div></div>
+        <div class="item-cell"><div class="item-text">Product screen recordings: blank canvas flow, brand kit auto-apply, animation style picker, one-click resize</div></div>
+        <div class="item-cell"><div class="item-owner">Lumen5 Product</div></div>
+        <div class="item-cell"><div class="item-due">2 wks before shoot</div></div>
+      </div>
+      <div class="item-row">
+        <div class="item-cell"><div class="item-num">4</div></div>
+        <div class="item-cell"><div class="item-text">Final product name confirmed — "Animated Explainer Videos" or something else?</div></div>
+        <div class="item-cell"><div class="item-owner">Michael</div></div>
+        <div class="item-cell"><div class="item-due">Before LP4 brief</div></div>
+      </div>
+      <div class="item-row">
+        <div class="item-cell"><div class="item-num">5</div></div>
+        <div class="item-cell"><div class="item-text">Add-on only vs. standalone confirmed — changes LP4 message and ad copy significantly</div></div>
+        <div class="item-cell"><div class="item-owner">Michael / Pius</div></div>
+        <div class="item-cell"><div class="item-due">Before LP4 brief</div></div>
+      </div>
+      <div class="item-row">
+        <div class="item-cell"><div class="item-num">6</div></div>
+        <div class="item-cell"><div class="item-text">Production path decision: animated in-tool, or live-action (and if live-action, local crew vs. Lumen5 internal resources)</div></div>
+        <div class="item-cell"><div class="item-owner">Ryan + Michael</div></div>
+        <div class="item-cell"><div class="item-due">Kickoff call</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Stryve Digital Marketing · Lumen5 Phase 2 · June 2026</span>
+  <span><strong>Confidential</strong> · For Michael Cheng &amp; Pius</span>
+</footer>
+
+</body>
+</html>

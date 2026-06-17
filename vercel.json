@@ -3,6 +3,7 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
+    { "source": "/plan", "destination": "/plan/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
