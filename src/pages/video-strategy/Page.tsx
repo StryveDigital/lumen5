@@ -17,6 +17,12 @@ const cards: Card[] = [
     external: true,
   },
   {
+    eyebrow: 'Landing Page · Launch',
+    title: 'Finally. Explainer videos anyone can make.',
+    desc: 'Animated Explainers launch page — real style reel, three-step product demo, outcomes by team, and customer proof.',
+    href: '/explainers',
+  },
+  {
     eyebrow: 'Landing Page · 01',
     title: 'Built for the marketer who has to press publish',
     desc: 'Hero marketing page — case study, three-step demo, weekly cadence proof, and CTA.',
