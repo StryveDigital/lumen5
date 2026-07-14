@@ -64,21 +64,21 @@ function LaunchVideo() {
 export default function Hero() {
   return (
     <div className="bg-[#201e26] w-full">
-      <div className="mx-auto max-w-[1230px] px-6 md:px-16 xl:px-[110px] pt-8 md:pt-10 pb-[64px] md:pb-[96px]">
+      <div className="mx-auto max-w-[1440px] 2xl:max-w-[1600px] px-6 md:px-16 xl:px-[110px] pt-8 md:pt-10 pb-[64px] md:pb-[96px]">
         {/* Logo */}
         <img alt="Lumen5" src="/lumen5-logo.svg" width={160} height={42} className="block mb-10 md:mb-14" />
 
-        <div className="flex flex-col xl:flex-row items-center gap-10 xl:gap-16">
+        <div className="flex flex-col xl:flex-row items-center gap-10 xl:gap-16 2xl:gap-20">
           {/* Copy */}
-          <div className="flex-1 min-w-0 w-full max-w-[560px]">
+          <div className="flex-1 xl:flex-[0.9] min-w-0 w-full max-w-[560px] xl:max-w-[600px]">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/5 ring-1 ring-white/10 px-3.5 py-1.5 mb-6">
               <span className="size-1.5 rounded-full bg-[#3bd9eb]" />
               <span className="font-heading font-semibold text-[12px] leading-none tracking-[0.14em] uppercase text-[#3bd9eb]">
                 New · Animated Explainers
               </span>
             </div>
-            <h1 className="font-heading font-semibold text-[38px] leading-[46px] md:text-[58px] md:leading-[68px] text-[#fafafa]">
-              Finally. Explainer&nbsp;videos anyone can make.
+            <h1 className="font-heading font-semibold text-[38px] leading-[46px] md:text-[58px] md:leading-[68px] xl:text-[48px] xl:leading-[58px] 2xl:text-[58px] 2xl:leading-[68px] text-[#fafafa]">
+              Finally. Explainer videos anyone can make.
             </h1>
             <p className="font-body font-normal text-[18px] leading-[30px] md:text-[22px] md:leading-[36px] text-[#fafafa]/85 mt-6">
               The kind that used to cost $50,000 and take a month. Turn your most complex idea into
@@ -97,8 +97,8 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Launch video */}
-          <div className="flex-1 min-w-0 w-full">
+          {/* Launch video — takes the larger share of the row on desktop */}
+          <div className="flex-1 xl:flex-[1.1] min-w-0 w-full max-w-[720px] xl:max-w-none">
             <LaunchVideo />
           </div>
         </div>

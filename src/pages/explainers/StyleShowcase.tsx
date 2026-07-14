@@ -32,7 +32,7 @@ export default function StyleShowcase() {
 
   return (
     <div ref={ref} className="bg-[#201e26] w-full px-6 md:px-16 py-[72px] md:py-[104px]">
-      <div className="mx-auto max-w-[1180px]">
+      <div className="mx-auto max-w-[1180px] 2xl:max-w-[1320px]">
         {/* heading */}
         <div className="flex flex-col gap-3 items-center text-center max-w-[820px] mx-auto mb-12">
           <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[54px] text-[#fafafa]">
