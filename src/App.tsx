@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Lp1 from './pages/lp1/Page'
 import Lp2 from './pages/lp2/Page'
 import Lp3 from './pages/lp3/Page'
+import Explainers from './pages/explainers/Page'
 import VideoStrategy from './pages/video-strategy/Page'
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/lp1" element={<Lp1 />} />
         <Route path="/lp2" element={<Lp2 />} />
         <Route path="/lp3" element={<Lp3 />} />
+        <Route path="/explainers" element={<Explainers />} />
         <Route path="/video-strategy" element={<VideoStrategy />} />
         <Route path="*" element={<Navigate to="/lp1" replace />} />
       </Routes>
