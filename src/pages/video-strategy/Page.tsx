@@ -17,21 +17,27 @@ const cards: Card[] = [
     external: true,
   },
   {
+    eyebrow: 'Landing Page · Launch',
+    title: 'Finally. Explainer videos anyone can make.',
+    desc: 'Animated Explainers launch page: real style reel, three-step product demo, outcomes by team, and launch CTA.',
+    href: '/explainers',
+  },
+  {
     eyebrow: 'Landing Page · 01',
     title: 'Built for the marketer who has to press publish',
-    desc: 'Hero marketing page — case study, three-step demo, weekly cadence proof, and CTA.',
+    desc: 'Hero marketing page: case study, three-step demo, weekly cadence proof, and CTA.',
     href: '/lp1',
   },
   {
     eyebrow: 'Landing Page · 02',
     title: 'Turn your webinar into a marketing machine',
-    desc: 'Webinar funnel pitch — repurposing flow, customer proof, and conversion CTA.',
+    desc: 'Webinar funnel pitch: repurposing flow, customer proof, and conversion CTA.',
     href: '/lp2',
   },
   {
     eyebrow: 'Landing Page · 03',
     title: 'AI video without the brand risk',
-    desc: 'Enterprise positioning — brand safety, security and compliance, two-card sales CTA.',
+    desc: 'Enterprise positioning: brand safety, security and compliance, two-card sales CTA.',
     href: '/lp3',
   },
 ]
