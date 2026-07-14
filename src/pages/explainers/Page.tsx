@@ -6,7 +6,6 @@ import StyleShowcase from './StyleShowcase'
 import Outcomes from './Outcomes'
 import ScaleBand from './ScaleBand'
 import OldWayVsNow from './OldWayVsNow'
-import CustomerProof from './CustomerProof'
 import CtaModule from './CtaModule'
 import Footer from '../../shared/Footer'
 
@@ -21,7 +20,6 @@ export default function Explainers() {
       <Outcomes />
       <ScaleBand />
       <OldWayVsNow />
-      <CustomerProof />
       <CtaModule />
       <Footer />
     </div>
