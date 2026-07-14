@@ -39,7 +39,7 @@ export default function ProofGrid() {
           Don’t take our word for it. Take ours.
         </h2>
         <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]/70">
-          The film up top was made in Lumen5. So was every one of these &mdash; from a paragraph of
+          The film up top was made in Lumen5. So was every one of these, each from a paragraph of
           text to a finished, on-brand explainer.
         </p>
       </div>

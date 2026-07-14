@@ -40,7 +40,7 @@ export default function StyleShowcase() {
             <span className="text-[#8b7fff]">This doesn’t.</span>
           </h2>
           <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#fafafa]/70">
-            Real, motion-design-grade animation — not a stock avatar reading a script. 15 styles,
+            Real motion-design-grade animation, not a stock avatar reading a script. 15 styles,
             your brand colors, any aspect ratio. Same script, a completely different film.
           </p>
         </div>

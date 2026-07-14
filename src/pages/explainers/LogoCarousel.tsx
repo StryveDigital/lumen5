@@ -11,5 +11,5 @@ const logos: LogoItem[] = [
 ];
 
 export default function LogoCarousel() {
-  return <LogoMarquee heading="Now animating explainers for teams at" logos={logos} />;
+  return <LogoMarquee heading="Trusted by teams at" logos={logos} />;
 }

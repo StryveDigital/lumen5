@@ -34,7 +34,7 @@ function AppWindow({ title, children }: { title: string; children: ReactNode }) 
 
 const SCRIPT_TABS = ['Describe it', 'Paste text', 'Import a URL', 'Upload a doc'];
 const SCRIPT_TEXT =
-  'Sales used to control the whole buying journey — the rep held all the answers, so buyers had to start there. But three forces now pull the buyer toward content before sales ever enters the room.';
+  'Sales used to control the whole buying journey. The rep held all the answers, so buyers had to start there. But three forces now pull the buyer toward content before sales ever enters the room.';
 
 function useTypewriter(text: string, active: boolean, cps = 55) {
   const [out, setOut] = useState('');
@@ -90,7 +90,7 @@ function ScriptPanel() {
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden><path d="M6 1v10M3 3.5v5M9 3.5v5" stroke="#5645f5" strokeWidth="1.4" strokeLinecap="round"/></svg>
             AI voice · Natural
           </span>
-          <span className="font-body text-[12.5px] text-[#201e26]/70 px-3 py-2 rounded-full ring-1 ring-black/[0.06]">Target · 0:90</span>
+          <span className="font-body text-[12.5px] text-[#201e26]/70 px-3 py-2 rounded-full ring-1 ring-black/[0.06]">Target · 90 sec</span>
           <span className="font-body text-[12.5px] text-[#5645f5] font-medium px-3 py-2 rounded-full bg-[#efecff]">Rewrite as explainer</span>
           <span className="ml-auto font-heading font-semibold text-[13px] text-white px-4 py-2.5 rounded-full bg-[#5645f5] shadow-sm">
             Generate script
@@ -137,7 +137,7 @@ function StylePanel() {
       <div className="mt-5 pt-5 border-t border-black/[0.07]">
         <div className="flex items-center gap-2 mb-3">
           <span className="font-heading font-semibold text-[12px] uppercase tracking-[0.1em] text-[#201e26]/60">Ingredients</span>
-          <span className="font-body text-[12px] text-[#201e26]/45">— locked across every scene</span>
+          <span className="font-body text-[12px] text-[#201e26]/45">locked across every scene</span>
         </div>
         <div className="flex items-center gap-3">
           <span className="flex items-center gap-2 rounded-full bg-[#efecff] pl-1.5 pr-3 py-1.5">
@@ -163,8 +163,8 @@ function StylePanel() {
 // One scene of the buyer's-journey video (continues the Step 1 script), being
 // directed in plain English. Single consistent style — the range lives in the
 // Style Showcase, not here. Scene rail stays within one style, mid-render.
-const SCENE_SCRIPT = 'Sales used to control the whole buying journey — buyers had to start there.';
-const EDIT_PROMPT = 'Add two people at the table, and some plants — who doesn’t like plants?';
+const SCENE_SCRIPT = 'Sales used to control the whole buying journey. Buyers had to start there.';
+const EDIT_PROMPT = 'Add two people at the table, and some plants. Who doesn’t like plants?';
 
 type RailScene = { src?: string; label: string; state: 'active' | 'ready' | 'animating' | 'generating' };
 const RAIL: RailScene[] = [
@@ -273,22 +273,22 @@ const STEPS = [
   {
     badge: 'Step 1',
     badgeColor: 'bg-[#46e378]',
-    title: 'Start with a sentence. Or a whole document.',
-    desc: 'Describe your idea, paste a blog, or drop in a URL. Lumen5 writes the script — the part that does the heavy lifting — and you shape it in a click.',
+    title: 'Start with anything. Even just an idea.',
+    desc: 'Paste text, import a URL, upload a document, or simply describe what you want and let the AI write the script for you. The script carries the video, and you shape it in a click.',
     panel: <ScriptPanel />,
   },
   {
     badge: 'Step 2',
     badgeColor: 'bg-[#3bd9eb]',
     title: 'Pick a style. Your brand stays locked.',
-    desc: 'Choose from 15 animation styles — or your own custom one. Ingredients keep your characters, product, and brand identical across every single scene.',
+    desc: 'Choose from 15 animation styles, or get a custom one built just for your brand. Ingredients keep your characters, your mascot, even your CEO consistent across every scene.',
     panel: <StylePanel />,
   },
   {
     badge: 'Step 3',
     badgeColor: 'bg-[#e5e250]',
     title: 'Generate. Then direct it like a pro.',
-    desc: 'Lumen5 builds a scene-by-scene storyboard. Refine any shot in plain English, animate it, and publish the same day — in any aspect ratio.',
+    desc: 'Lumen5 builds a scene-by-scene storyboard. Refine any shot in plain English, animate it, then add music, captions, and translations in the Lumen5 editor. Publish the same day.',
     panel: <StoryboardPanel />,
   },
 ];
@@ -328,11 +328,11 @@ export default function HowItWorks() {
             How it works
           </p>
           <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[54px] text-[#201e26]">
-            From a document to a finished video, in three steps.
+            From an idea to a finished video, in three steps.
           </h2>
           <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]/70">
-            No crew. No motion designer. No timeline. Just the same guided flow you already know from
-            the classic Lumen5 creator.
+            No crew. No motion designer. No agency timeline. A guided flow takes you from script to
+            styled scenes to a finished film.
           </p>
         </div>
 

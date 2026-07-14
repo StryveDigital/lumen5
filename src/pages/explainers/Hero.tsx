@@ -55,7 +55,7 @@ function LaunchVideo() {
         </span>
       </div>
       <div className="absolute right-4 bottom-4 rounded-md bg-black/55 backdrop-blur-sm px-2 py-1">
-        <span className="font-body text-[12px] leading-none text-white/90 tabular-nums">0:90</span>
+        <span className="font-body text-[12px] leading-none text-white/90 tabular-nums">1:30</span>
       </div>
     </div>
   );
@@ -82,7 +82,7 @@ export default function Hero() {
             </h1>
             <p className="font-body font-normal text-[18px] leading-[30px] md:text-[22px] md:leading-[36px] text-[#fafafa]/85 mt-6">
               The kind that used to cost $50,000 and take a month. Turn your most complex idea into
-              a video people actually finish &mdash; and make your first one this afternoon.
+              a video people actually finish. Make your first one this afternoon.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <a
