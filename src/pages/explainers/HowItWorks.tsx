@@ -160,42 +160,110 @@ function StylePanel() {
 
 /* --------------------------- 3 · storyboard panel ------------------------- */
 
-const BOARD = [
-  '/explainers/lucid-office.png',
-  '/explainers/lucid-city.png',
-  '/explainers/flat-office.png',
-  '/explainers/iso-cars.png',
-  '/explainers/comic-hoops.png',
-  '/explainers/flat-chip.png',
+// One scene of the buyer's-journey video (continues the Step 1 script), being
+// directed in plain English. Single consistent style — the range lives in the
+// Style Showcase, not here. Scene rail stays within one style, mid-render.
+const SCENE_SCRIPT = 'Sales used to control the whole buying journey — buyers had to start there.';
+const EDIT_PROMPT = 'Add two people at the table, and some plants — who doesn’t like plants?';
+
+type RailScene = { src?: string; label: string; state: 'active' | 'ready' | 'animating' | 'generating' };
+const RAIL: RailScene[] = [
+  { src: '/explainers/lucid-office.png', label: '1', state: 'active' },
+  { src: '/explainers/lucid-city.png', label: '2', state: 'ready' },
+  { src: '/explainers/lucid-factory.png', label: '3', state: 'ready' },
+  { label: '4', state: 'animating' },
+  { label: '5', state: 'generating' },
+  { label: '6', state: 'generating' },
 ];
 
 function StoryboardPanel() {
+  const { ref, inView } = useInView<HTMLDivElement>(0.4);
+  const typed = useTypewriter(EDIT_PROMPT, inView, 42);
+  const done = typed.length >= EDIT_PROMPT.length;
   return (
-    <AppWindow title="Storyboard · 16 scenes">
-      <div className="grid grid-cols-3 gap-2.5">
-        {BOARD.map((src, n) => (
-          <div key={src} className="relative aspect-video rounded-lg overflow-hidden ring-1 ring-black/[0.08] bg-[#f4f3f7]">
-            <img src={src} alt="" aria-hidden className="absolute inset-0 size-full object-cover" />
-            <span className="absolute top-1 left-1.5 font-body text-[10px] text-white/90 drop-shadow">{n + 1}</span>
-            {n === 1 && (
-              <div className="absolute inset-0 bg-[#201e26]/55 backdrop-blur-[1px] flex flex-col items-center justify-center gap-1.5">
-                <span className="font-body text-[11px] text-white">Animating…</span>
-                <span className="block h-1 w-3/5 rounded-full bg-white/25 overflow-hidden">
-                  <span className="block h-full w-2/3 bg-[#3bd9eb] rounded-full animate-pulse" />
-                </span>
+    <div ref={ref}>
+      <AppWindow title="Storyboard · Scene 1 of 16">
+        <div className="flex flex-col lg:flex-row gap-4">
+          {/* active scene reference image */}
+          <div className="lg:flex-[1.5] min-w-0">
+            <div className="flex items-center justify-between mb-2">
+              <span className="font-heading font-semibold text-[11px] uppercase tracking-[0.1em] text-[#201e26]/50">Reference image</span>
+              <span className="font-body text-[11px] text-[#5645f5] bg-[#efecff] px-2.5 py-1 rounded-full">Scene 1</span>
+            </div>
+            <div className="relative aspect-video rounded-xl overflow-hidden ring-2 ring-[#5645f5]/60">
+              <img src="/explainers/lucid-office.png" alt="Reference scene" className="absolute inset-0 size-full object-cover" />
+              <div
+                className="absolute left-2 bottom-2 flex items-center gap-1.5 rounded-full bg-[#201e26]/80 backdrop-blur-sm px-2.5 py-1 transition-opacity duration-500"
+                style={{ opacity: done ? 1 : 0 }}
+              >
+                <svg width="11" height="9" viewBox="0 0 11 9" fill="none" aria-hidden><path d="M1 4.5l3 3 6-6.5" stroke="#46e378" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                <span className="font-body text-[11px] text-white">Reference updated</span>
               </div>
-            )}
+            </div>
           </div>
-        ))}
-      </div>
-      {/* plain-English direction — real webinar prompt */}
-      <div className="mt-4 flex items-center gap-2 rounded-xl bg-[#faf9fc] ring-1 ring-black/[0.06] p-2 pl-4">
-        <p className="flex-1 font-body text-[13.5px] leading-[20px] text-[#201e26]/80 italic">
-          “Add two people at the table, and some plants — who doesn’t like plants?”
-        </p>
-        <span className="shrink-0 font-heading font-semibold text-[12.5px] text-white px-3.5 py-2 rounded-full bg-[#5645f5]">Animate scene</span>
-      </div>
-    </AppWindow>
+
+          {/* script + plain-English direction */}
+          <div className="lg:flex-1 min-w-0 flex flex-col">
+            <span className="font-heading font-semibold text-[11px] uppercase tracking-[0.1em] text-[#201e26]/50 mb-1.5">Script</span>
+            <p className="font-body text-[13.5px] leading-[21px] text-[#201e26]/80">{SCENE_SCRIPT}</p>
+
+            <div className="border-t border-black/[0.07] my-4" />
+
+            <span className="font-body text-[12.5px] text-[#201e26]/55 mb-2">Would you like to change this image?</span>
+            <div className="rounded-lg bg-[#faf9fc] ring-1 ring-black/[0.07] px-3 py-2.5 min-h-[60px]">
+              <p className="font-body text-[13px] leading-[20px] text-[#201e26] italic">
+                {typed}
+                {!done && <span className="inline-block w-[2px] h-[15px] align-[-2px] bg-[#5645f5] ml-0.5 animate-pulse" />}
+              </p>
+            </div>
+            <div className="flex items-center gap-2 mt-3">
+              <span className="font-heading font-semibold text-[12.5px] text-[#201e26]/70 px-3.5 py-2 rounded-full ring-1 ring-black/[0.1]">Edit image</span>
+              <span
+                className={`font-heading font-semibold text-[12.5px] text-white px-3.5 py-2 rounded-full bg-[#5645f5] inline-flex items-center gap-1.5 transition-shadow ${
+                  done ? 'shadow-[0_0_0_4px_rgba(86,69,245,0.18)]' : ''
+                }`}
+              >
+                Animate this image
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden><path d="M1 5h9M7 1.5 10.5 5 7 8.5" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* scene list — one style, mid-render */}
+        <div className="mt-5 pt-4 border-t border-black/[0.07]">
+          <div className="flex items-center gap-2 mb-2.5">
+            <span className="font-heading font-semibold text-[11px] uppercase tracking-[0.1em] text-[#201e26]/50">Scene list</span>
+            <span className="font-body text-[11px] text-[#201e26]/40">3 of 16 animated</span>
+          </div>
+          <div className="grid grid-cols-6 gap-2">
+            {RAIL.map(({ src, label, state }) => (
+              <div
+                key={label}
+                className={`relative aspect-video rounded-md overflow-hidden bg-[#f1f0f4] ${
+                  state === 'active' ? 'ring-2 ring-[#5645f5]' : 'ring-1 ring-black/[0.08]'
+                }`}
+              >
+                {src && <img src={src} alt="" aria-hidden className="absolute inset-0 size-full object-cover" />}
+                <span className="absolute top-0.5 left-1 font-body text-[9px] text-white/90 drop-shadow">{label}</span>
+                {state === 'animating' && (
+                  <div className="absolute inset-0 bg-[#201e26]/55 flex items-center justify-center px-1">
+                    <span className="block h-1 w-4/5 rounded-full bg-white/25 overflow-hidden">
+                      <span className="block h-full w-2/3 bg-[#3bd9eb] rounded-full animate-pulse" />
+                    </span>
+                  </div>
+                )}
+                {state === 'generating' && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#efecff] to-[#f6f5fb] animate-pulse">
+                    <span className="font-body text-[11px] text-[#201e26]/35">…</span>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </AppWindow>
+    </div>
   );
 }
 
