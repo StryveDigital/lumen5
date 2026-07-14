@@ -106,7 +106,7 @@ function ScriptPanel() {
 const STYLE_THUMBS = [
   { src: '/explainers/lucid-office.png', name: 'Lucid', on: true },
   { src: '/explainers/serenity-airport.png', name: 'Serenity', on: false },
-  { src: '/explainers/claymo-chart.png', name: 'Claymo', on: false },
+  { src: '/explainers/claymo-airbnb-driving.jpg', name: 'Claymo', on: false },
   { src: '/explainers/anime-yoga.png', name: 'Kiro', on: false },
 ];
 
