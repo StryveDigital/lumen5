@@ -19,37 +19,48 @@ type StyleDef = {
   bodyRadius: string;
 };
 
+// Real styles + descriptors from the platform's "Choose a style" screen. Each
+// scene's palette + shape language is tuned to the real style (Lucid = natural
+// 3D, Serenity = warm airbrush cubist, Claymo = matte clay, Kiro = dramatic
+// anime, Bauhz = flat Bauhaus geometry). "Your brand" = the Request-style tile.
 const STYLES: StyleDef[] = [
   {
-    name: 'Lucid',
-    sky: 'linear-gradient(160deg, #2b2668 0%, #5645f5 100%)',
-    sun: '#e5e250', hillBack: '#26215C', hillFront: '#3C3489',
-    charHead: '#CECBF6', charBody: '#ADA7F0', accent: '#3bd9eb',
-    headRadius: '50%', bodyRadius: '18px',
+    name: 'Lucid', // 3D CGI illustration · natural color range · realistic
+    sky: 'linear-gradient(160deg, #8fd3f4 0%, #f6e7c1 100%)',
+    sun: '#fff3d6', hillBack: '#3f7d5a', hillFront: '#5a9e6f',
+    charHead: '#e8b98f', charBody: '#3b6ea5', accent: '#f0a35e',
+    headRadius: '50%', bodyRadius: '20px',
   },
   {
-    name: 'Claymation',
+    name: 'Serenity', // soft cubist · airbrush gradient · zero outlines · warm
+    sky: 'linear-gradient(160deg, #f7a34f 0%, #ffd89b 100%)',
+    sun: '#fff1dc', hillBack: '#c9622e', hillFront: '#e0854a',
+    charHead: '#ffe1c4', charBody: '#b8451f', accent: '#fff1dc',
+    headRadius: '50%', bodyRadius: '28px',
+  },
+  {
+    name: 'Claymo', // hand-built clay · matte surfaces · miniature diorama
     sky: 'linear-gradient(160deg, #f6e3d0 0%, #efb98a 100%)',
     sun: '#fff6ea', hillBack: '#a05a2c', hillFront: '#c97b46',
     charHead: '#f2cc8f', charBody: '#e07a5f', accent: '#81b29a',
     headRadius: '46% 54% 50% 50%', bodyRadius: '46% 54% 42% 58%',
   },
   {
-    name: 'Anime',
-    sky: 'linear-gradient(160deg, #e6f1fb 0%, #9fc7f0 100%)',
-    sun: '#f95580', hillBack: '#2f4a7a', hillFront: '#4f6fae',
-    charHead: '#ffe0d1', charBody: '#26215C', accent: '#ffffff',
+    name: 'Kiro', // semi-realistic anime · dramatic cell shading
+    sky: 'linear-gradient(160deg, #14235f 0%, #3bd9eb 100%)',
+    sun: '#f95580', hillBack: '#0e1a45', hillFront: '#26356f',
+    charHead: '#ffe0d1', charBody: '#e5322e', accent: '#ffffff',
     headRadius: '50%', bodyRadius: '6px',
   },
   {
-    name: 'Serenity',
-    sky: 'linear-gradient(160deg, #0f7a5a 0%, #2fb083 100%)',
-    sun: '#E1F5EE', hillBack: '#0a4a37', hillFront: '#0f6b50',
-    charHead: '#E1F5EE', charBody: '#9FE1CB', accent: '#e5e250',
-    headRadius: '50%', bodyRadius: '24px',
+    name: 'Bauhz', // geometric shapes · Bauhaus palette · faceless · flat
+    sky: '#efe7d6',
+    sun: '#f2c230', hillBack: '#2b4bbf', hillFront: '#d1332e',
+    charHead: '#f2c230', charBody: '#2b4bbf', accent: '#d1332e',
+    headRadius: '50%', bodyRadius: '0px',
   },
   {
-    name: "Your brand's own",
+    name: 'Your brand', // Request style — a custom look, built for you
     sky: 'linear-gradient(160deg, #201e26 0%, #3C3489 100%)',
     sun: '#3bd9eb', hillBack: '#14121a', hillFront: '#2a2734',
     charHead: '#fafafa', charBody: '#5645f5', accent: '#46e378',
@@ -137,7 +148,7 @@ export default function StyleRange() {
           ))}
         </div>
         <p className="font-body text-[14px] leading-[22px] text-[#fafafa] opacity-50">
-          + a dozen more in the style library
+          Ember, Korb, Slender, Quill and more &mdash; 15 styles in the library
         </p>
       </div>
 

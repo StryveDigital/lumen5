@@ -89,11 +89,12 @@ function ScriptPanel() {
 
 /* --------------------- step 2 — styles + consistent ingredient --------------------- */
 
+// Real style names from the platform's "Choose a style" screen.
 const STYLE_THUMBS = [
-  { name: 'Lucid',      bg: 'linear-gradient(140deg, #5645f5 0%, #CECBF6 100%)', active: true },
-  { name: 'Claymation', bg: 'linear-gradient(140deg, #e07a5f 0%, #f2cc8f 100%)' },
-  { name: 'Anime',      bg: 'linear-gradient(140deg, #2f4a7a 0%, #9fc7f0 100%)' },
-  { name: 'Serenity',   bg: 'linear-gradient(140deg, #0f7a5a 0%, #9FE1CB 100%)' },
+  { name: 'Lucid',    bg: 'linear-gradient(140deg, #8fd3f4 0%, #f6e7c1 100%)', active: true },
+  { name: 'Serenity', bg: 'linear-gradient(140deg, #f7a34f 0%, #ffd89b 100%)' },
+  { name: 'Claymo',   bg: 'linear-gradient(140deg, #e07a5f 0%, #f2cc8f 100%)' },
+  { name: 'Kiro',     bg: 'linear-gradient(140deg, #14235f 0%, #3bd9eb 100%)' },
 ];
 
 function StylePanel() {
