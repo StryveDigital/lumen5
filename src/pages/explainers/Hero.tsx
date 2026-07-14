@@ -7,12 +7,12 @@ import { useEffect, useState } from 'react';
 import { CTA } from '../../shared/cta-urls';
 import { prefersReducedMotion } from './useInView';
 
-// Real frames pulled from actual Lumen5 animated explainers (mixed styles).
+// Real screengrabs pulled from actual Lumen5 animated explainers (mixed styles).
 const REEL = [
   '/explainers/lucid-office.png',
-  '/explainers/bauhaus-city.png',
-  '/explainers/claymo-chart.png',
-  '/explainers/anime-yoga.png',
+  '/explainers/cgi-health-anatomy.jpg',
+  '/explainers/claymo-airbnb-resolved.jpg',
+  '/explainers/nyu-langone-brain.jpg',
 ];
 
 function LaunchVideo() {

@@ -9,7 +9,7 @@ import { useInView, prefersReducedMotion } from './useInView';
 
 const STYLES = [
   { name: 'Lucid',    desc: '3D CGI · natural light',        src: '/explainers/lucid-city.png' },
-  { name: 'Claymo',   desc: 'Hand-built clay · matte',       src: '/explainers/claymo-chart.png' },
+  { name: 'Claymo',   desc: 'Hand-built clay · matte',       src: '/explainers/claymo-airbnb-driving.jpg' },
   { name: 'Kiro',     desc: 'Semi-real anime · cell-shaded', src: '/explainers/anime-yoga.png' },
   { name: 'Serenity', desc: 'Soft airbrush · warm',          src: '/explainers/serenity-snow.png' },
   { name: 'Bauhz',    desc: 'Geometric · Bauhaus palette',   src: '/explainers/bauhaus-city.png' },

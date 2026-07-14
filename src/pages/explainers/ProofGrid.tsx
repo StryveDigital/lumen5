@@ -1,23 +1,24 @@
 // Explainers — "cash the claim". The hero says anyone can make these; this
-// block proves it with real stills from actual Lumen5 explainers, spanning
-// visibly different styles so the range reads immediately. Topics echo the
-// real beta examples (buyer's journey demo, health/education, energy).
+// block proves it with real screengrabs from actual Lumen5 explainers, pulled
+// directly from the beta examples shown in the product webinar. NYU Langone
+// Health is named explicitly in the webinar as a real beta customer; the
+// other two are shown as topic demonstrations, not customer claims.
 
 const tiles = [
   {
-    src: '/explainers/lucid-office.png',
-    topic: 'The content-led buyer’s journey',
-    tag: 'Sales & Marketing · Lucid',
+    src: '/explainers/nyu-langone-brain.jpg',
+    topic: 'The science of a conversation',
+    tag: 'NYU Langone Health · Beta customer',
   },
   {
-    src: '/explainers/flat-health.png',
+    src: '/explainers/claymo-airbnb-resolved.jpg',
+    topic: 'Co-hosting, explained',
+    tag: 'Topic demo · Claymation',
+  },
+  {
+    src: '/explainers/cgi-health-avocado.jpg',
     topic: 'How your body actually uses fruit',
-    tag: 'Education · Editorial',
-  },
-  {
-    src: '/explainers/bauhaus-city.png',
-    topic: 'A city’s path to cleaner power',
-    tag: 'Brand & PR · Bauhaus',
+    tag: 'Topic demo · Lucid 3D',
   },
 ];
 
