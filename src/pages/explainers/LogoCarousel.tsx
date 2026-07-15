@@ -11,5 +11,11 @@ const logos: LogoItem[] = [
 ];
 
 export default function LogoCarousel() {
-  return <LogoMarquee heading="Trusted by teams at" logos={logos} />;
+  return (
+    <LogoMarquee
+      heading="Trusted by teams at"
+      logos={logos}
+      headingClassName="font-heading font-semibold text-[20px] leading-[28px] text-[#201e26] text-center px-6 xl:px-0"
+    />
+  );
 }

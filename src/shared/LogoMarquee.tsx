@@ -26,9 +26,13 @@ export type LogoItem = { src: string; alt: string; aspect: number };
 interface Props {
   heading: string;
   logos: LogoItem[];
+  headingClassName?: string;
 }
 
-export default function LogoMarquee({ heading, logos }: Props) {
+const DEFAULT_HEADING_CLASS =
+  'font-heading font-semibold text-[16px] leading-[24px] text-[#201e26] text-center px-6 xl:px-0';
+
+export default function LogoMarquee({ heading, logos, headingClassName = DEFAULT_HEADING_CLASS }: Props) {
   const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -88,7 +92,7 @@ export default function LogoMarquee({ heading, logos }: Props) {
 
   return (
     <div className="bg-[#fafafa] flex flex-col gap-7 items-center justify-center py-10 md:py-14 relative w-full">
-      <p className="font-heading font-semibold text-[16px] leading-[24px] text-[#201e26] text-center px-6 xl:px-0">
+      <p className={headingClassName}>
         {heading}
       </p>
       <div

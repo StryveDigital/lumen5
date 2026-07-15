@@ -16,7 +16,7 @@ export default function OldWayVsNow() {
           <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[54px] text-[#201e26] max-w-[760px]">
             The math that used to stop you.
           </h2>
-          <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]/70">
+          <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]">
             How many more explainers would you make if they didn’t cost thousands and take weeks?
           </p>
         </div>
@@ -29,13 +29,13 @@ export default function OldWayVsNow() {
                 highlight ? 'bg-[#201e26]' : 'bg-[#fafafa] ring-1 ring-black/[0.05]'
               }`}
             >
-              <p className={`font-body text-[15px] leading-[22px] uppercase tracking-[0.1em] ${highlight ? 'text-[#8b7fff]' : 'text-[#201e26]/45'}`}>
+              <p className={`font-body text-[15px] leading-[22px] uppercase tracking-[0.1em] ${highlight ? 'text-[#8b7fff]' : 'text-[#201e26]'}`}>
                 {label}
               </p>
               <p className={`font-heading font-semibold text-[28px] leading-[34px] ${highlight ? 'text-[#fafafa]' : 'text-[#201e26]'}`}>
                 {value}
               </p>
-              <p className={`font-body text-[14px] leading-[20px] ${highlight ? 'text-[#fafafa]/60' : 'text-[#201e26]/55'}`}>
+              <p className={`font-body text-[14px] leading-[20px] ${highlight ? 'text-[#fafafa]' : 'text-[#201e26]'}`}>
                 {note}
               </p>
             </div>

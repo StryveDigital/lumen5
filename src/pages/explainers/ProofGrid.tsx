@@ -49,7 +49,7 @@ export default function ProofGrid() {
         <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[54px] text-[#201e26]">
           Don’t take our word for it. Press play.
         </h2>
-        <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]/70">
+        <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]">
           Real explainers, made in Lumen5, from nothing but a script. Voiceover, animation,
           captions and all.
         </p>
@@ -92,10 +92,10 @@ export default function ProofGrid() {
               )}
             </div>
             <figcaption className="mt-4">
-              <p className="font-heading font-semibold text-[18px] leading-[26px] text-[#201e26]">{topic}</p>
-              <p className="font-body font-normal text-[13px] leading-[20px] text-[#201e26]/55 mt-1 uppercase tracking-[0.08em]">
+              <p className="font-body font-normal text-[13px] leading-[20px] text-[#201e26]">
                 {tag}
               </p>
+              <p className="font-heading font-semibold text-[26px] leading-[31px] text-[#201e26] mt-1">{topic}</p>
             </figcaption>
           </figure>
         ))}

@@ -16,13 +16,13 @@ export default function WebinarSection() {
     <div className="bg-[#fafafa] w-full px-6 md:px-16 py-[72px] md:py-[104px]">
       <div className="mx-auto max-w-[1020px]">
         <div className="flex flex-col gap-3 items-center text-center mb-10 md:mb-12">
-          <p className="font-heading font-semibold text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] text-[#5645f5]">
+          <p className="font-heading font-semibold text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] text-[#201e26]">
             Go deeper
           </p>
           <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[54px] text-[#201e26]">
             Watch the full walkthrough
           </h2>
-          <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]/70 max-w-[720px]">
+          <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26] max-w-[720px]">
             Real videos from beta customers, plus a live build from pasted text to a finished
             explainer. Watch it here, or share it with the person who needs convincing.
           </p>
@@ -58,9 +58,8 @@ export default function WebinarSection() {
                   </svg>
                 </span>
               </span>
-              <span className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/45 backdrop-blur-sm px-3 py-1.5">
-                <span className="size-2 rounded-full bg-[#f95580]" />
-                <span className="font-heading font-semibold text-[12px] leading-none text-white tracking-wide">
+              <span className="absolute left-4 top-4 flex items-center rounded-full bg-[#ffffff] px-3 py-1.5">
+                <span className="font-heading font-semibold text-[12px] leading-none text-[#201e26] tracking-wide">
                   Product webinar
                 </span>
               </span>
@@ -68,7 +67,7 @@ export default function WebinarSection() {
           )}
         </div>
 
-        <p className="text-center font-body text-[15px] leading-[24px] text-[#201e26]/60 mt-6">
+        <p className="text-center font-body text-[15px] leading-[24px] text-[#201e26] mt-6">
           Prefer a link you can send around?{' '}
           <a
             href={WATCH_URL}

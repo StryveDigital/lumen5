@@ -44,10 +44,9 @@ export default function StyleShowcase() {
         {/* heading */}
         <div className="flex flex-col gap-3 items-center text-center max-w-[820px] mx-auto mb-12">
           <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[54px] text-[#fafafa]">
-            Most AI video looks like a robot made it.{' '}
-            <span className="text-[#8b7fff]">This doesn’t.</span>
+            Most AI video looks like a robot made it. This doesn’t.
           </h2>
-          <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#fafafa]/70">
+          <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#fafafa]">
             Real motion-design-grade animation, not a stock avatar reading a script. 15 styles,
             your brand colors, any aspect ratio. Same script, a completely different film.
           </p>

@@ -8,15 +8,15 @@ export default function CtaModule() {
         <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[54px] text-[#fafafa] text-center w-full max-w-[820px]">
           The complicated thing you’ve been putting off? Explain it today.
         </h2>
-        <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#fafafa]/80 text-center w-full max-w-[620px]">
+        <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#fafafa] text-center w-full max-w-[620px]">
           Describe the idea, pick a style, and watch it become a video. Your first one is free.
         </p>
         <a href={CTA.signup} className="bg-[#5645f5] flex items-center justify-center px-8 py-5 rounded-full shrink-0 hover:opacity-90 transition-opacity mt-4">
-          <span className="font-heading font-semibold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap">
+          <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
             Try it out now for free
           </span>
         </a>
-        <p className="font-body font-normal text-[16px] leading-[24px] text-[#fafafa] text-center opacity-70 mt-2">
+        <p className="font-body font-normal text-[16px] leading-[24px] text-[#fafafa] text-center mt-2">
           Free plan • No credit card required
         </p>
       </div>
