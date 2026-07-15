@@ -8,14 +8,14 @@ import { useEffect, useState } from 'react';
 import { useInView, prefersReducedMotion } from './useInView';
 
 const STYLES = [
-  { name: 'Lucid',    desc: '3D CGI · natural light',        src: '/explainers/lucid-city.png' },
-  { name: 'Claymo',   desc: 'Hand-built clay · matte',       src: '/explainers/claymo-airbnb-driving.jpg' },
-  { name: 'Kiro',     desc: 'Semi-real anime · cell-shaded', src: '/explainers/anime-yoga.png' },
-  { name: 'Serenity', desc: 'Soft airbrush · warm',          src: '/explainers/serenity-snow.png' },
-  { name: 'Bauhz',    desc: 'Geometric · Bauhaus palette',   src: '/explainers/bauhaus-city.png' },
-  { name: 'Vector',   desc: 'Flat editorial · clean line',   src: '/explainers/flat-office.png' },
-  { name: 'Comic',    desc: 'Hand-drawn · illustrated',      src: '/explainers/comic-hoops.png' },
-  { name: 'Neon',     desc: 'Isometric · glowing',           src: '/explainers/iso-security.png' },
+  { name: 'Lucid',    desc: '3D CGI · natural light',        src: '/explainers/lucid-city.webp' },
+  { name: 'Claymo',   desc: 'Hand-built clay · matte',       src: '/explainers/claymo-airbnb-driving.webp' },
+  { name: 'Kiro',     desc: 'Semi-real anime · cell-shaded', src: '/explainers/anime-yoga.webp' },
+  { name: 'Serenity', desc: 'Soft airbrush · warm',          src: '/explainers/serenity-snow.webp' },
+  { name: 'Bauhz',    desc: 'Geometric · Bauhaus palette',   src: '/explainers/bauhaus-city.webp' },
+  { name: 'Vector',   desc: 'Flat editorial · clean line',   src: '/explainers/flat-office.webp' },
+  { name: 'Comic',    desc: 'Hand-drawn · illustrated',      src: '/explainers/comic-hoops.webp' },
+  { name: 'Neon',     desc: 'Isometric · glowing',           src: '/explainers/iso-security.webp' },
 ];
 
 export default function StyleShowcase() {
@@ -44,10 +44,9 @@ export default function StyleShowcase() {
         {/* heading */}
         <div className="flex flex-col gap-3 items-center text-center max-w-[820px] mx-auto mb-12">
           <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[54px] text-[#fafafa]">
-            Most AI video looks like a robot made it.{' '}
-            <span className="text-[#8b7fff]">This doesn’t.</span>
+            Most AI video looks like a robot made it. This doesn’t.
           </h2>
-          <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#fafafa]/70">
+          <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#fafafa]">
             Real motion-design-grade animation, not a stock avatar reading a script. 15 styles,
             your brand colors, any aspect ratio. Same script, a completely different film.
           </p>

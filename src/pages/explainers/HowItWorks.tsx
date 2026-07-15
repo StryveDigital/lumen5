@@ -106,8 +106,8 @@ function ScriptPanel() {
 const STYLE_THUMBS = [
   { src: '/explainers/lucid-office.png', name: 'Lucid', on: true },
   { src: '/explainers/serenity-airport.png', name: 'Serenity', on: false },
-  { src: '/explainers/claymo-airbnb-driving.jpg', name: 'Claymo', on: false },
-  { src: '/explainers/anime-yoga.png', name: 'Kiro', on: false },
+  { src: '/explainers/claymo-airbnb-driving.webp', name: 'Claymo', on: false },
+  { src: '/explainers/anime-yoga.webp', name: 'Kiro', on: false },
 ];
 
 function StylePanel() {
@@ -169,7 +169,7 @@ const EDIT_PROMPT = 'Add two people at the table, and some plants. Who doesn’t
 type RailScene = { src?: string; label: string; state: 'active' | 'ready' | 'animating' | 'generating' };
 const RAIL: RailScene[] = [
   { src: '/explainers/lucid-office.png', label: '1', state: 'active' },
-  { src: '/explainers/lucid-city.png', label: '2', state: 'ready' },
+  { src: '/explainers/lucid-city.webp', label: '2', state: 'ready' },
   { src: '/explainers/lucid-factory.png', label: '3', state: 'ready' },
   { label: '4', state: 'animating' },
   { label: '5', state: 'generating' },
@@ -310,7 +310,7 @@ function Row({ step, index }: { step: (typeof STEPS)[number]; index: number }) {
         <h3 className="font-heading font-semibold text-[26px] leading-[32px] md:text-[32px] md:leading-[40px] text-[#201e26]">
           {step.title}
         </h3>
-        <p className="font-body font-normal text-[17px] leading-[28px] md:text-[18px] md:leading-[30px] text-[#201e26]/70 mt-4">
+        <p className="font-body font-normal text-[17px] leading-[28px] md:text-[18px] md:leading-[30px] text-[#201e26] mt-4">
           {step.desc}
         </p>
       </div>
@@ -324,13 +324,13 @@ export default function HowItWorks() {
     <div className="bg-white w-full px-6 md:px-16 py-[72px] md:py-[104px]">
       <div className="mx-auto max-w-[1180px]">
         <div className="flex flex-col gap-3 items-center text-center max-w-[820px] mx-auto mb-14 md:mb-20">
-          <p className="font-heading font-semibold text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] text-[#5645f5]">
+          <p className="font-heading font-semibold text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] text-[#201e26]">
             How it works
           </p>
           <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[54px] text-[#201e26]">
             From an idea to a finished video, in three steps.
           </h2>
-          <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]/70">
+          <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]">
             No crew. No motion designer. No agency timeline. A guided flow takes you from script to
             styled scenes to a finished film.
           </p>
@@ -345,7 +345,7 @@ export default function HowItWorks() {
         <div className="flex justify-center mt-16 md:mt-20">
           <a
             href={CTA.signup}
-            className="bg-[#5645f5] px-8 py-5 rounded-full font-heading font-semibold text-[18px] leading-[30px] text-[#fafafa] hover:opacity-90 transition-opacity"
+            className="bg-[#5645f5] px-8 py-5 rounded-full font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] hover:opacity-90 transition-opacity"
           >
             Try it out now for free
           </a>

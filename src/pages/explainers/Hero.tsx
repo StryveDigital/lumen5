@@ -72,9 +72,8 @@ function LaunchVideo() {
       </span>
 
       {/* Label + runtime chip */}
-      <span className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/45 backdrop-blur-sm px-3 py-1.5">
-        <span className="size-2 rounded-full bg-[#f95580] animate-pulse" />
-        <span className="font-heading font-semibold text-[12px] leading-none text-white tracking-wide">
+      <span className="absolute left-4 top-4 flex items-center rounded-full bg-[#ffffff] px-3 py-1.5">
+        <span className="font-heading font-semibold text-[12px] leading-none text-[#201e26] tracking-wide">
           Made in Lumen5
         </span>
       </span>
@@ -95,27 +94,24 @@ export default function Hero() {
         <div className="flex flex-col xl:flex-row items-center gap-10 xl:gap-16 2xl:gap-20">
           {/* Copy */}
           <div className="flex-1 xl:flex-[0.9] min-w-0 w-full max-w-[560px] xl:max-w-[600px]">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/5 ring-1 ring-white/10 px-3.5 py-1.5 mb-6">
-              <span className="size-1.5 rounded-full bg-[#3bd9eb]" />
-              <span className="font-heading font-semibold text-[12px] leading-none tracking-[0.14em] uppercase text-[#3bd9eb]">
-                New · Animated Explainers
-              </span>
-            </div>
+            <p className="font-heading font-semibold text-[20px] leading-none text-[#fafafa] mb-6">
+              New · Animated explainers
+            </p>
             <h1 className="font-heading font-semibold text-[38px] leading-[46px] md:text-[58px] md:leading-[68px] xl:text-[48px] xl:leading-[58px] 2xl:text-[58px] 2xl:leading-[68px] text-[#fafafa]">
               Finally. Explainer videos anyone can make.
             </h1>
-            <p className="font-body font-normal text-[18px] leading-[30px] md:text-[22px] md:leading-[36px] text-[#fafafa]/85 mt-6">
+            <p className="font-body font-normal text-[18px] leading-[30px] md:text-[22px] md:leading-[36px] text-[#fafafa] mt-6">
               The kind that used to cost $50,000 and take a month. Turn your most complex idea into
               a video people actually watch. Make your first one today.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <a
                 href={CTA.signup}
-                className="bg-[#5645f5] px-8 py-5 rounded-full font-heading font-semibold text-[18px] leading-[30px] text-[#fafafa] whitespace-nowrap hover:opacity-90 transition-opacity"
+                className="bg-[#5645f5] px-8 py-5 rounded-full font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap hover:opacity-90 transition-opacity"
               >
                 Try it out now for free
               </a>
-              <span className="font-body text-[15px] leading-[22px] text-[#fafafa]/55">
+              <span className="font-body text-[16px] leading-[22px] text-[#fafafa]">
                 Free plan · no credit card
               </span>
             </div>

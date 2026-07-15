@@ -28,7 +28,7 @@ export default function Outcomes() {
     <div className="bg-[#fafafa] w-full px-6 md:px-16 py-[72px] md:py-[104px]">
       <div className="mx-auto max-w-[1180px]">
         <div className="flex flex-col gap-3 items-center text-center max-w-[820px] mx-auto mb-14">
-          <p className="font-heading font-semibold text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] text-[#5645f5]">
+          <p className="font-heading font-semibold text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] text-[#201e26]">
             The best teams put explainers to work
           </p>
           <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[54px] text-[#201e26]">
@@ -37,15 +37,12 @@ export default function Outcomes() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {columns.map(({ accent, team, uses, outcome }) => (
+          {columns.map(({ team, uses, outcome }) => (
             <div key={team} className="bg-white rounded-2xl p-8 flex flex-col gap-6 ring-1 ring-black/[0.04]">
-              <div className="flex items-center gap-3">
-                <span className={`${accent} size-3 rounded-full`} />
-                <h3 className="font-heading font-semibold text-[22px] leading-[28px] text-[#201e26]">{team}</h3>
-              </div>
+              <h3 className="font-heading font-semibold text-[22px] leading-[28px] text-[#201e26]">{team}</h3>
               <ul className="flex flex-col gap-3">
                 {uses.map((u) => (
-                  <li key={u} className="flex items-center gap-2.5 font-body text-[16px] leading-[24px] text-[#201e26]/75">
+                  <li key={u} className="flex items-center gap-2.5 font-body text-[16px] leading-[24px] text-[#201e26]">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden className="shrink-0">
                       <path d="M3 8.5l3 3 7-7.5" stroke="#5645f5" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
@@ -53,7 +50,7 @@ export default function Outcomes() {
                   </li>
                 ))}
               </ul>
-              <p className="font-body text-[15px] leading-[24px] text-[#201e26]/60 border-t border-black/[0.06] pt-5 mt-auto">
+              <p className="font-body text-[15px] leading-[24px] text-[#201e26] border-t border-black/[0.06] pt-5 mt-auto">
                 {outcome}
               </p>
             </div>
