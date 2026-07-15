@@ -106,8 +106,8 @@ function ScriptPanel() {
 const STYLE_THUMBS = [
   { src: '/explainers/lucid-office.png', name: 'Lucid', on: true },
   { src: '/explainers/serenity-airport.png', name: 'Serenity', on: false },
-  { src: '/explainers/claymo-airbnb-driving.jpg', name: 'Claymo', on: false },
-  { src: '/explainers/anime-yoga.png', name: 'Kiro', on: false },
+  { src: '/explainers/claymo-airbnb-driving.webp', name: 'Claymo', on: false },
+  { src: '/explainers/anime-yoga.webp', name: 'Kiro', on: false },
 ];
 
 function StylePanel() {
@@ -169,7 +169,7 @@ const EDIT_PROMPT = 'Add two people at the table, and some plants. Who doesn’t
 type RailScene = { src?: string; label: string; state: 'active' | 'ready' | 'animating' | 'generating' };
 const RAIL: RailScene[] = [
   { src: '/explainers/lucid-office.png', label: '1', state: 'active' },
-  { src: '/explainers/lucid-city.png', label: '2', state: 'ready' },
+  { src: '/explainers/lucid-city.webp', label: '2', state: 'ready' },
   { src: '/explainers/lucid-factory.png', label: '3', state: 'ready' },
   { label: '4', state: 'animating' },
   { label: '5', state: 'generating' },
