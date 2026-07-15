@@ -106,7 +106,7 @@ export default function Hero() {
             </h1>
             <p className="font-body font-normal text-[18px] leading-[30px] md:text-[22px] md:leading-[36px] text-[#fafafa]/85 mt-6">
               The kind that used to cost $50,000 and take a month. Turn your most complex idea into
-              a video people actually finish. Make your first one this afternoon.
+              a video people actually watch. Make your first one today.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <a

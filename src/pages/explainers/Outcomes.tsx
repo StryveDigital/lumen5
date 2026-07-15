@@ -29,10 +29,10 @@ export default function Outcomes() {
       <div className="mx-auto max-w-[1180px]">
         <div className="flex flex-col gap-3 items-center text-center max-w-[820px] mx-auto mb-14">
           <p className="font-heading font-semibold text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] text-[#5645f5]">
-            Where teams put them to work
+            The best teams put explainers to work
           </p>
           <h2 className="font-heading font-semibold text-[28px] leading-[36px] md:text-[42px] md:leading-[54px] text-[#201e26]">
-            It’s not about making a video. It’s what the video does.
+            Don’t just make a video. Give it a job.
           </h2>
         </div>
 
