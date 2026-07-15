@@ -1,7 +1,8 @@
-// Explainers — launch hero. Left: launch headline + CTA. Right: the "launch
-// video" slot. Until the real host-announces cut is embedded, the slot shows a
-// crossfading showreel of real animated-explainer frames behind a play glyph,
-// so the range of the tool is proven the instant the page loads.
+// Explainers — launch hero. Left: launch headline + CTA. Right: a playable
+// film slot. The facade is a crossfading showreel of real explainer
+// screengrabs; pressing play runs Lumen5's own meta-explainer (an animated
+// explainer about animated explainers, made in the product). When the real
+// host-announces launch film is shot, swap VIDEO_SRC and the runtime chip.
 
 import { useEffect, useState } from 'react';
 import { CTA } from '../../shared/cta-urls';
@@ -15,16 +16,39 @@ const REEL = [
   '/explainers/nyu-langone-brain.jpg',
 ];
 
+const VIDEO_SRC = '/explainers/videos/lumen5-meta-explainer.mp4';
+
 function LaunchVideo() {
   const [i, setI] = useState(0);
+  const [playing, setPlaying] = useState(false);
   useEffect(() => {
-    if (prefersReducedMotion()) return;
+    if (playing || prefersReducedMotion()) return;
     const id = setInterval(() => setI((n) => (n + 1) % REEL.length), 2600);
     return () => clearInterval(id);
-  }, []);
+  }, [playing]);
+
+  if (playing) {
+    return (
+      <div className="relative w-full aspect-video rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl bg-black">
+        <video
+          className="absolute inset-0 size-full object-cover"
+          src={VIDEO_SRC}
+          controls
+          autoPlay
+          playsInline
+          preload="none"
+        />
+      </div>
+    );
+  }
 
   return (
-    <div className="relative w-full aspect-video rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl bg-black">
+    <button
+      type="button"
+      onClick={() => setPlaying(true)}
+      aria-label="Play: an animated explainer about animated explainers, made in Lumen5"
+      className="group relative block w-full aspect-video rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl bg-black cursor-pointer"
+    >
       {REEL.map((src, n) => (
         <img
           key={src}
@@ -36,28 +60,28 @@ function LaunchVideo() {
         />
       ))}
       {/* Cinematic vignette so the play glyph reads on any frame */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/15" />
+      <span className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/15" />
 
-      {/* Play affordance — the real launch video embeds here */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="flex items-center justify-center size-[74px] rounded-full bg-white/95 shadow-lg backdrop-blur-sm transition-transform hover:scale-105">
+      {/* Play affordance */}
+      <span className="absolute inset-0 flex items-center justify-center">
+        <span className="flex items-center justify-center size-[74px] rounded-full bg-white/95 shadow-lg backdrop-blur-sm transition-transform group-hover:scale-105">
           <svg width="26" height="30" viewBox="0 0 26 30" fill="none" aria-hidden>
             <path d="M25 13.27a2 2 0 0 1 0 3.46L3 29.4A2 2 0 0 1 0 27.66V2.34A2 2 0 0 1 3 .6l22 12.67Z" fill="#201e26" />
           </svg>
-        </div>
-      </div>
+        </span>
+      </span>
 
-      {/* Launch label + runtime chip */}
-      <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/45 backdrop-blur-sm px-3 py-1.5">
+      {/* Label + runtime chip */}
+      <span className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/45 backdrop-blur-sm px-3 py-1.5">
         <span className="size-2 rounded-full bg-[#f95580] animate-pulse" />
         <span className="font-heading font-semibold text-[12px] leading-none text-white tracking-wide">
-          Launch film
+          Made in Lumen5
         </span>
-      </div>
-      <div className="absolute right-4 bottom-4 rounded-md bg-black/55 backdrop-blur-sm px-2 py-1">
-        <span className="font-body text-[12px] leading-none text-white/90 tabular-nums">1:30</span>
-      </div>
-    </div>
+      </span>
+      <span className="absolute right-4 bottom-4 rounded-md bg-black/55 backdrop-blur-sm px-2 py-1">
+        <span className="font-body text-[12px] leading-none text-white/90 tabular-nums">0:39</span>
+      </span>
+    </button>
   );
 }
 

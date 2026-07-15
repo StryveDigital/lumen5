@@ -21,12 +21,20 @@ const STYLES = [
 export default function StyleShowcase() {
   const { ref, inView } = useInView<HTMLDivElement>(0.3);
   const [active, setActive] = useState(0);
+  // Once a visitor picks a style themselves, stop the auto-cycle so their
+  // selection is never yanked away mid-look.
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    if (!inView || prefersReducedMotion()) return;
+    if (!inView || paused || prefersReducedMotion()) return;
     const id = setInterval(() => setActive((n) => (n + 1) % STYLES.length), 3200);
     return () => clearInterval(id);
-  }, [inView, active]);
+  }, [inView, active, paused]);
+
+  const pick = (n: number) => {
+    setPaused(true);
+    setActive(n);
+  };
 
   const current = STYLES[active];
 
@@ -70,7 +78,7 @@ export default function StyleShowcase() {
           {STYLES.map((s, n) => (
             <button
               key={s.name}
-              onClick={() => setActive(n)}
+              onClick={() => pick(n)}
               className={`font-heading font-semibold text-[14px] leading-none px-4 py-2.5 rounded-full transition-colors ${
                 n === active
                   ? 'bg-[#5645f5] text-white'
@@ -87,7 +95,7 @@ export default function StyleShowcase() {
           {STYLES.map((s, n) => (
             <button
               key={s.name}
-              onClick={() => setActive(n)}
+              onClick={() => pick(n)}
               aria-label={`Preview ${s.name} style`}
               className={`relative aspect-video rounded-lg overflow-hidden transition-all ${
                 n === active ? 'ring-2 ring-[#5645f5] opacity-100' : 'ring-1 ring-white/10 opacity-55 hover:opacity-90'
