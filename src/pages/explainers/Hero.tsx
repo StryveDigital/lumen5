@@ -16,7 +16,7 @@ const REEL = [
   '/explainers/nyu-langone-brain.jpg',
 ];
 
-const VIDEO_SRC = '/explainers/videos/lumen5-meta-explainer.mp4';
+const VIDEO_SRC = '/explainers/videos/lumen5-hero-explainer.mp4';
 
 function LaunchVideo() {
   const [i, setI] = useState(0);

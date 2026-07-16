@@ -13,9 +13,9 @@ const STYLES = [
   { name: 'Kiro',     desc: 'Semi-real anime · cell-shaded', src: '/explainers/anime-yoga.webp' },
   { name: 'Serenity', desc: 'Soft airbrush · warm',          src: '/explainers/serenity-snow.webp' },
   { name: 'Bauhz',    desc: 'Geometric · Bauhaus palette',   src: '/explainers/bauhaus-city.webp' },
-  { name: 'Vector',   desc: 'Flat editorial · clean line',   src: '/explainers/flat-office.webp' },
-  { name: 'Comic',    desc: 'Hand-drawn · illustrated',      src: '/explainers/comic-hoops.webp' },
-  { name: 'Neon',     desc: 'Isometric · glowing',           src: '/explainers/iso-security.webp' },
+  { name: 'Minimal',  desc: 'Flat editorial · clean line',   src: '/explainers/flat-office.webp' },
+  { name: 'Korb',     desc: 'Hand-drawn · illustrated',      src: '/explainers/comic-hoops.webp' },
+  { name: 'Glow',     desc: 'Isometric · glowing',           src: '/explainers/iso-security.webp' },
 ];
 
 export default function StyleShowcase() {
