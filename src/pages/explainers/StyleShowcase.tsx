@@ -60,7 +60,9 @@ export default function StyleShowcase() {
               src={s.src}
               alt={n === active ? `${s.name} style` : ''}
               aria-hidden={n !== active}
-              className="absolute inset-0 size-full object-cover transition-opacity duration-700 ease-in-out"
+              className={`absolute inset-0 size-full object-cover transition-opacity duration-700 ease-in-out ${
+                n % 2 === 0 ? 'motion-safe:animate-kenburns' : 'motion-safe:animate-kenburns-alt'
+              }`}
               style={{ opacity: n === active ? 1 : 0 }}
             />
           ))}
