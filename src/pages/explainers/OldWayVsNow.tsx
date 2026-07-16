@@ -3,7 +3,7 @@
 // good, it's both.
 
 const cols = [
-  { label: 'Agency', value: '$50k · 3 weeks', note: 'Expensive and slow', highlight: false },
+  { label: 'Agency', value: 'Thousands · 3 weeks', note: 'Expensive and slow', highlight: false },
   { label: 'In-house / freelance', value: 'Never scales', note: 'One at a time, if at all', highlight: false },
   { label: 'Lumen5', value: 'An afternoon', note: 'On brand, any volume', highlight: true },
 ];

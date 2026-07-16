@@ -47,8 +47,8 @@ export default function StyleShowcase() {
             Most AI video looks like a robot made it. This doesn’t.
           </h2>
           <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#fafafa]">
-            Real motion-design-grade animation, not a stock avatar reading a script. 15 styles,
-            your brand colors, any aspect ratio. Same script, a completely different film.
+            Real motion-design-grade animation, not a stock avatar reading a script. A wide range of
+            styles, your brand colors, any aspect ratio. Same script, a completely different video.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export default function StyleShowcase() {
         </div>
 
         <p className="text-center font-body text-[14px] leading-[22px] text-[#fafafa]/45 italic mt-10">
-          No talking avatars were used in the making of this film.
+          No talking avatars were used in the making of this video.
         </p>
       </div>
     </div>

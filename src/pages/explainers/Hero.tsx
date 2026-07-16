@@ -101,7 +101,7 @@ export default function Hero() {
               Finally. Explainer videos anyone can make.
             </h1>
             <p className="font-body font-normal text-[18px] leading-[30px] md:text-[22px] md:leading-[36px] text-[#fafafa] mt-6">
-              The kind that used to cost $50,000 and take a month. Turn your most complex idea into
+              The kind that used to cost thousands and take a month. Turn your most complex idea into
               a video people actually watch. Make your first one today.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">

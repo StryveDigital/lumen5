@@ -281,7 +281,7 @@ const STEPS = [
     badge: 'Step 2',
     badgeColor: 'bg-[#3bd9eb]',
     title: 'Pick a style. Your brand stays locked.',
-    desc: 'Choose from 15 animation styles, or get a custom one built just for your brand. Ingredients keep your characters, your mascot, even your CEO consistent across every scene.',
+    desc: 'Choose from a wide range of animation styles, or get a custom one built just for your brand. Ingredients keep your characters, your mascot, even your CEO consistent across every scene.',
     panel: <StylePanel />,
   },
   {
@@ -332,7 +332,7 @@ export default function HowItWorks() {
           </h2>
           <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]">
             No crew. No motion designer. No agency timeline. A guided flow takes you from script to
-            styled scenes to a finished film.
+            storyboard to video.
           </p>
         </div>
 

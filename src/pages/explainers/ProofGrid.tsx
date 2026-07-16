@@ -50,8 +50,9 @@ export default function ProofGrid() {
           Don’t take our word for it. Press play.
         </h2>
         <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#201e26]">
-          Real explainers, made in Lumen5, from nothing but a script. Voiceover, animation,
-          captions and all.
+          Real explainers, made entirely in Lumen5, from nothing but a script. Ideation, scripting,
+          voiceover, illustration, and animation — the whole pipeline in one place, not four AI
+          tools stitched together.
         </p>
       </div>
 
