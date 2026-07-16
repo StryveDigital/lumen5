@@ -5,6 +5,7 @@ import HowItWorks from './HowItWorks'
 import StyleShowcase from './StyleShowcase'
 import Outcomes from './Outcomes'
 import ScaleBand from './ScaleBand'
+import WorkflowCompare from './WorkflowCompare'
 import OldWayVsNow from './OldWayVsNow'
 import WebinarSection from './WebinarSection'
 import CtaModule from './CtaModule'
@@ -20,6 +21,7 @@ export default function Explainers() {
       <StyleShowcase />
       <Outcomes />
       <ScaleBand />
+      <WorkflowCompare />
       <OldWayVsNow />
       <WebinarSection />
       <CtaModule />
