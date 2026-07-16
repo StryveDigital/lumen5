@@ -17,7 +17,7 @@ export default function CtaModule() {
           </span>
         </a>
         <p className="font-body font-normal text-[16px] leading-[24px] text-[#fafafa] text-center mt-2">
-          Free plan • No credit card required
+          Free plan · No credit card required
         </p>
       </div>
       <img alt="" className="hidden xl:block absolute h-[294px] left-[-107px] top-[77px] w-[281px] pointer-events-none" src="/shape-cta-pink.svg" />
