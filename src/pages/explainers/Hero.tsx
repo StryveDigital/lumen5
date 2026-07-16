@@ -13,7 +13,7 @@ const REEL = [
   '/explainers/lucid-office.png',
   '/explainers/cgi-health-anatomy.jpg',
   '/explainers/claymo-airbnb-resolved.jpg',
-  '/explainers/nyu-langone-brain.jpg',
+  '/explainers/soft-womenshealth-consult.jpg',
 ];
 
 const VIDEO_SRC = '/explainers/videos/lumen5-hero-explainer.mp4';

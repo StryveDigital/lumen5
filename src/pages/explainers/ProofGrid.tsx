@@ -8,18 +8,18 @@ import { useState } from 'react';
 
 const tiles = [
   {
-    video: '/explainers/videos/nyu-langone-mouse.mp4',
-    poster: '/explainers/nyu-langone-brain.jpg',
-    topic: 'The science of a conversation',
-    tag: 'NYU Langone Health · Beta customer',
-    duration: '1:43',
+    video: '/explainers/videos/business-freedom-trap.mp4',
+    poster: '/explainers/flat-business-overwhelm.jpg',
+    topic: 'The business freedom trap',
+    tag: 'Topic demo · Minimal',
+    duration: '1:40',
   },
   {
-    video: '/explainers/videos/airbnb-cohosting.mp4',
-    poster: '/explainers/claymo-airbnb-resolved.jpg',
-    topic: 'Co-hosting, explained',
-    tag: 'Topic demo · Claymation',
-    duration: '2:02',
+    video: '/explainers/videos/womens-health.mp4',
+    poster: '/explainers/soft-womenshealth-consult.jpg',
+    topic: 'What every woman should know',
+    tag: 'Topic demo · Serenity',
+    duration: '1:42',
   },
   {
     video: '/explainers/videos/fruit-health.mp4',
