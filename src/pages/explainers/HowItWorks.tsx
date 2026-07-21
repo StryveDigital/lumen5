@@ -347,7 +347,7 @@ export default function HowItWorks() {
             href={CTA.signup}
             className="bg-[#5645f5] px-8 py-5 rounded-full font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] hover:opacity-90 transition-opacity"
           >
-            Try it out now for free
+            Try it out now with a Basic plan
           </a>
         </div>
       </div>
