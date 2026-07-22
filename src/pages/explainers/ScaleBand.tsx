@@ -16,7 +16,7 @@ export default function ScaleBand() {
         className="bg-[#5645f5] flex items-center justify-center px-8 py-5 rounded-full shrink-0 hover:opacity-90 transition-opacity"
       >
         <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
-          Try it out now for free
+          Try it out now with a Basic plan
         </span>
       </a>
     </div>

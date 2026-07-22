@@ -25,7 +25,7 @@ const tiles = [
     video: '/explainers/videos/fruit-health.mp4',
     poster: '/explainers/cgi-health-avocado.jpg',
     topic: 'How your body actually uses fruit',
-    tag: 'Topic demo · Lucid 3D',
+    tag: 'Topic demo · Lucid',
     duration: '2:07',
   },
 ];
