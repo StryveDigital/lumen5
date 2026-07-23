@@ -104,10 +104,10 @@ function ScriptPanel() {
 /* ----------------------------- 2 · style panel ---------------------------- */
 
 const STYLE_THUMBS = [
-  { src: '/explainers/lucid-office.png', name: 'Lucid', on: true },
-  { src: '/explainers/serenity-airport.png', name: 'Serenity', on: false },
-  { src: '/explainers/claymo-airbnb-driving.webp', name: 'Claymo', on: false },
-  { src: '/explainers/anime-yoga.webp', name: 'Kiro', on: false },
+  { src: '/explainers/style-lucid.webp', name: 'Lucid', on: true },
+  { src: '/explainers/style-serenity.webp', name: 'Serenity', on: false },
+  { src: '/explainers/claymo-airbnb-resolved.jpg', name: 'Claymo', on: false },
+  { src: '/explainers/style-kiro.webp', name: 'Kiro', on: false },
 ];
 
 function StylePanel() {

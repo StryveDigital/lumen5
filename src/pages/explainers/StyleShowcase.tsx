@@ -8,14 +8,14 @@ import { useEffect, useState } from 'react';
 import { useInView, prefersReducedMotion } from './useInView';
 
 const STYLES = [
-  { name: 'Lucid',    desc: '3D CGI · natural light',        src: '/explainers/lucid-city.webp' },
-  { name: 'Claymo',   desc: 'Hand-built clay · matte',       src: '/explainers/claymo-airbnb-driving.webp' },
-  { name: 'Kiro',     desc: 'Semi-real anime · cell-shaded', src: '/explainers/anime-yoga.webp' },
-  { name: 'Serenity', desc: 'Soft airbrush · warm',          src: '/explainers/serenity-snow.webp' },
-  { name: 'Bauhz',    desc: 'Geometric · Bauhaus palette',   src: '/explainers/bauhaus-city.webp' },
-  { name: 'Minimal',  desc: 'Flat editorial · clean line',   src: '/explainers/flat-office.webp' },
-  { name: 'Korb',     desc: 'Hand-drawn · illustrated',      src: '/explainers/comic-hoops.webp' },
-  { name: 'Glow',     desc: 'Isometric · glowing',           src: '/explainers/iso-security.webp' },
+  { name: 'Lucid',    desc: '3D CGI · natural light',        src: '/explainers/style-lucid.webp' },
+  { name: 'Claymo',   desc: 'Hand-built clay · matte',       src: '/explainers/claymo-airbnb-resolved.jpg' },
+  { name: 'Kiro',     desc: 'Semi-real anime · cell-shaded', src: '/explainers/style-kiro.webp' },
+  { name: 'Serenity', desc: 'Soft airbrush · warm',          src: '/explainers/style-serenity.webp' },
+  { name: 'Bauhz',    desc: 'Geometric · Bauhaus palette',   src: '/explainers/style-bauhz.webp' },
+  { name: 'Minimal',  desc: 'Flat editorial · clean line',   src: '/explainers/style-minimal.webp' },
+  { name: 'Korb',     desc: 'Hand-drawn · illustrated',      src: '/explainers/style-korb.webp' },
+  { name: 'Glow',     desc: 'Isometric · glowing',           src: '/explainers/style-glow.webp' },
 ];
 
 export default function StyleShowcase() {
