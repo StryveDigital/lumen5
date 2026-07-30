@@ -1,6 +1,8 @@
 // Explainers — "cash the claim". The hero says anyone can make these; this
-// block proves it with the real videos shown in the product webinar, playable
-// inline. Facade pattern: poster still + play glyph until clicked, then a
+// block proves it with real industry-example explainers (mock companies across
+// banking, health insurance, and pharma), playable inline so enterprise buyers
+// can picture their own use case. Facade pattern: poster still + play glyph
+// until clicked, then a
 // self-hosted <video> with controls (preload="none" so nothing downloads
 // until someone presses play). Only one tile plays at a time.
 
@@ -8,25 +10,25 @@ import { useState } from 'react';
 
 const tiles = [
   {
-    video: '/explainers/videos/business-freedom-trap.mp4',
-    poster: '/explainers/flat-business-overwhelm.jpg',
-    topic: 'The business freedom trap',
-    tag: 'Topic demo · Minimal',
-    duration: '1:40',
+    video: '/explainers/videos/banking-finance.mp4',
+    poster: '/explainers/banking-finance.jpg',
+    topic: 'Northbridge Business Bank',
+    tag: 'Banking & Finance',
+    duration: '1:53',
   },
   {
-    video: '/explainers/videos/womens-health.mp4',
-    poster: '/explainers/soft-womenshealth-consult.jpg',
-    topic: 'What every woman should know',
-    tag: 'Topic demo · Serenity',
-    duration: '1:42',
+    video: '/explainers/videos/health-insurance.mp4',
+    poster: '/explainers/health-insurance.jpg',
+    topic: 'Elevia Health Insurance',
+    tag: 'Health Insurance',
+    duration: '1:50',
   },
   {
-    video: '/explainers/videos/fruit-health.mp4',
-    poster: '/explainers/cgi-health-avocado.jpg',
-    topic: 'How your body actually uses fruit',
-    tag: 'Topic demo · Lucid',
-    duration: '2:07',
+    video: '/explainers/videos/pharmaceutical.mp4',
+    poster: '/explainers/pharmaceutical.jpg',
+    topic: 'Aurevantis Pharma',
+    tag: 'Pharmaceutical',
+    duration: '2:23',
   },
 ];
 
