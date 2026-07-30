@@ -12,22 +12,22 @@ const tiles = [
   {
     video: '/explainers/videos/banking-finance.mp4',
     poster: '/explainers/banking-finance.jpg',
-    topic: 'Northbridge Business Bank',
-    tag: 'Banking & Finance',
+    topic: 'Banking and Finance',
+    tag: 'Topic demo · Minimal',
     duration: '1:53',
   },
   {
     video: '/explainers/videos/health-insurance.mp4',
     poster: '/explainers/health-insurance.jpg',
-    topic: 'Elevia Health Insurance',
-    tag: 'Health Insurance',
+    topic: 'Health Insurance',
+    tag: 'Topic demo · Serenity',
     duration: '1:50',
   },
   {
     video: '/explainers/videos/pharmaceutical.mp4',
     poster: '/explainers/pharmaceutical.jpg',
-    topic: 'Aurevantis Pharma',
-    tag: 'Pharmaceutical',
+    topic: 'Pharmaceutical',
+    tag: 'Topic demo · Lucid 3D',
     duration: '2:23',
   },
 ];
