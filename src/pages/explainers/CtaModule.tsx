@@ -11,11 +11,18 @@ export default function CtaModule() {
         <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#fafafa] text-center w-full max-w-[620px]">
           Describe the idea, pick a style, and watch it become a video.
         </p>
-        <a href={CTA.signup} className="bg-[#5645f5] flex items-center justify-center px-8 py-5 rounded-full shrink-0 hover:opacity-90 transition-opacity mt-4">
-          <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
-            Try it out now with a Basic plan
-          </span>
-        </a>
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
+          <a href={CTA.signup} className="bg-[#5645f5] flex items-center justify-center px-8 py-5 rounded-full shrink-0 hover:opacity-90 transition-opacity">
+            <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
+              Try it out now with a Basic plan
+            </span>
+          </a>
+          <a href={CTA.demo} className="bg-[#fafafa] flex items-center justify-center px-6 py-4 rounded-full shrink-0 hover:opacity-90 transition-opacity">
+            <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#5645f5] whitespace-nowrap">
+              Get a demo
+            </span>
+          </a>
+        </div>
       </div>
       <img alt="" className="hidden xl:block absolute h-[294px] left-[-107px] top-[77px] w-[281px] pointer-events-none" src="/shape-cta-pink.svg" />
       <img alt="" className="hidden xl:block absolute h-[231px] right-[-107px] top-[139px] w-[273px] pointer-events-none" src="/shape-cta-green.svg" />

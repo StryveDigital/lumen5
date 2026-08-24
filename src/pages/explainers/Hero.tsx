@@ -104,12 +104,20 @@ export default function Hero() {
               The kind that used to cost thousands and take a month. Turn your most complex idea into
               a video people actually watch. Make your first one today.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href={CTA.signup}
                 className="inline-block bg-[#5645f5] px-8 py-5 rounded-full font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] hover:opacity-90 transition-opacity"
               >
                 Try it out now with a Basic plan
+              </a>
+              <a
+                href={CTA.demo}
+                className="bg-[#fafafa] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity"
+              >
+                <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#5645f5] whitespace-nowrap">
+                  Get a demo
+                </span>
               </a>
             </div>
           </div>
