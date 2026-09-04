@@ -23,12 +23,22 @@ export default function Banner() {
           <p className="font-body font-normal text-[18px] leading-[30px] md:text-[20px] md:leading-[36px] text-[#fafafa]">
             Locked brand kits. Multi-stage approval workflows. Regional rollouts that don&rsquo;t end in a CMO email.
           </p>
-          <div className="mt-2">
-            <a href={CTA.demo} className="bg-[#5645f5] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity w-fit">
-              <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
-                Get a demo
-              </span>
-            </a>
+          <div className="flex flex-col gap-3 mt-2 w-full">
+            <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+              <a href={CTA.signup} className="bg-[#5645f5] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity w-fit">
+                <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
+                  See it on your brand instantly
+                </span>
+              </a>
+              <a href={CTA.demo} className="border border-[#fafafa]/40 flex items-center justify-center px-6 py-4 rounded-full hover:border-[#fafafa] transition-colors w-fit">
+                <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#fafafa] whitespace-nowrap">
+                  Talk to our team
+                </span>
+              </a>
+            </div>
+            <p className="font-body font-normal text-[14px] leading-[22px] text-[#fafafa] opacity-70">
+              Free plan &bull; No credit card required
+            </p>
           </div>
         </div>
       </div>
