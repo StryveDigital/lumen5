@@ -22,10 +22,10 @@ export default function Explainers() {
       <HowItWorks />
       <StyleShowcase />
       <ProofGrid />
+      <CtaModule />
       <Footer />
       {/* <OldWayVsNow />
       <WebinarSection />*/}
-      <CtaModule />
     </div>
   )
 }
