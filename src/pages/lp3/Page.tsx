@@ -5,6 +5,7 @@ import SmallCta from './SmallCta'
 import StatsModule from './StatsModule'
 import SecurityCompliance from './SecurityCompliance'
 import TwoCardCta from './TwoCardCta'
+import ProfessionalServicesCta from './ProfessionalServicesCta'
 import Footer from '../../shared/Footer'
 
 export default function Lp3() {
@@ -16,6 +17,7 @@ export default function Lp3() {
       <SmallCta />
       <StatsModule />
       <SecurityCompliance />
+      <ProfessionalServicesCta />
       <TwoCardCta />
       <Footer />
     </div>
