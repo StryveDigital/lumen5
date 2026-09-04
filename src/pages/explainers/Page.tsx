@@ -8,7 +8,7 @@ import ScaleBand from './ScaleBand'
 import WorkflowCompare from './WorkflowCompare'
 //import OldWayVsNow from './OldWayVsNow'
 //import WebinarSection from './WebinarSection'
-//import CtaModule from './CtaModule'
+import CtaModule from './CtaModule'
 import Footer from '../../shared/Footer'
 
 export default function Explainers() {
@@ -24,8 +24,8 @@ export default function Explainers() {
       <ProofGrid />
       <Footer />
       {/* <OldWayVsNow />
-      <WebinarSection />
-      <CtaModule /> */}
+      <WebinarSection />*/}
+      <CtaModule />
     </div>
   )
 }
