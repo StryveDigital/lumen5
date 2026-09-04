@@ -6,9 +6,9 @@ import StyleShowcase from './StyleShowcase'
 import Outcomes from './Outcomes'
 import ScaleBand from './ScaleBand'
 import WorkflowCompare from './WorkflowCompare'
-import OldWayVsNow from './OldWayVsNow'
-import WebinarSection from './WebinarSection'
-import CtaModule from './CtaModule'
+//import OldWayVsNow from './OldWayVsNow'
+//import WebinarSection from './WebinarSection'
+//import CtaModule from './CtaModule'
 import Footer from '../../shared/Footer'
 
 export default function Explainers() {
