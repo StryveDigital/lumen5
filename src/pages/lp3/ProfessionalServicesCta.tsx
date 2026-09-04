@@ -6,7 +6,8 @@ export default function ProfessionalServicesCta() {
     <div className="bg-[#201e26] flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6 md:gap-12 px-6 md:px-16 py-10 md:py-16 w-full">
       <p className="font-heading font-semibold text-[24px] leading-[36px] md:text-[36px] md:leading-[60px] text-[#fafafa] w-full max-w-[829px]">
         Need more than a tool?
-        Get a team with Lumen5's Professional Services.
+        <br />
+        Get a team with Lumen5&rsquo;s Professional Services.
       </p>
       <div className="flex flex-wrap gap-3 md:gap-5 items-center shrink-0">
         <a href={CTA.professionalServices} className="bg-[#5645f5] flex items-center justify-center px-6 py-4 rounded-full hover:opacity-90 transition-opacity">
