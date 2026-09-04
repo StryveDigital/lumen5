@@ -16,8 +16,8 @@ export default function Lp3() {
       <Features />
       <SmallCta />
       <StatsModule />
-      <SecurityCompliance />
       <ProfessionalServicesCta />
+      <SecurityCompliance />
       <TwoCardCta />
       <Footer />
     </div>
