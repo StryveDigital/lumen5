@@ -15,17 +15,17 @@ export default function Explainers() {
   return (
     <div className="w-full">
       <Hero />
+      <Outcomes />
       <LogoCarousel />
-      <ProofGrid />
+      <WorkflowCompare />
+      <ScaleBand />
       <HowItWorks />
       <StyleShowcase />
-      <Outcomes />
-      <ScaleBand />
-      <WorkflowCompare />
-      <OldWayVsNow />
-      <WebinarSection />
-      <CtaModule />
+      <ProofGrid />
       <Footer />
+      {/* <OldWayVsNow />
+      <WebinarSection />
+      <CtaModule /> */}
     </div>
   )
 }
