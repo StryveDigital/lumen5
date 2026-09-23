@@ -1,30 +1,31 @@
 // Demo page — "Confused about something specific?" resources grid.
 // Figma node: 424:2280 ("Resources").
-// NOTE: the 4 "Read more" links have no destination in the design or in shared/cta-urls.ts
-// (they point at specific Help Centre articles this repo doesn't have URLs for) — left as
-// `#` placeholders rather than guessed. Swap in the real article links when known.
-type Card = { image: string; title: string; body: string };
+type Card = { image: string; title: string; body: string; href: string };
 
 const CARDS: Card[] = [
   {
     image: '/demo-resource-1.png',
     title: 'Best practice guides',
     body: 'Our advice for creating stunning videos.',
+    href: 'https://help.lumen5.com/en/category/best-practice-guides-slcsq9/',
   },
   {
     image: '/demo-resource-2.png',
     title: 'Publishing & downloading',
     body: 'Read more about rendering and downloading a complete video.',
+    href: 'https://help.lumen5.com/en/category/publishing-downloading-your-video-1l1xmq2/',
   },
   {
     image: '/demo-resource-3.png',
     title: 'Video & scene controls',
     body: 'Changing the look and feel of your video and scenes.',
+    href: 'https://help.lumen5.com/en/category/video-scene-controls-1gkguse/',
   },
   {
     image: '/demo-resource-4.png',
     title: 'Copyright, credit & attribution',
     body: 'All about licensing, copyright, and who owns videos and media.',
+    href: 'https://help.lumen5.com/en/category/copyright-credit-attribution-1ofeh3i/',
   },
 ];
 
@@ -61,7 +62,7 @@ export default function Resources() {
                 <p className="font-body font-normal text-[18px] leading-[30px] text-[#201e26]">
                   {card.body}
                 </p>
-                <a href="#" className="flex gap-[10px] items-center justify-center rounded-full">
+                <a href={card.href} className="flex gap-[10px] items-center justify-center rounded-full">
                   <span className="font-heading font-semibold text-[16px] leading-[30px] text-[#5645f5] whitespace-nowrap">
                     Read more
                   </span>
