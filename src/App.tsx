@@ -4,6 +4,7 @@ import Lp2 from './pages/lp2/Page'
 import Lp3 from './pages/lp3/Page'
 import Explainers from './pages/explainers/Page'
 import VideoStrategy from './pages/video-strategy/Page'
+import Demo from './pages/demo/Page'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/lp3" element={<Lp3 />} />
         <Route path="/explainers" element={<Explainers />} />
         <Route path="/video-strategy" element={<VideoStrategy />} />
+        <Route path="/demo" element={<Demo />} />
         <Route path="*" element={<Navigate to="/lp1" replace />} />
       </Routes>
     </BrowserRouter>
