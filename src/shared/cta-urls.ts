@@ -10,7 +10,7 @@
 
 export const CTA = {
   signup:              "https://lumen5.com/auth/signup/",
-  demo:                "https://lumen5.com/request-a-demo",
+  demo:                "https://get.lumen5.com/demo",
   trust:                "https://lumen5.com/trust/",
   professionalServices: "https://ps.lumen5.com/",
 } as const;
