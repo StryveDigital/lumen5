@@ -16,7 +16,9 @@ export default function DemoForm() {
   }, []);
 
   return (
-    <div className="w-full max-w-[518px]">
+    // White card keeps HubSpot's default dark labels legible on the dark hero; drop it once the
+    // portal switches to unstyled embeds and we style the fields ourselves.
+    <div className="w-full max-w-[518px] bg-white rounded-2xl p-6 md:p-8">
       <div
         className="hs-form-frame"
         data-region="na1"
