@@ -28,7 +28,8 @@ export default function Banner() {
         style={{ right: -260, top: -180, width: 480, transform: 'rotate(-60.54deg)' }}
       />
 
-      <div className="relative mx-auto max-w-[1232px] flex flex-col xl:flex-row items-start justify-between gap-14 xl:gap-10 px-6 md:px-16 xl:px-[105px] py-16 md:py-24">
+      <div className="relative px-6 md:px-16 xl:px-[104px] py-16 md:py-24">
+      <div className="mx-auto max-w-[1232px] flex flex-col xl:flex-row items-start justify-between gap-14 xl:gap-10">
         {/* Copy + anchor nav */}
         <div className="flex flex-col gap-12 items-start w-full max-w-[648px]">
           <div className="flex flex-col gap-8 items-start w-full">
@@ -76,9 +77,10 @@ export default function Banner() {
         </div>
 
         {/* Form */}
-        <div className="w-full xl:w-auto flex justify-center xl:justify-end">
+        <div className="w-full xl:w-[518px] xl:shrink-0 flex justify-center xl:justify-end">
           <DemoForm />
         </div>
+      </div>
       </div>
     </div>
   );
